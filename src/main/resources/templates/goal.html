@@ -1,0 +1,46 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>LifeSync · Merchant recommendations</title>
+<link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><span class="brand-icon">L</span><span>LifeSync <small>DEMO BANK</small></span></a>
+<nav><a href="/">Automation</a><a href="/customers">Customer search</a><a href="/graph-search">Ask the graph</a></nav></div></header><main class="shell">
+<div class="hero"><div><div class="eyebrow">PERSONALIZED SAVINGS SUPPORT</div><h1 th:text="|Welcome, ${goal.customerName}!|">Welcome!</h1>
+<p th:if="${goal.plccHolder()}">Explore PLCC-eligible merchants that may be relevant to your goal.</p>
+<p th:if="${goal.plccNonHolder()}">Explore a PLCC account invitation. Merchant information is never shared with non-holders.</p>
+<p th:unless="${goal.plccHolder() or goal.plccNonHolder()}">Account verification required before any recommendation or invitation.</p></div></div>
+<section class="panel pad"><div class="eyebrow">YOUR GOAL</div><h2 th:text="${goal.description}"></h2>
+<p><span th:text="${goal.category}"></span> · <span th:text="${goal.customerCity}"></span> · PLCC account: <strong th:text="${goal.plccAccountStatus}"></strong> · Status: <strong th:text="${goal.status}"></strong></p>
+<div class="muted" th:if="${goalClassification != null}">
+  Matched categories: <strong th:text="${#strings.listJoin(goalClassification.categories, ', ')}">APPLIANCES</strong>
+  · Classification confidence: <strong th:text="${#numbers.formatDecimal(goalClassification.confidence, 1, 2)}">0.95</strong>
+  · Source: <strong th:text="${goalClassification.source}">EXPLICIT_AND_TEXT</strong>
+</div>
+<div class="actions"><a th:if="${goal.status == 'READY' and goal.plccHolder()}" class="btn" th:href="@{/emails/{id}(id=${goal.goalId})}">Preview generated email</a>
+<form th:if="${goal.status == 'PENDING' or goal.status == 'RETRY_PENDING'}" th:action="@{/goals/{id}/generate(id=${goal.goalId})}" method="post"><button type="submit" class="btn">Generate recommendations now</button></form>
+<a class="btn secondary" th:href="@{/graph/{id}(id=${goal.goalId})}">View knowledge graph query</a></div></section>
+<section class="panel pad" th:if="${retrieval != null}" style="margin-top:18px">
+  <div class="eyebrow">RECOMMENDATION EXPLAINABILITY</div>
+  <p>Retrieval: <strong th:text="${retrieval.retrievalMode}">GRAPH_AND_VECTOR</strong>
+     · Wording: <strong th:text="${retrieval.explanationSource}">GRAPH_GROUNDED_LLM</strong></p>
+  <p>Java retrieval decision: <strong th:text="${retrieval.decisionPlan}">HYBRID</strong> ·
+     Evaluation: <strong th:text="${retrieval.decisionEvaluation}">ACCEPT</strong> ·
+     Search attempts: <strong th:text="${retrieval.searchAttempts}">1</strong></p>
+  <p class="muted">Neo4j validates PLCC category eligibility. Ollama receives only the retrieved
+     merchant facts; Java selects the nearest five and fixes their order.</p>
+  <form th:action="@{/goals/{id}/requeue(id=${goal.goalId})}" method="post">
+    <button class="btn secondary" type="submit">Requeue this goal to refresh recommendations and email text</button>
+  </form>
+</section>
+<h2 class="section-title" th:if="${goal.plccHolder()}">Top nearby matching merchants</h2>
+<section class="panel pad" th:if="${goal.plccNonHolder() and goal.status == 'READY'}">
+<div class="eyebrow">PLCC INVITATION</div><h2>Invitation preview is ready</h2>
+<p>Customer does not currently have a PLCC account. No merchant names, stores, Google Maps links, or offers are disclosed.</p>
+<a class="btn" th:href="@{/emails/{id}(id=${goal.goalId})}">View invitation with permission link</a></section>
+<p class="muted" th:if="${goal.plccHolder() and #lists.isEmpty(merchants)}">No generated merchant recommendations are available for this goal yet. Unsupported goals and goals without geographic data do not receive invented matches.</p>
+<div class="cards"><article class="merchant" th:each="m : ${merchants}" th:if="${goal.status == 'READY' and goal.plccHolder()}">
+<div class="merchant-title"><div><span class="eyebrow" th:text="|MATCH #${m.rank}|">MATCH 1</span><h3 th:text="${m.name}">Merchant</h3></div><div class="distance" th:text="|${#numbers.formatDecimal(m.distanceMiles, 1, 1)} mi|">2.3 mi</div></div>
+<p th:text="${m.description}"></p><div class="muted"><span th:text="${m.addressLine}"></span>, <span th:text="${m.city}"></span>, <span th:text="${m.state}"></span></div>
+<div class="reason" th:text="${m.explanation}"></div>
+<div class="muted" th:if="${m.semanticScore != null}" th:text="|Vector similarity: ${#numbers.formatDecimal(m.semanticScore, 1, 3)}|">Vector score</div>
+<div><a th:href="${m.googleMapsUrl()}" target="_blank" rel="noopener noreferrer">View approximate city location on Google Maps ↗</a></div></article></div>
+<p class="footnote">Distances are approximate straight-line measurements using synthetic location points, not real route or delivery distances. Category relevance does not establish inventory availability or a bank endorsement.</p>
+</main></body></html>

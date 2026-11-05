@@ -1,0 +1,42 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>LifeSync · Automation dashboard</title>
+<link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><span class="brand-icon">L</span><span>LifeSync <small>DEMO BANK</small></span></a>
+<nav><a href="/">Automation</a><a href="/customers">Customer search</a><a href="/graph-search">Ask the graph</a><a href="http://localhost:7474" target="_blank" rel="noopener">Neo4j Browser</a></nav></div></header>
+<main class="shell">
+<div class="hero"><div><div class="eyebrow">AUTOMATED RECOMMENDATIONS</div><h1>PLCC automation and email previews</h1>
+<p>Existing savings goals are processed automatically. Holder recommendations and non-holder consent invitations are prepared automatically. Email bodies are assembled when viewed using fresh Offers REST data; <strong>nothing is sent</strong>.</p></div>
+<div class="status"><span class="dot"></span> AUTO-PROCESSING ENABLED BY DEFAULT</div></div>
+<div class="metrics">
+  <div class="metric"><span>Customers</span><strong th:text="${counts.customers}">50</strong></div>
+  <div class="metric"><span>Goals</span><strong th:text="${counts.goals}">150</strong></div>
+  <div class="metric"><span>Previews ready (holders + invitations)</span><strong th:text="${counts.ready}">0</strong></div>
+  <div class="metric"><span>Pending / retry</span><strong th:text="${counts.pending}">0</strong></div>
+  <div class="metric"><span>Unsupported</span><strong th:text="${counts.unsupported}">0</strong></div>
+  <div class="metric"><span>No match / location</span><strong th:text="${counts.noMatches}">0</strong></div>
+</div>
+<section class="panel pad" style="margin-bottom:20px">
+  <div class="panel-top" style="padding:0;border:0"><div>
+    <div class="eyebrow">NEO4J VECTOR SEARCH / GRAPHRAG</div>
+    <h2>Semantic index progress</h2>
+    <p>Indexed <strong th:text="${vectors.embeddedMerchants}">0</strong> of
+       <strong th:text="${vectors.activeMerchants}">0</strong> eligible active merchants ·
+       <strong th:text="${vectors.embeddedGoals}">0</strong> goal vectors cached ·
+       index: <strong th:text="${vectors.indexState}">ONLINE</strong></p>
+    <p class="muted">The background vector job processes a few merchants at a time.
+       Goal embeddings are cached on demand. Matching always validates category relationships.
+       Vector similarity does not override distance ordering.</p>
+  </div><form action="/vectors/backfill" method="post"><button type="submit" class="btn secondary">Embed next 5 merchants</button></form></div>
+</section>
+<div class="notice" th:if="${notice}" th:text="${notice}"></div>
+<section class="panel"><div class="panel-top"><div><h2>Generated customer communications</h2>
+<p>Automatic scheduler handles batches of goals. You can process a small batch immediately. Once vectors are indexed, regenerate a goal to demonstrate hybrid retrieval.</p></div>
+<form method="post" action="/process/next"><button type="submit" class="btn">Process next pending-goal batch</button></form></div>
+<div class="table-wrap"><table><thead><tr><th>Customer</th><th>Goal</th><th>Category</th><th>Status</th><th>Preview</th></tr></thead>
+<tbody><tr th:each="g : ${goals}"><td><strong th:text="${g.customerName}">Alex Smith</strong><div class="muted" th:text="${g.customerEcn}"></div></td>
+<td><a th:href="@{/goals/{id}(id=${g.goalId})}" th:text="${g.description}">Goal</a><div class="muted" th:text="${g.goalId}"></div></td>
+<td th:text="${g.category}"></td><td><span class="pill" th:classappend="${g.status == 'READY'} ? ' success' : (${g.status == 'UNSUPPORTED'} ? ' neutral' : ' pending')" th:text="${g.status}">PENDING</span></td>
+<td><a th:if="${g.previewId != ''}" class="text-link" th:href="@{/emails/{id}(id=${g.goalId})}">View email</a>
+<a th:unless="${g.previewId != ''}" class="text-link" th:href="@{/goals/{id}(id=${g.goalId})}">View goal</a></td></tr></tbody></table></div></section>
+<p class="footnote">PLCC status is supplied by a synthetic demo fixture. Customer account status gates both UI and email preview; UNKNOWN customers are held for verification. Offers remain in an external REST source, never Neo4j. Distances are straight-line estimates based on synthetic approximate coordinates, not driving distances or verified store addresses. No customer email is sent.</p>
+</main></body></html>

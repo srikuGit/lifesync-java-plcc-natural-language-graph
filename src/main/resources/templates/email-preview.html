@@ -1,0 +1,12 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>LifeSync · Saved email preview</title>
+<link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><span class="brand-icon">L</span><span>LifeSync <small>DEMO BANK</small></span></a>
+<nav><a href="/">Automation</a><a href="/customers">Customer search</a></nav></div></header><main class="shell">
+<div class="hero"><div><div class="eyebrow">EMAIL OUTBOX · PREVIEW ONLY</div><h1>Automatically generated customer email</h1>
+<p>The scheduler prepared this recommendation. The HTML is rendered on demand, and eligible offers are fetched live from Offers Flow. No offers or HTML body are persisted in Neo4j. <strong>No email is sent.</strong></p></div></div>
+<section class="panel pad email-metadata"><div><strong>Subject:</strong> <span th:text="${preview.subject}"></span></div><div><strong>Generated:</strong> <span th:text="${preview.generatedAt}"></span></div>
+<div><strong>Status:</strong> <span class="pill success">READY · NOT SENT</span></div></section>
+<div class="email-frame"><iframe class="email-iframe" title="Saved email preview" sandbox="allow-popups allow-popups-to-escape-sandbox" th:srcdoc="${preview.html}"></iframe></div>
+<div class="actions"><a href="/" class="btn secondary">Back to dashboard</a><a th:href="@{/goals/{id}(id=${preview.goalId})}" class="btn secondary">View goal</a></div>
+</main></body></html>

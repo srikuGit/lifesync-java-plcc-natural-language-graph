@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:24px;background:#f3f6fa;font-family:Arial,sans-serif;color:#16253a">
+<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;max-width:680px;margin:auto;background:#fff;border-radius:12px;overflow:hidden">
+<tr><td style="background:#102a46;padding:26px 32px;color:white"><strong style="font-size:22px" th:text="${bankName}">LifeSync</strong><p style="font-size:12px">PLCC SAVINGS GOAL DEMONSTRATION</p></td></tr>
+<tr><td style="padding:28px 32px">
+<h1 style="font-size:23px" th:text="|Hello ${customerName},|">Hello,</h1>
+<p>Thank you for planning your next milestone with us.</p>
+<div style="padding:14px;background:#f5f6f8;border-left:4px solid #b38b3c"><small>YOUR SAVINGS GOAL</small><div th:text="${goalDescription}">Purchase a refrigerator</div></div>
+<p th:text="${introduction}">Here are merchants relevant to your goal.</p>
+<h2 style="font-size:18px">Nearby merchants — sorted by approximate distance</h2>
+<div th:each="item : ${merchants}" style="border-bottom:1px solid #d7dfe9;padding:16px 0">
+<strong th:text="|${item.merchant.rank}. ${item.merchant.name}|">1. Example Merchant</strong>
+<div th:text="|${item.merchant.addressLine}, ${item.merchant.city}, ${item.merchant.state}|">Address</div>
+<div style="font-size:13px;color:#315a7e" th:text="|Approx. ${#numbers.formatDecimal(item.merchant.distanceMiles,1,1)} miles (straight-line)|">3.0 miles</div>
+<div style="font-size:13px" th:text="${item.merchant.explanation}">Category match</div>
+<div><a th:href="${item.merchant.googleMapsUrl()}" target="_blank" rel="noopener noreferrer">View approximate merchant area in Google Maps</a></div>
+<div th:if="${!#lists.isEmpty(item.offers)}" style="margin-top:10px;background:#fff7e7;padding:10px;border-radius:6px">
+  <div style="font-size:12px;font-weight:bold">CURRENT OFFERS FROM OFFERS FLOW</div>
+  <div th:each="offer : ${item.offers}" style="font-size:13px;padding-top:5px">
+    <strong th:text="${offer.title}">Offer title</strong>:
+    <span th:text="${offer.description}">Description</span>
+    <small th:text="|Valid until ${offer.validUntil}|">Expires</small>
+  </div>
+</div>
+</div>
+<p th:if="${#lists.isEmpty(merchants)}">No eligible merchant recommendations were found.</p>
+<p>We hope these resources help you explore your purchase options.</p>
+<p>Best regards,<br><strong th:text="${bankName}">LifeSync</strong></p>
+</td></tr>
+<tr><td style="background:#f3f6fa;color:#5e6f81;padding:20px 32px;font-size:12px">
+<strong>POC PREVIEW — NOT SENT.</strong> This is a fictional demonstration, not an official Wells Fargo communication or verified PLCC offer.
+Distances use synthetic approximate coordinates; offers are fetched live from a demo REST endpoint and require eligibility and terms verification before real communications.
+</td></tr></table></body></html>

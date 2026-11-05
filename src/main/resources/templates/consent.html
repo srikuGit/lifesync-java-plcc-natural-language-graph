@@ -1,0 +1,8 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PLCC demo consent</title><link rel="stylesheet" href="/css/app.css"></head>
+<body><main class="shell" style="max-width:720px;padding-top:40px"><section class="panel pad"><div class="eyebrow">LIFESYNC PLCC — CONCEPT DEMONSTRATION</div><h1>Permission to be contacted</h1>
+<p>This is a simulated permission form for a potential Wells Fargo PLCC account inquiry. It is not affiliated with Wells Fargo and does not initiate a real contact or application.</p>
+<form method="post" action="/consent"><input type="hidden" name="token" th:value="${token}">
+<label style="display:block;margin:20px 0"><input type="checkbox" name="permission" value="true" required>
+I would like a representative to contact me about PLCC account information, subject to the bank's verified eligibility and communication policies.</label>
+<button type="submit" class="btn">Submit demo permission request</button></form>
+<p class="footnote">For the POC only: submitting records REQUESTED in Neo4j. It does not constitute production-grade verified marketing consent.</p></section></main></body></html>

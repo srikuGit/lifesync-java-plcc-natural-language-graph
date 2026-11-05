@@ -1,0 +1,21 @@
+{
+  "programId": "PLCC_DEMO",
+  "programName": "Wells Fargo PLCC concept \u2014 simulated, not affiliated",
+  "categories": [
+    "HOME_FURNISHINGS",
+    "APPLIANCES",
+    "ELECTRONICS",
+    "HOME_IMPROVEMENT",
+    "FLOORING",
+    "JEWELRY",
+    "OUTDOOR_LIVING",
+    "SPECIALTY_RETAIL",
+    "APPAREL"
+  ],
+  "otherMerchantCategories": [
+    "TRAVEL",
+    "AUTOMOTIVE",
+    "SERVICES",
+    "GROCERIES"
+  ]
+}

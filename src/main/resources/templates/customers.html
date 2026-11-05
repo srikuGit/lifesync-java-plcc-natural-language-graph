@@ -1,0 +1,15 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>LifeSync · Customer search</title>
+<link rel="stylesheet" th:href="@{/css/app.css}"></head><body>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><span class="brand-icon">L</span><span>LifeSync <small>DEMO BANK</small></span></a>
+<nav><a href="/">Automation</a><a href="/customers">Customer search</a><a href="/graph-search">Ask the graph</a></nav></div></header><main class="shell">
+<div class="hero"><div><div class="eyebrow">CUSTOMER DISCOVERY</div><h1>Find a customer’s savings goals</h1>
+<p>Search by ECN or select one of the first five demo customers.</p></div></div>
+<section class="panel pad"><form method="get" action="/customers" class="searchform"><label>Customer ECN <input type="text" name="ecn" placeholder="ECN-DEMO-00001" required></label><button class="btn" type="submit">Search customer</button></form>
+<div class="chips"><a th:each="d : ${demoCustomers}" th:href="@{/customers(ecn=${d.ecn})}" th:text="${d.name}">Customer</a></div>
+<p class="error" th:if="${error}" th:text="${error}"></p></section>
+<section class="panel pad" th:if="${customer}"><div class="eyebrow">CUSTOMER PROFILE</div><h2 th:text="${customer.name}">Demo Customer</h2>
+<p><span th:text="${customer.city}"></span>, <span th:text="${customer.state}"></span> · <span th:text="${customer.ecn}"></span></p>
+<h3>Savings goals</h3><div class="goal-list"><a class="goal-row" th:each="g : ${goals}" th:href="@{/goals/{id}(id=${g.goalId})}">
+<span><strong th:text="${g.description}"></strong><small th:text="${g.category}"></small></span><span class="pill" th:text="${g.status}"></span></a></div></section>
+</main></body></html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LifeSync · Ask the knowledge graph</title>
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+  <style>
+    .nl-field {display:flex;flex-direction:column;gap:6px;flex:1}
+    .nl-field input {width:100%; padding:12px;border:1px solid #c6d1db;border-radius:9px;font:inherit}
+    .nl-search {display:flex;gap:12px;align-items:end;flex-wrap:wrap}
+    .nl-query {display:flex;align-items:end;gap:12px;flex-wrap:wrap}
+    .nl-query textarea {width:100%;min-height:88px;padding:12px;border:1px solid #c6d1db;border-radius:9px;font:inherit;resize:vertical}
+    .nl-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .nl-goal {border:1px solid #dbe4eb;border-radius:12px;padding:16px;background:#fff}
+    .nl-store {border-top:1px solid #edf0f3;padding:12px 0}
+    .nl-store:first-of-type {margin-top:8px}
+    .nl-note {font-size:0.93rem;color:#536476}
+    .nl-examples {display:flex;gap:8px;flex-wrap:wrap;padding-top:12px}
+    .nl-examples a {border:1px solid #dbe4eb;border-radius:18px;padding:6px 10px;text-decoration:none}
+    .nl-hint {padding:12px 15px;background:#eef6fa;border-radius:9px;margin:15px 0}
+    .nl-section {margin:20px 0}
+    .nl-goal h3 {margin-top:6px}
+  </style>
+</head>
+<body>
+<header class="top"><div class="shell nav"><a class="brand" href="/"><span class="brand-icon">L</span><span>LifeSync <small>DEMO BANK</small></span></a>
+<nav><a href="/">Automation</a><a href="/customers">Customer search</a><a href="/graph-search">Ask the graph</a></nav></div></header>
+<main class="shell">
+ <div class="hero"><div><div class="eyebrow">NATURAL-LANGUAGE KNOWLEDGE GRAPH SEARCH</div>
+ <h1>Ask about your savings goals and nearby stores</h1>
+ <p>Find an existing customer by ID, explore their goals, and ask a question in ordinary language. Typos and imperfect phrasing are supported through local Ollama interpretation.</p></div></div>
+ <section class="panel pad nl-section">
+  <form method="get" action="/graph-search" class="nl-search">
+   <label class="nl-field">Customer ID
+    <input name="customerId" maxlength="64" required placeholder="C001" th:value="${customerIdInput}"></label>
+   <button class="btn" type="submit">Load goals</button>
+  </form>
+  <div class="nl-examples"><span class="nl-note">Demo customer IDs:</span>
+   <a th:each="c : ${examples}" th:href="@{/graph-search(customerId=${c.customerId})}" th:text="${c.customerId}">C001</a>
+  </div>
+  <p class="error" th:if="${error}" th:text="${error}"></p>
+ </section>
+ <div th:if="${customer != null}">
+  <section class="panel pad nl-section">
+   <div class="eyebrow">CUSTOMER GRAPH</div>
+   <h2 th:text="${customer.name}">Customer</h2>
+   <p class="nl-note"><span th:text="${customer.customerId}">C001</span> ·
+   <span th:text="${customer.city}">City</span> · PLCC status: <strong th:text="${customer.plccAccountStatus}">ACTIVE</strong></p>
+   <h3>Goals saved in Neo4j</h3>
+   <p th:if="${#lists.isEmpty(allGoals)}" class="nl-note">No goals found for this customer.</p>
+   <div class="nl-grid">
+    <article class="nl-goal" th:each="g : ${allGoals}">
+     <div class="eyebrow" th:text="${g.goalId}">G001</div>
+     <h3 th:text="${g.description}">Goal description</h3>
+     <p class="nl-note"><span th:text="${g.category}">Category</span> · <span th:text="${g.status}">Status</span></p>
+     <a th:href="@{/goals/{id}(id=${g.goalId})}">View goal details</a>
+    </article>
+   </div>
+  </section>
+  <section class="panel pad nl-section">
+   <div class="eyebrow">ASK THE GRAPH</div>
+   <h2>What would you like to find?</h2>
+   <form method="get" action="/graph-search" class="nl-query">
+    <input type="hidden" name="customerId" th:value="${customer.customerId}">
+    <label class="nl-field">Your question
+     <textarea name="question" maxlength="500" required placeholder="Which stores can help me furnish my home offce?" th:text="${questionInput}"></textarea>
+    </label>
+    <button class="btn" type="submit">Ask the graph</button>
+   </form>
+   <div class="nl-examples">
+    <a th:href="@{/graph-search(customerId=${customer.customerId},question='Show all my goals')}">Show all my goals</a>
+    <a th:href="@{/graph-search(customerId=${customer.customerId},question='Which stores can serve my goals?')}">Which stores can help?</a>
+    <a th:href="@{/graph-search(customerId=${customer.customerId},question='Where can I shop for my hom offce?')}">Find my hom offce stores</a>
+   </div>
+  </section>
+  <section class="panel pad nl-section" th:if="${plan != null}">
+   <div class="eyebrow">GRAPH QUERY RESULTS</div>
+   <h2 th:text="${plan.mode == 'STORES' ? 'Matching goals and stores' : 'Customer goals'}">Results</h2>
+   <p class="nl-hint"><strong th:text="${plan.source}">LLM_INTENT</strong> · <span th:text="${plan.note}">Explanation</span></p>
+   <p th:if="${plan.mode == 'STORES' and !merchantDisclosureAllowed}" class="nl-hint">
+    Store recommendations are shown only to verified ACTIVE PLCC holders. This customer’s goals remain visible, but merchant details are restricted.
+   </p>
+   <p th:if="${#lists.isEmpty(results)}" class="nl-note">No customer goals matched this question. Try rephrasing it or use “Show all my goals.”</p>
+   <div class="nl-grid">
+    <article class="nl-goal" th:each="item : ${results}">
+     <div class="eyebrow" th:text="${item.goal.goalId}">G001</div>
+     <h3 th:text="${item.goal.description}">Goal</h3>
+     <p class="nl-note"><span th:text="${item.goal.category}">Category</span> · <span th:text="${item.goal.status}">READY</span></p>
+     <a th:href="@{/goals/{id}(id=${item.goal.goalId})}">Goal details</a>
+     <div th:if="${plan.mode == 'STORES' and merchantDisclosureAllowed}">
+      <p class="nl-note" th:if="${item.matchSource == 'LIVE_GRAPH_CANDIDATES'}">Preliminary PLCC-eligible graph candidates; not yet finalized recommendations.</p>
+      <p class="nl-note" th:if="${item.matchSource == 'SAVED_RECOMMENDATIONS'}">Previously generated recommendations, loaded from Neo4j.</p>
+      <p class="nl-note" th:if="${#lists.isEmpty(item.merchants)}">No matching located stores found for this goal.</p>
+      <div th:each="m : ${item.merchants}" class="nl-store">
+       <strong th:text="${m.name}">Merchant</strong>
+       <div class="nl-note"><span th:text="${m.city}">City</span>, <span th:text="${m.state}">State</span> ·
+        <span th:text="${m.category}">Category</span> ·
+        <span th:text="|${#numbers.formatDecimal(m.distanceMiles, 1, 1)} miles|">Miles</span></div>
+       <div class="nl-note" th:text="${m.explanation}">Reason</div>
+       <a th:href="${m.googleMapsUrl()}" target="_blank" rel="noopener noreferrer">View approximate location on Google Maps</a>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+ </div>
+ <p class="footnote">Local synthetic demonstration only: customer ID lookup is not authentication. In production, enforce the signed-in user's identity and role authorization. Store coordinates are synthetic approximate points, not verified storefronts. No emails are sent. The LLM only chooses known customer goal IDs; it never runs Cypher or changes PLCC eligibility.</p>
+</main>
+</body></html>

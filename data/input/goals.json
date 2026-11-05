@@ -1,0 +1,4502 @@
+[
+  {
+    "ecn": "ECN-DEMO-00001",
+    "goalId": "G001",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sofa and laptop for my home office",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7193,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00002",
+    "goalId": "G002",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a king-size bedroom furniture set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 9020,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00003",
+    "goalId": "G003",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a dining table and six chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9379,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00004",
+    "goalId": "G004",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Furnish my first apartment with couches and shelves",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 2411,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00005",
+    "goalId": "G005",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade living room furniture before moving",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 3394,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00006",
+    "goalId": "G006",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sectional sofa for our living room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 6718,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00007",
+    "goalId": "G007",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a king-size bedroom furniture set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4189,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00008",
+    "goalId": "G008",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a dining table and six chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5244,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00009",
+    "goalId": "G009",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Furnish my first apartment with couches and shelves",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 976,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00010",
+    "goalId": "G010",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade living room furniture before moving",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4181,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00011",
+    "goalId": "G011",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sectional sofa for our living room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2411,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00012",
+    "goalId": "G012",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a king-size bedroom furniture set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9817,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00013",
+    "goalId": "G013",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a dining table and six chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 644,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00014",
+    "goalId": "G014",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Furnish my first apartment with couches and shelves",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2141,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00015",
+    "goalId": "G015",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade living room furniture before moving",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 3067,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_FURNISHINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00016",
+    "goalId": "G016",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an energy-efficient refrigerator",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8916,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00017",
+    "goalId": "G017",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace my washer and dryer",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5464,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00018",
+    "goalId": "G018",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a new dishwasher",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 6700,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00019",
+    "goalId": "G019",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a convection oven for our kitchen",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7136,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00020",
+    "goalId": "G020",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade our kitchen with a new range and microwave",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5843,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00021",
+    "goalId": "G021",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an energy-efficient refrigerator",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 6370,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00022",
+    "goalId": "G022",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace my washer and dryer",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1705,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00023",
+    "goalId": "G023",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a new dishwasher",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 6051,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00024",
+    "goalId": "G024",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a convection oven for our kitchen",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 5132,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00025",
+    "goalId": "G025",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade our kitchen with a new range and microwave",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 3105,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00026",
+    "goalId": "G026",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an energy-efficient refrigerator",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2335,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00027",
+    "goalId": "G027",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace my washer and dryer",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 8872,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00028",
+    "goalId": "G028",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a new dishwasher",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1647,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00029",
+    "goalId": "G029",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a convection oven for our kitchen",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2050,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00030",
+    "goalId": "G030",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade our kitchen with a new range and microwave",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 4923,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPLIANCES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00031",
+    "goalId": "G031",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a gaming laptop for school and work",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 5667,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00032",
+    "goalId": "G032",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a 65-inch television",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2264,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00033",
+    "goalId": "G033",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a mirrorless camera",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 5246,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00034",
+    "goalId": "G034",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my home office with two monitors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1073,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00035",
+    "goalId": "G035",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a tablet and noise-canceling headphones",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 6145,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00036",
+    "goalId": "G036",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a gaming laptop for school and work",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 6822,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00037",
+    "goalId": "G037",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a 65-inch television",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 2069,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00038",
+    "goalId": "G038",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a mirrorless camera",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 8319,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00039",
+    "goalId": "G039",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my home office with two monitors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 8300,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00040",
+    "goalId": "G040",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a tablet and noise-canceling headphones",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 3622,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00041",
+    "goalId": "G041",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a gaming laptop for school and work",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 3589,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00042",
+    "goalId": "G042",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a 65-inch television",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 2630,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00043",
+    "goalId": "G043",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a mirrorless camera",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4732,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00044",
+    "goalId": "G044",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my home office with two monitors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4562,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00045",
+    "goalId": "G045",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a tablet and noise-canceling headphones",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 1306,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "ELECTRONICS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00046",
+    "goalId": "G046",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Renovate our kitchen with new cabinets",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 17298,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00047",
+    "goalId": "G047",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace bathroom fixtures and install a vanity",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 13769,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00048",
+    "goalId": "G048",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a backyard deck renovation",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 18429,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00049",
+    "goalId": "G049",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade home lighting and electrical fixtures",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 20712,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00050",
+    "goalId": "G050",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy supplies to repaint and remodel the guest room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 10643,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00001",
+    "goalId": "G051",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Renovate our kitchen with new cabinets",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 17928,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00002",
+    "goalId": "G052",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace bathroom fixtures and install a vanity",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4429,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00003",
+    "goalId": "G053",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a backyard deck renovation",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 8153,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00004",
+    "goalId": "G054",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade home lighting and electrical fixtures",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 10312,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00005",
+    "goalId": "G055",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy supplies to repaint and remodel the guest room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 21218,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00006",
+    "goalId": "G056",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Renovate our kitchen with new cabinets",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 12231,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00007",
+    "goalId": "G057",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace bathroom fixtures and install a vanity",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 21464,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00008",
+    "goalId": "G058",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a backyard deck renovation",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 16255,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00009",
+    "goalId": "G059",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade home lighting and electrical fixtures",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 14827,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00010",
+    "goalId": "G060",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy supplies to repaint and remodel the guest room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 6681,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "HOME_IMPROVEMENT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00011",
+    "goalId": "G061",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install hardwood flooring in our living room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4942,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00012",
+    "goalId": "G062",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace old carpet with laminate flooring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4572,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00013",
+    "goalId": "G063",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy porcelain tiles for our bathroom",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 7013,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00014",
+    "goalId": "G064",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install vinyl plank flooring in our condo",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8879,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00015",
+    "goalId": "G065",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Refinish and replace worn wooden floors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 12623,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00016",
+    "goalId": "G066",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install hardwood flooring in our living room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 11914,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00017",
+    "goalId": "G067",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace old carpet with laminate flooring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 3220,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00018",
+    "goalId": "G068",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy porcelain tiles for our bathroom",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 11975,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00019",
+    "goalId": "G069",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install vinyl plank flooring in our condo",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 20160,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00020",
+    "goalId": "G070",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Refinish and replace worn wooden floors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4991,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00021",
+    "goalId": "G071",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install hardwood flooring in our living room",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 18831,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00022",
+    "goalId": "G072",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Replace old carpet with laminate flooring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 5125,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00023",
+    "goalId": "G073",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy porcelain tiles for our bathroom",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 13810,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00024",
+    "goalId": "G074",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Install vinyl plank flooring in our condo",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 18979,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00025",
+    "goalId": "G075",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Refinish and replace worn wooden floors",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 12310,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "FLOORING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00026",
+    "goalId": "G076",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase an engagement ring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8546,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00027",
+    "goalId": "G077",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gold necklace anniversary gift",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5413,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00028",
+    "goalId": "G078",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy diamond earrings for a special occasion",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 7072,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00029",
+    "goalId": "G079",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding bands",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7104,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00030",
+    "goalId": "G080",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gemstone bracelet",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5450,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00031",
+    "goalId": "G081",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase an engagement ring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9463,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00032",
+    "goalId": "G082",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gold necklace anniversary gift",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7869,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00033",
+    "goalId": "G083",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy diamond earrings for a special occasion",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 1692,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00034",
+    "goalId": "G084",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding bands",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 5700,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00035",
+    "goalId": "G085",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gemstone bracelet",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4631,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00036",
+    "goalId": "G086",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase an engagement ring",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2657,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00037",
+    "goalId": "G087",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gold necklace anniversary gift",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 2668,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00038",
+    "goalId": "G088",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy diamond earrings for a special occasion",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 2669,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00039",
+    "goalId": "G089",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding bands",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 1718,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00040",
+    "goalId": "G090",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a gemstone bracelet",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 7735,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "JEWELRY"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00041",
+    "goalId": "G091",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a patio dining set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 6987,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00042",
+    "goalId": "G092",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for an outdoor grill and barbecue station",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 6155,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00043",
+    "goalId": "G093",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a garden pergola",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 7765,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00044",
+    "goalId": "G094",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade the backyard with outdoor lounge chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1879,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00045",
+    "goalId": "G095",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an outdoor fire pit and patio furniture",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4989,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00046",
+    "goalId": "G096",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a patio dining set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9939,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00047",
+    "goalId": "G097",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for an outdoor grill and barbecue station",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 2687,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00048",
+    "goalId": "G098",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a garden pergola",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5064,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00049",
+    "goalId": "G099",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade the backyard with outdoor lounge chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9239,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00050",
+    "goalId": "G100",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an outdoor fire pit and patio furniture",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8743,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00001",
+    "goalId": "G101",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a patio dining set",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 6431,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00002",
+    "goalId": "G102",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for an outdoor grill and barbecue station",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 4483,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00003",
+    "goalId": "G103",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a garden pergola",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1067,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00004",
+    "goalId": "G104",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade the backyard with outdoor lounge chairs",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4337,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00005",
+    "goalId": "G105",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy an outdoor fire pit and patio furniture",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9675,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "OUTDOOR_LIVING"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00006",
+    "goalId": "G106",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a professional acoustic guitar",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8490,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00007",
+    "goalId": "G107",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a road bicycle from a specialty bike shop",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 1696,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00008",
+    "goalId": "G108",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sewing machine for a hobby studio",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 8763,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00009",
+    "goalId": "G109",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase camping equipment for hiking",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4951,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00010",
+    "goalId": "G110",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for premium art supplies and easels",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 7257,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00011",
+    "goalId": "G111",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a professional acoustic guitar",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 2786,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00012",
+    "goalId": "G112",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a road bicycle from a specialty bike shop",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7915,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00013",
+    "goalId": "G113",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sewing machine for a hobby studio",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4597,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00014",
+    "goalId": "G114",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase camping equipment for hiking",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 2657,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00015",
+    "goalId": "G115",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for premium art supplies and easels",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 4296,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00016",
+    "goalId": "G116",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a professional acoustic guitar",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 6492,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00017",
+    "goalId": "G117",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a road bicycle from a specialty bike shop",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 9143,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00018",
+    "goalId": "G118",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy a sewing machine for a hobby studio",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 2349,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00019",
+    "goalId": "G119",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase camping equipment for hiking",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 5728,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00020",
+    "goalId": "G120",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for premium art supplies and easels",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 5831,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SPECIALTY_RETAIL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00021",
+    "goalId": "G121",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy formal suits for a new job",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 8635,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00022",
+    "goalId": "G122",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for winter jackets and boots",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2883,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00023",
+    "goalId": "G123",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding guest outfits",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 578,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00024",
+    "goalId": "G124",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my work wardrobe",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 1793,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00025",
+    "goalId": "G125",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy running shoes and activewear",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 7147,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00026",
+    "goalId": "G126",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy formal suits for a new job",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 7094,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00027",
+    "goalId": "G127",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for winter jackets and boots",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 6760,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00028",
+    "goalId": "G128",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding guest outfits",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 9923,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00029",
+    "goalId": "G129",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my work wardrobe",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 8816,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00030",
+    "goalId": "G130",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy running shoes and activewear",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7856,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00031",
+    "goalId": "G131",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy formal suits for a new job",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 4099,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00032",
+    "goalId": "G132",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for winter jackets and boots",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 4115,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00033",
+    "goalId": "G133",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase wedding guest outfits",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 3061,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00034",
+    "goalId": "G134",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Upgrade my work wardrobe",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 2918,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00035",
+    "goalId": "G135",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Buy running shoes and activewear",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 583,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "APPAREL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00036",
+    "goalId": "G136",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a hybrid commuter sedan",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 23873,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "VEHICLES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00037",
+    "goalId": "G137",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a two-bedroom condominium",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 22397,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "REAL_ESTATE"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00038",
+    "goalId": "G138",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Plan a Hawaii family holiday",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 2906,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "TRAVEL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00039",
+    "goalId": "G139",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Pay university tuition next year",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 37107,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "EDUCATION"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00040",
+    "goalId": "G140",
+    "data": {
+      "attributes": [
+        {
+          "type": "SAVINGS",
+          "customName": "Build an emergency savings fund",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 47691,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SAVINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00041",
+    "goalId": "G141",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a hybrid commuter sedan",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 15885,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "VEHICLES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00042",
+    "goalId": "G142",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a two-bedroom condominium",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 41832,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "REAL_ESTATE"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00043",
+    "goalId": "G143",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Plan a Hawaii family holiday",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 10477,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "TRAVEL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00044",
+    "goalId": "G144",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Pay university tuition next year",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 12915,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "EDUCATION"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00045",
+    "goalId": "G145",
+    "data": {
+      "attributes": [
+        {
+          "type": "SAVINGS",
+          "customName": "Build an emergency savings fund",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 14317,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SAVINGS"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00046",
+    "goalId": "G146",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Save for a hybrid commuter sedan",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 37627,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "VEHICLES"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00047",
+    "goalId": "G147",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Purchase a two-bedroom condominium",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 3025,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "REAL_ESTATE"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00048",
+    "goalId": "G148",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Plan a Hawaii family holiday",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2028,
+          "endDate": "01/12/2028",
+          "targetAmount": 7060,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "TRAVEL"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00049",
+    "goalId": "G149",
+    "data": {
+      "attributes": [
+        {
+          "type": "BIG_PURCHASE",
+          "customName": "Pay university tuition next year",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2029,
+          "endDate": "01/12/2029",
+          "targetAmount": 9905,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "EDUCATION"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ecn": "ECN-DEMO-00050",
+    "goalId": "G150",
+    "data": {
+      "attributes": [
+        {
+          "type": "SAVINGS",
+          "customName": "Build an emergency savings fund",
+          "image": {
+            "type": "CUSTOM_IMAGE",
+            "reference": "fictional-image"
+          },
+          "startYear": 2027,
+          "startDate": "01/01/2027",
+          "endYear": 2030,
+          "endDate": "01/12/2030",
+          "targetAmount": 8226,
+          "currency": "USD",
+          "recurringIntervals": 1,
+          "beneficiaries": [],
+          "additionalFields": [
+            {
+              "type": "BIG_PURCHASE_TYPE",
+              "value": "SAVINGS"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
