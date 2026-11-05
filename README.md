@@ -1,3 +1,23 @@
+# LifeSync v0.9 — Multi-product customer experience and graph MCP
+
+The landing page now loads a customer's goals across **PLCC, home purchase, home refinancing, and auto loans**, then shows nearby merchants or lending providers with current synthetic offers. Enter `C-DEMO-001`, `C-DEMO-002`, or `C-DEMO-003` and switch customers on the same screen. This is a demo lookup, not authentication.
+
+The UI service calls the read-only **MCP Streamable HTTP endpoint at `/mcp`** to retrieve a customer-scoped graph projection. Optional Ollama generation uses only that projection to write on-screen introductions; Java controls account gates, provider ranking, and exact offer terms. The new workflow does not generate email. The previous PLCC automation remains at `/automation`.
+
+See **[Multi-product setup, architecture, MCP contract, and validation](docs/multi-product-mcp.md)** for current instructions. Curated fixtures start without AI models; enable LLM introductions after pulling the chat model. Legacy semantic ingestion and its scheduler are opt-in.
+
+```sh
+gradle test bootJar
+docker compose up -d neo4j ollama
+UI_CONTENT_ENABLED=false java -jar build/libs/lifesync-java-poc-0.9.0.jar
+# In another shell:
+python3 scripts/smoke-products.py
+```
+
+## Previous PLCC workflow reference (v0.7–v0.8)
+
+The following describes the retained legacy workflow; v0.9 defaults and startup instructions above take precedence.
+
 # LifeSync PLCC — Java-only retrieval + semantic classification + email LLM (v0.7.0)
 
 Local Java 21 / Spring Boot / Neo4j Community / Spring AI / Ollama / Thymeleaf / Docker Compose proof of concept. **No email is actually sent.** All names, account statuses, goals, stores, and offers are synthetic demo fixtures.

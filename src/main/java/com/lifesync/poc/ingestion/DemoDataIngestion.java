@@ -20,6 +20,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Component
+@org.springframework.boot.autoconfigure.condition.ConditionalOnProperty(name="lifesync.legacy-ingestion-enabled", havingValue="true", matchIfMissing=false)
+@org.springframework.core.annotation.Order(0)
 public class DemoDataIngestion implements ApplicationRunner {
     private static final Logger log = LoggerFactory.getLogger(DemoDataIngestion.class);
     private final String inputDir;

@@ -1,0 +1,313 @@
+{
+  "products": [
+    {
+      "productId": "PLCC",
+      "name": "PLCC shopping",
+      "categories": [
+        "HOME_FURNISHINGS",
+        "APPLIANCES",
+        "ELECTRONICS"
+      ]
+    },
+    {
+      "productId": "HOME_PURCHASE",
+      "name": "Home purchase",
+      "categories": [
+        "HOME_PURCHASE"
+      ]
+    },
+    {
+      "productId": "HOME_REFINANCE",
+      "name": "Home refinancing",
+      "categories": [
+        "HOME_REFINANCE"
+      ]
+    },
+    {
+      "productId": "AUTO_LOAN",
+      "name": "Auto loans",
+      "categories": [
+        "AUTO_LOAN"
+      ]
+    }
+  ],
+  "customers": [
+    {
+      "customerId": "C-DEMO-001",
+      "ecn": "ECN-PRODUCT-DEMO-001",
+      "name": "Alex Demo",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "00000",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "plccAccountStatus": "ACTIVE"
+    },
+    {
+      "customerId": "C-DEMO-002",
+      "ecn": "ECN-PRODUCT-DEMO-002",
+      "name": "Jordan Demo",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "00000",
+      "latitude": 47.6101,
+      "longitude": -122.2015,
+      "plccAccountStatus": "NONE"
+    },
+    {
+      "customerId": "C-DEMO-003",
+      "ecn": "ECN-PRODUCT-DEMO-003",
+      "name": "Casey Demo",
+      "city": "Tacoma",
+      "state": "WA",
+      "postalCode": "00000",
+      "latitude": 47.2529,
+      "longitude": -122.4443,
+      "plccAccountStatus": "UNKNOWN"
+    }
+  ],
+  "goals": [
+    {
+      "goalId": "PG-001-1",
+      "customerId": "C-DEMO-001",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-001-2",
+      "customerId": "C-DEMO-001",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-001-3",
+      "customerId": "C-DEMO-001",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-001-4",
+      "customerId": "C-DEMO-001",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-002-1",
+      "customerId": "C-DEMO-002",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-002-2",
+      "customerId": "C-DEMO-002",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-002-3",
+      "customerId": "C-DEMO-002",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-002-4",
+      "customerId": "C-DEMO-002",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-003-1",
+      "customerId": "C-DEMO-003",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-003-2",
+      "customerId": "C-DEMO-003",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-003-3",
+      "customerId": "C-DEMO-003",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-003-4",
+      "customerId": "C-DEMO-003",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    }
+  ],
+  "merchants": [
+    {
+      "merchantId": "PM-1-1",
+      "storeId": "PM-1-1-S1",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS",
+      "name": "Seattle Demo Home Store",
+      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "active": true,
+      "city": "Seattle",
+      "state": "WA",
+      "latitude": 47.611200000000004,
+      "longitude": -122.3271
+    },
+    {
+      "merchantId": "PM-1-2",
+      "storeId": "PM-1-2-S1",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS",
+      "name": "Bellevue Demo Home Store",
+      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "active": true,
+      "city": "Bellevue",
+      "state": "WA",
+      "latitude": 47.615100000000005,
+      "longitude": -122.1965
+    },
+    {
+      "merchantId": "PM-1-3",
+      "storeId": "PM-1-3-S1",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS",
+      "name": "Tacoma Demo Home Store",
+      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "active": true,
+      "city": "Tacoma",
+      "state": "WA",
+      "latitude": 47.2579,
+      "longitude": -122.4393
+    },
+    {
+      "merchantId": "PM-2-1",
+      "storeId": "PM-2-1-S1",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE",
+      "name": "Seattle Demo Home Lending",
+      "description": "Synthetic Home purchase provider; not a real business.",
+      "active": true,
+      "city": "Seattle",
+      "state": "WA",
+      "latitude": 47.611200000000004,
+      "longitude": -122.3271
+    },
+    {
+      "merchantId": "PM-2-2",
+      "storeId": "PM-2-2-S1",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE",
+      "name": "Bellevue Demo Home Lending",
+      "description": "Synthetic Home purchase provider; not a real business.",
+      "active": true,
+      "city": "Bellevue",
+      "state": "WA",
+      "latitude": 47.615100000000005,
+      "longitude": -122.1965
+    },
+    {
+      "merchantId": "PM-2-3",
+      "storeId": "PM-2-3-S1",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE",
+      "name": "Tacoma Demo Home Lending",
+      "description": "Synthetic Home purchase provider; not a real business.",
+      "active": true,
+      "city": "Tacoma",
+      "state": "WA",
+      "latitude": 47.2579,
+      "longitude": -122.4393
+    },
+    {
+      "merchantId": "PM-3-1",
+      "storeId": "PM-3-1-S1",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE",
+      "name": "Seattle Demo Refinance Center",
+      "description": "Synthetic Home refinancing provider; not a real business.",
+      "active": true,
+      "city": "Seattle",
+      "state": "WA",
+      "latitude": 47.611200000000004,
+      "longitude": -122.3271
+    },
+    {
+      "merchantId": "PM-3-2",
+      "storeId": "PM-3-2-S1",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE",
+      "name": "Bellevue Demo Refinance Center",
+      "description": "Synthetic Home refinancing provider; not a real business.",
+      "active": true,
+      "city": "Bellevue",
+      "state": "WA",
+      "latitude": 47.615100000000005,
+      "longitude": -122.1965
+    },
+    {
+      "merchantId": "PM-3-3",
+      "storeId": "PM-3-3-S1",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE",
+      "name": "Tacoma Demo Refinance Center",
+      "description": "Synthetic Home refinancing provider; not a real business.",
+      "active": true,
+      "city": "Tacoma",
+      "state": "WA",
+      "latitude": 47.2579,
+      "longitude": -122.4393
+    },
+    {
+      "merchantId": "PM-4-1",
+      "storeId": "PM-4-1-S1",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN",
+      "name": "Seattle Demo Auto Finance",
+      "description": "Synthetic Auto loans provider; not a real business.",
+      "active": true,
+      "city": "Seattle",
+      "state": "WA",
+      "latitude": 47.611200000000004,
+      "longitude": -122.3271
+    },
+    {
+      "merchantId": "PM-4-2",
+      "storeId": "PM-4-2-S1",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN",
+      "name": "Bellevue Demo Auto Finance",
+      "description": "Synthetic Auto loans provider; not a real business.",
+      "active": true,
+      "city": "Bellevue",
+      "state": "WA",
+      "latitude": 47.615100000000005,
+      "longitude": -122.1965
+    },
+    {
+      "merchantId": "PM-4-3",
+      "storeId": "PM-4-3-S1",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN",
+      "name": "Tacoma Demo Auto Finance",
+      "description": "Synthetic Auto loans provider; not a real business.",
+      "active": true,
+      "city": "Tacoma",
+      "state": "WA",
+      "latitude": 47.2579,
+      "longitude": -122.4393
+    }
+  ]
+}

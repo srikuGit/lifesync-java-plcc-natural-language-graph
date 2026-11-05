@@ -1,3 +1,11 @@
+## v0.9.0
+
+- Add home purchase, home refinancing and auto financing alongside PLCC, with curated synthetic product/customer/goal/provider fixtures and an external synthetic offer feed.
+- Add a customer-ID entry and comparison screen, product filtering and switching customers on the same page. Move legacy automation to `/automation`; legacy ingestion and scheduler are opt-in.
+- Expose customer-scoped graph retrieval as a read-only, stateless MCP Streamable HTTP tool, consumed by the UI service and compatible with the official MCP Python client.
+- Render nearest-provider and per-product offer comparisons from Java facts. Generate optional customer-subgraph-grounded UI introductions with factual fallback; exclude customer identifiers from prompts.
+- Add unit and live smoke coverage for scope, account restrictions, offer ranking/validity, MCP transport and content fallback.
+
 # Changelog
 
 ## 0.7.0 — Deterministic Java retrieval and chat LLM for email text only

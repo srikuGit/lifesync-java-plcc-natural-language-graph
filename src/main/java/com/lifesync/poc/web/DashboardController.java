@@ -30,7 +30,7 @@ public class DashboardController {
         this.emails=emails;
     }
 
-    @GetMapping("/")
+    @GetMapping("/automation")
     public String dashboard(Model model) {
         model.addAttribute("counts", graph.counts());
         model.addAttribute("vectors", graph.vectorStats(embeddingModel));
@@ -43,7 +43,7 @@ public class DashboardController {
         var results = orchestrator.processNextBatch();
         redirect.addFlashAttribute("notice", "Processed " + results.size() + " pending goals."
                 + (results.isEmpty() ? " No pending goals available or a batch is already running." : ""));
-        return "redirect:/";
+        return "redirect:/automation";
     }
 
     @PostMapping("/vectors/backfill")
@@ -51,7 +51,7 @@ public class DashboardController {
         int count = vectorBackfill.backfill(5);
         redirect.addFlashAttribute("notice", "Embedded " + count + " eligible merchants."
                 + (count == 0 ? " They may already be indexed, or Ollama may be unavailable." : ""));
-        return "redirect:/";
+        return "redirect:/automation";
     }
 
     @PostMapping("/goals/{goalId}/requeue")
