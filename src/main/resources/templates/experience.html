@@ -24,8 +24,7 @@
 <section class="panel pad"><div class="eyebrow">YOUR GOALS</div>
 <h2 th:text="${page.graph.displayName}">Customer</h2>
 <p><span th:text="${page.graph.customerId}">ID</span> ·
-<span th:text="${#lists.size(page.graph.goals)}">0</span> goals</p>
-<div class="product-overview"><div><strong>PLCC shopping</strong><span>Furniture, appliances and electronics</span></div></div>
+<span th:text="${#lists.size(page.graph.goals)}">0</span> <span th:text="${#lists.size(page.graph.goals) == 1 ? 'goal' : 'goals'}">goals</span></p>
 <p th:if="${#lists.isEmpty(page.graph.goals)}">No goals found for this customer.</p></section>
 <section id="plcc-contact" class="panel pad" th:if="${contactToken != null or contactSaved == true}">
 <div th:if="${contactSaved == true}">
