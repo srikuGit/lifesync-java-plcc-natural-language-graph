@@ -27,8 +27,10 @@ class JsonDataParserTest {
         assertTrue(goals.stream().allMatch(g -> ecns.contains(g.ecn())));
         assertTrue(goals.stream().anyMatch(g -> g.rawCategory().equals("VEHICLES")));
         assertTrue(goals.stream().anyMatch(g -> g.rawCategory().equals("APPLIANCES")));
-        assertNotNull(customers.get(0).latitude());
-        assertNotNull(merchants.get(0).longitude());
+        assertNull(customers.get(0).latitude()); // Resolved by LocationService after ingestion.
+        assertTrue(customers.stream().allMatch(c -> c.ecn().matches("[0-9]{12}")));
+        assertTrue(customers.stream().noneMatch(c -> c.name().contains("Demo")));
+        assertNull(merchants.get(0).longitude());
     }
 
     @Test

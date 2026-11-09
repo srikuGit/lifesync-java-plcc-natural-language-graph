@@ -33,120 +33,117 @@
   ],
   "customers": [
     {
-      "customerId": "C-DEMO-001",
-      "ecn": "ECN-PRODUCT-DEMO-001",
-      "name": "Alex Demo",
+      "customerId": "C001",
+      "ecn": "254325674257",
+      "name": "Arjun Campbell",
       "city": "Seattle",
       "state": "WA",
-      "postalCode": "00000",
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "plccAccountStatus": "ACTIVE"
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
     },
     {
-      "customerId": "C-DEMO-002",
-      "ecn": "ECN-PRODUCT-DEMO-002",
-      "name": "Jordan Demo",
-      "city": "Bellevue",
+      "customerId": "C002",
+      "ecn": "210288042435",
+      "name": "Liam Walker",
+      "city": "Shoreline",
       "state": "WA",
-      "postalCode": "00000",
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "plccAccountStatus": "NONE"
+      "postalCode": "98133",
+      "plccAccountStatus": "NONE",
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
     },
     {
-      "customerId": "C-DEMO-003",
-      "ecn": "ECN-PRODUCT-DEMO-003",
-      "name": "Casey Demo",
-      "city": "Tacoma",
+      "customerId": "C003",
+      "ecn": "223791672979",
+      "name": "Sofia Patel",
+      "city": "Redmond",
       "state": "WA",
-      "postalCode": "00000",
-      "latitude": 47.2529,
-      "longitude": -122.4443,
-      "plccAccountStatus": "UNKNOWN"
+      "postalCode": "98052",
+      "plccAccountStatus": "UNKNOWN",
+      "address": "15670 NE 85th St, Redmond, WA 98052"
     }
   ],
   "goals": [
     {
       "goalId": "PG-001-1",
-      "customerId": "C-DEMO-001",
+      "customerId": "C001",
       "description": "Furnish my home office",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS"
     },
     {
       "goalId": "PG-001-2",
-      "customerId": "C-DEMO-001",
+      "customerId": "C001",
       "description": "Save for a down payment to buy a home",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-001-3",
-      "customerId": "C-DEMO-001",
+      "customerId": "C001",
       "description": "Explore refinancing my current home",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-001-4",
-      "customerId": "C-DEMO-001",
+      "customerId": "C001",
       "description": "Finance a replacement family car",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN"
     },
     {
       "goalId": "PG-002-1",
-      "customerId": "C-DEMO-002",
+      "customerId": "C002",
       "description": "Furnish my home office",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS"
     },
     {
       "goalId": "PG-002-2",
-      "customerId": "C-DEMO-002",
+      "customerId": "C002",
       "description": "Save for a down payment to buy a home",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-002-3",
-      "customerId": "C-DEMO-002",
+      "customerId": "C002",
       "description": "Explore refinancing my current home",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-002-4",
-      "customerId": "C-DEMO-002",
+      "customerId": "C002",
       "description": "Finance a replacement family car",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN"
     },
     {
       "goalId": "PG-003-1",
-      "customerId": "C-DEMO-003",
+      "customerId": "C003",
       "description": "Furnish my home office",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS"
     },
     {
       "goalId": "PG-003-2",
-      "customerId": "C-DEMO-003",
+      "customerId": "C003",
       "description": "Save for a down payment to buy a home",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-003-3",
-      "customerId": "C-DEMO-003",
+      "customerId": "C003",
       "description": "Explore refinancing my current home",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-003-4",
-      "customerId": "C-DEMO-003",
+      "customerId": "C003",
       "description": "Finance a replacement family car",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN"
@@ -158,156 +155,168 @@
       "storeId": "PM-1-1-S1",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS",
-      "name": "Seattle Demo Home Store",
-      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "name": "Cedar Home Furnishings",
+      "description": "Home office furniture and furnishings retailer.",
       "active": true,
       "city": "Seattle",
       "state": "WA",
-      "latitude": 47.611200000000004,
-      "longitude": -122.3271
+      "ecn": "950768395141",
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "postalCode": "98104"
     },
     {
       "merchantId": "PM-1-2",
       "storeId": "PM-1-2-S1",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS",
-      "name": "Bellevue Demo Home Store",
-      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "name": "Evergreen Home Furnishings",
+      "description": "Home office furniture and furnishings retailer.",
       "active": true,
       "city": "Bellevue",
       "state": "WA",
-      "latitude": 47.615100000000005,
-      "longitude": -122.1965
+      "ecn": "130930709273",
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "postalCode": "98004"
     },
     {
       "merchantId": "PM-1-3",
       "storeId": "PM-1-3-S1",
       "productId": "PLCC",
       "category": "HOME_FURNISHINGS",
-      "name": "Tacoma Demo Home Store",
-      "description": "Synthetic PLCC shopping provider; not a real business.",
+      "name": "Cascadia Home Furnishings",
+      "description": "Home office furniture and furnishings retailer.",
       "active": true,
       "city": "Tacoma",
       "state": "WA",
-      "latitude": 47.2579,
-      "longitude": -122.4393
+      "ecn": "886283824998",
+      "address": "747 Market St, Tacoma, WA 98402",
+      "postalCode": "98402"
     },
     {
       "merchantId": "PM-2-1",
       "storeId": "PM-2-1-S1",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE",
-      "name": "Seattle Demo Home Lending",
-      "description": "Synthetic Home purchase provider; not a real business.",
+      "name": "Rainier Home Lending",
+      "description": "Home purchase financing provider.",
       "active": true,
       "city": "Seattle",
       "state": "WA",
-      "latitude": 47.611200000000004,
-      "longitude": -122.3271
+      "ecn": "326132780709",
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "postalCode": "98104"
     },
     {
       "merchantId": "PM-2-2",
       "storeId": "PM-2-2-S1",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE",
-      "name": "Bellevue Demo Home Lending",
-      "description": "Synthetic Home purchase provider; not a real business.",
+      "name": "Harbor Home Lending",
+      "description": "Home purchase financing provider.",
       "active": true,
       "city": "Bellevue",
       "state": "WA",
-      "latitude": 47.615100000000005,
-      "longitude": -122.1965
+      "ecn": "521285869918",
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "postalCode": "98004"
     },
     {
       "merchantId": "PM-2-3",
       "storeId": "PM-2-3-S1",
       "productId": "HOME_PURCHASE",
       "category": "HOME_PURCHASE",
-      "name": "Tacoma Demo Home Lending",
-      "description": "Synthetic Home purchase provider; not a real business.",
+      "name": "Summit Home Lending",
+      "description": "Home purchase financing provider.",
       "active": true,
       "city": "Tacoma",
       "state": "WA",
-      "latitude": 47.2579,
-      "longitude": -122.4393
+      "ecn": "265157360308",
+      "address": "747 Market St, Tacoma, WA 98402",
+      "postalCode": "98402"
     },
     {
       "merchantId": "PM-3-1",
       "storeId": "PM-3-1-S1",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE",
-      "name": "Seattle Demo Refinance Center",
-      "description": "Synthetic Home refinancing provider; not a real business.",
+      "name": "Juniper Mortgage Partners",
+      "description": "Mortgage refinancing provider.",
       "active": true,
       "city": "Seattle",
       "state": "WA",
-      "latitude": 47.611200000000004,
-      "longitude": -122.3271
+      "ecn": "604461656209",
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "postalCode": "98104"
     },
     {
       "merchantId": "PM-3-2",
       "storeId": "PM-3-2-S1",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE",
-      "name": "Bellevue Demo Refinance Center",
-      "description": "Synthetic Home refinancing provider; not a real business.",
+      "name": "Alder Mortgage Partners",
+      "description": "Mortgage refinancing provider.",
       "active": true,
       "city": "Bellevue",
       "state": "WA",
-      "latitude": 47.615100000000005,
-      "longitude": -122.1965
+      "ecn": "891875038903",
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "postalCode": "98004"
     },
     {
       "merchantId": "PM-3-3",
       "storeId": "PM-3-3-S1",
       "productId": "HOME_REFINANCE",
       "category": "HOME_REFINANCE",
-      "name": "Tacoma Demo Refinance Center",
-      "description": "Synthetic Home refinancing provider; not a real business.",
+      "name": "Willow Mortgage Partners",
+      "description": "Mortgage refinancing provider.",
       "active": true,
       "city": "Tacoma",
       "state": "WA",
-      "latitude": 47.2579,
-      "longitude": -122.4393
+      "ecn": "149754130854",
+      "address": "747 Market St, Tacoma, WA 98402",
+      "postalCode": "98402"
     },
     {
       "merchantId": "PM-4-1",
       "storeId": "PM-4-1-S1",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN",
-      "name": "Seattle Demo Auto Finance",
-      "description": "Synthetic Auto loans provider; not a real business.",
+      "name": "Maple Auto Finance",
+      "description": "Vehicle purchase financing provider.",
       "active": true,
       "city": "Seattle",
       "state": "WA",
-      "latitude": 47.611200000000004,
-      "longitude": -122.3271
+      "ecn": "376848200876",
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "postalCode": "98104"
     },
     {
       "merchantId": "PM-4-2",
       "storeId": "PM-4-2-S1",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN",
-      "name": "Bellevue Demo Auto Finance",
-      "description": "Synthetic Auto loans provider; not a real business.",
+      "name": "Olympic Auto Finance",
+      "description": "Vehicle purchase financing provider.",
       "active": true,
       "city": "Bellevue",
       "state": "WA",
-      "latitude": 47.615100000000005,
-      "longitude": -122.1965
+      "ecn": "977010812766",
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "postalCode": "98004"
     },
     {
       "merchantId": "PM-4-3",
       "storeId": "PM-4-3-S1",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN",
-      "name": "Tacoma Demo Auto Finance",
-      "description": "Synthetic Auto loans provider; not a real business.",
+      "name": "Sound Auto Finance",
+      "description": "Vehicle purchase financing provider.",
       "active": true,
       "city": "Tacoma",
       "state": "WA",
-      "latitude": 47.2579,
-      "longitude": -122.4393
+      "ecn": "689246852976",
+      "address": "747 Market St, Tacoma, WA 98402",
+      "postalCode": "98402"
     }
   ]
 }

@@ -42,7 +42,7 @@ with urllib.request.urlopen(notification, timeout=10) as response:
 assert rpc("tools/list", {})["tools"][0]["name"] == "get_customer_subgraph"
 
 for index in range(1, 4):
-    customer = f"C-DEMO-{index:03d}"
+    customer = f"C{index:03d}"
     result = graph(customer)
     assert result["customerId"] == customer
     assert len(result["goals"]) == 4
@@ -78,7 +78,7 @@ for index in range(1, 4):
             for provider in goal["providers"]:
                 assert provider["name"] in html, "UI omitted a provider"
         if index != 1:
-            assert "Demo Home Store" not in html, "Restricted PLCC merchant leaked"
+            assert "Home Furnishings" not in html, "Restricted PLCC merchant leaked"
     print(customer, "customer scope, products, account gates, distance, offers and UI passed")
 
 assert rpc("tools/call", {"name": "get_customer_subgraph",

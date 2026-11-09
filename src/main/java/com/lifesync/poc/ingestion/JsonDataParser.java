@@ -34,7 +34,7 @@ public class JsonDataParser {
             if (current == null) current = mapper.createObjectNode();
             JsonNode loc = data.path("approximateLocation");
             customers.add(new Customer(required(data, "customerId"), required(data, "ecn"),
-                    names.isArray() && !names.isEmpty() ? names.get(0).asText() : "Demo Customer",
+                    names.isArray() && !names.isEmpty() ? names.get(0).asText() : "Customer",
                     str(current, "city"), str(current, "stateCode"), str(current, "postalCode"),
                     latitude(loc), longitude(loc), accountStatus(data)));
         }

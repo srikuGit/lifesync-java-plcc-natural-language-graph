@@ -1,17 +1,17 @@
 [
   {
     "merchantId": "M001",
-    "legalName": "Home Furnishings Demo Store 01",
-    "dbaName": "Home Furnishings Demo Store 01",
+    "legalName": "Cedar Home Furnishings Collective",
+    "dbaName": "Cedar Home Furnishings Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified. Also sells home office desks, laptop accessories and electronics for home offices.",
-    "businessAddressLine1": "101 Example Commerce Plaza",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98102",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -24,22 +24,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.623,
-      "longitude": -122.321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "949943458841"
   },
   {
     "merchantId": "M002",
-    "legalName": "Appliances Demo Store 02",
-    "dbaName": "Appliances Demo Store 02",
+    "legalName": "Evergreen Appliances Collective",
+    "dbaName": "Evergreen Appliances Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "102 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Redmond",
+    "businessAddressLine1": "15670 NE 85th St",
+    "businessAddressLine2": "",
     "businessCity": "Redmond",
     "businessState": "WA",
     "businessZipCode": "98052",
@@ -54,22 +50,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.674,
-      "longitude": -122.1215,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "390043756482"
   },
   {
     "merchantId": "M003",
-    "legalName": "Electronics Demo Store 03",
-    "dbaName": "Electronics Demo Store 03",
+    "legalName": "Cascadia Electronics Collective",
+    "dbaName": "Cascadia Electronics Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "103 Example Commerce Plaza",
-    "businessAddressLine2": "Shoreline",
+    "businessAddressLine1": "17500 Midvale Ave N",
+    "businessAddressLine2": "",
     "businessCity": "Shoreline",
     "businessState": "WA",
     "businessZipCode": "98133",
@@ -84,25 +76,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7557,
-      "longitude": -122.3415,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "735880254544"
   },
   {
     "merchantId": "M004",
-    "legalName": "Home Improvement Demo Store 04",
-    "dbaName": "Home Improvement Demo Store 04",
+    "legalName": "Rainier Home Improvement Collective",
+    "dbaName": "Rainier Home Improvement Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "104 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -114,22 +102,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "874621849451"
   },
   {
     "merchantId": "M005",
-    "legalName": "Flooring Demo Store 05",
-    "dbaName": "Flooring Demo Store 05",
+    "legalName": "Harbor Flooring Collective",
+    "dbaName": "Harbor Flooring Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "105 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Bellevue",
+    "businessAddressLine1": "450 110th Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bellevue",
     "businessState": "WA",
     "businessZipCode": "98004",
@@ -145,22 +129,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "878814295875"
   },
   {
     "merchantId": "M006",
-    "legalName": "Jewelry Demo Store 06",
-    "dbaName": "Jewelry Demo Store 06",
+    "legalName": "Summit Jewelry Collective",
+    "dbaName": "Summit Jewelry Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Jewelry",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an engagement ring, a gold necklace anniversary gift, diamond earrings for a special occasion. Products available for purchase; no inventory or prices verified. Also sells home office desks, laptop accessories and electronics for home offices.",
-    "businessAddressLine1": "106 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Renton",
+    "businessAddressLine1": "1055 S Grady Way",
+    "businessAddressLine2": "",
     "businessCity": "Renton",
     "businessState": "WA",
     "businessZipCode": "98057",
@@ -175,22 +155,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.4829,
-      "longitude": -122.2171,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "141879691158"
   },
   {
     "merchantId": "M007",
-    "legalName": "Outdoor Living Demo Store 07",
-    "dbaName": "Outdoor Living Demo Store 07",
+    "legalName": "Juniper Outdoor Living Collective",
+    "dbaName": "Juniper Outdoor Living Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Outdoor Living",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a patio dining set, an outdoor grill and barbecue station, a garden pergola. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "107 Example Commerce Plaza",
-    "businessAddressLine2": "Issaquah",
+    "businessAddressLine1": "130 E Sunset Way",
+    "businessAddressLine2": "",
     "businessCity": "Issaquah",
     "businessState": "WA",
     "businessZipCode": "98027",
@@ -205,25 +181,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.5301,
-      "longitude": -122.0326,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "143438140879"
   },
   {
     "merchantId": "M008",
-    "legalName": "Specialty Retail Demo Store 08",
-    "dbaName": "Specialty Retail Demo Store 08",
+    "legalName": "Alder Specialty Retail Collective",
+    "dbaName": "Alder Specialty Retail Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Specialty Retail",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a professional acoustic guitar, a road bicycle from a specialty bike shop, a sewing machine for a hobby studio. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "108 Example Commerce Plaza",
-    "businessAddressLine2": "South Lake Union",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98109",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -235,22 +207,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.629,
-      "longitude": -122.343,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "558637196141"
   },
   {
     "merchantId": "M009",
-    "legalName": "Apparel Demo Store 09",
-    "dbaName": "Apparel Demo Store 09",
+    "legalName": "Willow Apparel Collective",
+    "dbaName": "Willow Apparel Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Apparel",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling formal suits for a new job, winter jackets and boots, wedding guest outfits. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "109 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Kirkland",
+    "businessAddressLine1": "123 5th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Kirkland",
     "businessState": "WA",
     "businessZipCode": "98033",
@@ -266,22 +234,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6769,
-      "longitude": -122.206,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "681907285223"
   },
   {
     "merchantId": "M010",
-    "legalName": "Home Furnishings Demo Store 10",
-    "dbaName": "Home Furnishings Demo Store 10",
+    "legalName": "Maple Home Furnishings Collective",
+    "dbaName": "Maple Home Furnishings Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "110 Example Commerce Plaza",
-    "businessAddressLine2": "Bothell",
+    "businessAddressLine1": "18415 101st Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bothell",
     "businessState": "WA",
     "businessZipCode": "98011",
@@ -296,25 +260,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7623,
-      "longitude": -122.2054,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "469551465343"
   },
   {
     "merchantId": "M011",
-    "legalName": "Appliances Demo Store 11",
-    "dbaName": "Appliances Demo Store 11",
+    "legalName": "Olympic Appliances Collective",
+    "dbaName": "Olympic Appliances Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified. Also offers indoor furniture and outdoor patio furniture for sale.",
-    "businessAddressLine1": "111 Example Commerce Plaza",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98102",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -326,22 +286,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.623,
-      "longitude": -122.321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "930890432019"
   },
   {
     "merchantId": "M012",
-    "legalName": "Electronics Demo Store 12",
-    "dbaName": "Electronics Demo Store 12",
+    "legalName": "Sound Electronics Collective",
+    "dbaName": "Sound Electronics Collective",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "112 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Redmond",
+    "businessAddressLine1": "15670 NE 85th St",
+    "businessAddressLine2": "",
     "businessCity": "Redmond",
     "businessState": "WA",
     "businessZipCode": "98052",
@@ -356,22 +312,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.674,
-      "longitude": -122.1215,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "390035751226"
   },
   {
     "merchantId": "M013",
-    "legalName": "Home Improvement Demo Store 13",
-    "dbaName": "Home Improvement Demo Store 13",
+    "legalName": "Cedar Home Improvement Market",
+    "dbaName": "Cedar Home Improvement Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "113 Example Commerce Plaza",
-    "businessAddressLine2": "Shoreline",
+    "businessAddressLine1": "17500 Midvale Ave N",
+    "businessAddressLine2": "",
     "businessCity": "Shoreline",
     "businessState": "WA",
     "businessZipCode": "98133",
@@ -387,25 +339,21 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7557,
-      "longitude": -122.3415,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "994497486726"
   },
   {
     "merchantId": "M014",
-    "legalName": "Flooring Demo Store 14",
-    "dbaName": "Flooring Demo Store 14",
+    "legalName": "Evergreen Flooring Market",
+    "dbaName": "Evergreen Flooring Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "114 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -417,22 +365,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "477113444137"
   },
   {
     "merchantId": "M015",
-    "legalName": "Jewelry Demo Store 15",
-    "dbaName": "Jewelry Demo Store 15",
+    "legalName": "Cascadia Jewelry Market",
+    "dbaName": "Cascadia Jewelry Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Jewelry",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an engagement ring, a gold necklace anniversary gift, diamond earrings for a special occasion. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "115 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Bellevue",
+    "businessAddressLine1": "450 110th Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bellevue",
     "businessState": "WA",
     "businessZipCode": "98004",
@@ -447,22 +391,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "875004614122"
   },
   {
     "merchantId": "M016",
-    "legalName": "Outdoor Living Demo Store 16",
-    "dbaName": "Outdoor Living Demo Store 16",
+    "legalName": "Rainier Outdoor Living Market",
+    "dbaName": "Rainier Outdoor Living Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Outdoor Living",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a patio dining set, an outdoor grill and barbecue station, a garden pergola. Products available for purchase; no inventory or prices verified. Also offers indoor furniture and outdoor patio furniture for sale.",
-    "businessAddressLine1": "116 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Renton",
+    "businessAddressLine1": "1055 S Grady Way",
+    "businessAddressLine2": "",
     "businessCity": "Renton",
     "businessState": "WA",
     "businessZipCode": "98057",
@@ -477,22 +417,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.4829,
-      "longitude": -122.2171,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "180540933101"
   },
   {
     "merchantId": "M017",
-    "legalName": "Specialty Retail Demo Store 17",
-    "dbaName": "Specialty Retail Demo Store 17",
+    "legalName": "Harbor Specialty Retail Market",
+    "dbaName": "Harbor Specialty Retail Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Specialty Retail",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a professional acoustic guitar, a road bicycle from a specialty bike shop, a sewing machine for a hobby studio. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "117 Example Commerce Plaza",
-    "businessAddressLine2": "Issaquah",
+    "businessAddressLine1": "130 E Sunset Way",
+    "businessAddressLine2": "",
     "businessCity": "Issaquah",
     "businessState": "WA",
     "businessZipCode": "98027",
@@ -508,25 +444,21 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.5301,
-      "longitude": -122.0326,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "372180505323"
   },
   {
     "merchantId": "M018",
-    "legalName": "Apparel Demo Store 18",
-    "dbaName": "Apparel Demo Store 18",
+    "legalName": "Summit Apparel Market",
+    "dbaName": "Summit Apparel Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Apparel",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling formal suits for a new job, winter jackets and boots, wedding guest outfits. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "118 Example Commerce Plaza",
-    "businessAddressLine2": "South Lake Union",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98109",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -538,22 +470,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.629,
-      "longitude": -122.343,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "631568777408"
   },
   {
     "merchantId": "M019",
-    "legalName": "Home Furnishings Demo Store 19",
-    "dbaName": "Home Furnishings Demo Store 19",
+    "legalName": "Juniper Home Furnishings Market",
+    "dbaName": "Juniper Home Furnishings Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "119 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Kirkland",
+    "businessAddressLine1": "123 5th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Kirkland",
     "businessState": "WA",
     "businessZipCode": "98033",
@@ -568,22 +496,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6769,
-      "longitude": -122.206,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "521738909025"
   },
   {
     "merchantId": "M020",
-    "legalName": "Appliances Demo Store 20",
-    "dbaName": "Appliances Demo Store 20",
+    "legalName": "Alder Appliances Market",
+    "dbaName": "Alder Appliances Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "120 Example Commerce Plaza",
-    "businessAddressLine2": "Bothell",
+    "businessAddressLine1": "18415 101st Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bothell",
     "businessState": "WA",
     "businessZipCode": "98011",
@@ -598,25 +522,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7623,
-      "longitude": -122.2054,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "275546471541"
   },
   {
     "merchantId": "M021",
-    "legalName": "Electronics Demo Store 21",
-    "dbaName": "Electronics Demo Store 21",
+    "legalName": "Willow Electronics Market",
+    "dbaName": "Willow Electronics Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "121 Example Commerce Plaza",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98102",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -629,22 +549,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.623,
-      "longitude": -122.321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "686980472962"
   },
   {
     "merchantId": "M022",
-    "legalName": "Home Improvement Demo Store 22",
-    "dbaName": "Home Improvement Demo Store 22",
+    "legalName": "Maple Home Improvement Market",
+    "dbaName": "Maple Home Improvement Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "122 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Redmond",
+    "businessAddressLine1": "15670 NE 85th St",
+    "businessAddressLine2": "",
     "businessCity": "Redmond",
     "businessState": "WA",
     "businessZipCode": "98052",
@@ -659,22 +575,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.674,
-      "longitude": -122.1215,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "435008751052"
   },
   {
     "merchantId": "M023",
-    "legalName": "Flooring Demo Store 23",
-    "dbaName": "Flooring Demo Store 23",
+    "legalName": "Olympic Flooring Market",
+    "dbaName": "Olympic Flooring Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "123 Example Commerce Plaza",
-    "businessAddressLine2": "Shoreline",
+    "businessAddressLine1": "17500 Midvale Ave N",
+    "businessAddressLine2": "",
     "businessCity": "Shoreline",
     "businessState": "WA",
     "businessZipCode": "98133",
@@ -689,25 +601,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7557,
-      "longitude": -122.3415,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "766504863525"
   },
   {
     "merchantId": "M024",
-    "legalName": "Jewelry Demo Store 24",
-    "dbaName": "Jewelry Demo Store 24",
+    "legalName": "Sound Jewelry Market",
+    "dbaName": "Sound Jewelry Market",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Jewelry",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an engagement ring, a gold necklace anniversary gift, diamond earrings for a special occasion. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "124 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -719,22 +627,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "938682900743"
   },
   {
     "merchantId": "M025",
-    "legalName": "Outdoor Living Demo Store 25",
-    "dbaName": "Outdoor Living Demo Store 25",
+    "legalName": "Cedar Outdoor Living Gallery",
+    "dbaName": "Cedar Outdoor Living Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Outdoor Living",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a patio dining set, an outdoor grill and barbecue station, a garden pergola. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "125 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Bellevue",
+    "businessAddressLine1": "450 110th Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bellevue",
     "businessState": "WA",
     "businessZipCode": "98004",
@@ -750,22 +654,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "744515672129"
   },
   {
     "merchantId": "M026",
-    "legalName": "Specialty Retail Demo Store 26",
-    "dbaName": "Specialty Retail Demo Store 26",
+    "legalName": "Evergreen Specialty Retail Gallery",
+    "dbaName": "Evergreen Specialty Retail Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Specialty Retail",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a professional acoustic guitar, a road bicycle from a specialty bike shop, a sewing machine for a hobby studio. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "126 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Renton",
+    "businessAddressLine1": "1055 S Grady Way",
+    "businessAddressLine2": "",
     "businessCity": "Renton",
     "businessState": "WA",
     "businessZipCode": "98057",
@@ -780,22 +680,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.4829,
-      "longitude": -122.2171,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "718168321745"
   },
   {
     "merchantId": "M027",
-    "legalName": "Apparel Demo Store 27",
-    "dbaName": "Apparel Demo Store 27",
+    "legalName": "Cascadia Apparel Gallery",
+    "dbaName": "Cascadia Apparel Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Apparel",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling formal suits for a new job, winter jackets and boots, wedding guest outfits. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "127 Example Commerce Plaza",
-    "businessAddressLine2": "Issaquah",
+    "businessAddressLine1": "130 E Sunset Way",
+    "businessAddressLine2": "",
     "businessCity": "Issaquah",
     "businessState": "WA",
     "businessZipCode": "98027",
@@ -810,25 +706,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.5301,
-      "longitude": -122.0326,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "903388131353"
   },
   {
     "merchantId": "M028",
-    "legalName": "Home Furnishings Demo Store 28",
-    "dbaName": "Home Furnishings Demo Store 28",
+    "legalName": "Rainier Home Furnishings Gallery",
+    "dbaName": "Rainier Home Furnishings Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "128 Example Commerce Plaza",
-    "businessAddressLine2": "South Lake Union",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98109",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -840,22 +732,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.629,
-      "longitude": -122.343,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "749723087205"
   },
   {
     "merchantId": "M029",
-    "legalName": "Appliances Demo Store 29",
-    "dbaName": "Appliances Demo Store 29",
+    "legalName": "Harbor Appliances Gallery",
+    "dbaName": "Harbor Appliances Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "129 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Kirkland",
+    "businessAddressLine1": "123 5th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Kirkland",
     "businessState": "WA",
     "businessZipCode": "98033",
@@ -871,22 +759,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6769,
-      "longitude": -122.206,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "157604155748"
   },
   {
     "merchantId": "M030",
-    "legalName": "Electronics Demo Store 30",
-    "dbaName": "Electronics Demo Store 30",
+    "legalName": "Summit Electronics Gallery",
+    "dbaName": "Summit Electronics Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "130 Example Commerce Plaza",
-    "businessAddressLine2": "Bothell",
+    "businessAddressLine1": "18415 101st Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bothell",
     "businessState": "WA",
     "businessZipCode": "98011",
@@ -901,25 +785,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7623,
-      "longitude": -122.2054,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "160777949925"
   },
   {
     "merchantId": "M031",
-    "legalName": "Home Improvement Demo Store 31",
-    "dbaName": "Home Improvement Demo Store 31",
+    "legalName": "Juniper Home Improvement Gallery",
+    "dbaName": "Juniper Home Improvement Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "131 Example Commerce Plaza",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98102",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -931,22 +811,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.623,
-      "longitude": -122.321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "729192142950"
   },
   {
     "merchantId": "M032",
-    "legalName": "Flooring Demo Store 32",
-    "dbaName": "Flooring Demo Store 32",
+    "legalName": "Alder Flooring Gallery",
+    "dbaName": "Alder Flooring Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "132 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Redmond",
+    "businessAddressLine1": "15670 NE 85th St",
+    "businessAddressLine2": "",
     "businessCity": "Redmond",
     "businessState": "WA",
     "businessZipCode": "98052",
@@ -961,22 +837,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.674,
-      "longitude": -122.1215,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "552018987394"
   },
   {
     "merchantId": "M033",
-    "legalName": "Jewelry Demo Store 33",
-    "dbaName": "Jewelry Demo Store 33",
+    "legalName": "Willow Jewelry Gallery",
+    "dbaName": "Willow Jewelry Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Jewelry",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an engagement ring, a gold necklace anniversary gift, diamond earrings for a special occasion. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "133 Example Commerce Plaza",
-    "businessAddressLine2": "Shoreline",
+    "businessAddressLine1": "17500 Midvale Ave N",
+    "businessAddressLine2": "",
     "businessCity": "Shoreline",
     "businessState": "WA",
     "businessZipCode": "98133",
@@ -992,25 +864,21 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7557,
-      "longitude": -122.3415,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "908551170734"
   },
   {
     "merchantId": "M034",
-    "legalName": "Outdoor Living Demo Store 34",
-    "dbaName": "Outdoor Living Demo Store 34",
+    "legalName": "Maple Outdoor Living Gallery",
+    "dbaName": "Maple Outdoor Living Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Outdoor Living",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a patio dining set, an outdoor grill and barbecue station, a garden pergola. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "134 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1022,22 +890,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "652291641733"
   },
   {
     "merchantId": "M035",
-    "legalName": "Specialty Retail Demo Store 35",
-    "dbaName": "Specialty Retail Demo Store 35",
+    "legalName": "Olympic Specialty Retail Gallery",
+    "dbaName": "Olympic Specialty Retail Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Specialty Retail",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a professional acoustic guitar, a road bicycle from a specialty bike shop, a sewing machine for a hobby studio. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "135 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Bellevue",
+    "businessAddressLine1": "450 110th Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bellevue",
     "businessState": "WA",
     "businessZipCode": "98004",
@@ -1052,22 +916,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "129152429229"
   },
   {
     "merchantId": "M036",
-    "legalName": "Apparel Demo Store 36",
-    "dbaName": "Apparel Demo Store 36",
+    "legalName": "Sound Apparel Gallery",
+    "dbaName": "Sound Apparel Gallery",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Apparel",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling formal suits for a new job, winter jackets and boots, wedding guest outfits. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "136 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Renton",
+    "businessAddressLine1": "1055 S Grady Way",
+    "businessAddressLine2": "",
     "businessCity": "Renton",
     "businessState": "WA",
     "businessZipCode": "98057",
@@ -1082,22 +942,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.4829,
-      "longitude": -122.2171,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "464438270336"
   },
   {
     "merchantId": "M037",
-    "legalName": "Home Furnishings Demo Store 37",
-    "dbaName": "Home Furnishings Demo Store 37",
+    "legalName": "Cedar Home Furnishings Partners",
+    "dbaName": "Cedar Home Furnishings Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "137 Example Commerce Plaza",
-    "businessAddressLine2": "Issaquah",
+    "businessAddressLine1": "130 E Sunset Way",
+    "businessAddressLine2": "",
     "businessCity": "Issaquah",
     "businessState": "WA",
     "businessZipCode": "98027",
@@ -1113,25 +969,21 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.5301,
-      "longitude": -122.0326,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "413083722249"
   },
   {
     "merchantId": "M038",
-    "legalName": "Appliances Demo Store 38",
-    "dbaName": "Appliances Demo Store 38",
+    "legalName": "Evergreen Appliances Partners",
+    "dbaName": "Evergreen Appliances Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "138 Example Commerce Plaza",
-    "businessAddressLine2": "South Lake Union",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98109",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1143,22 +995,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.629,
-      "longitude": -122.343,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "154060506858"
   },
   {
     "merchantId": "M039",
-    "legalName": "Electronics Demo Store 39",
-    "dbaName": "Electronics Demo Store 39",
+    "legalName": "Cascadia Electronics Partners",
+    "dbaName": "Cascadia Electronics Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "139 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Kirkland",
+    "businessAddressLine1": "123 5th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Kirkland",
     "businessState": "WA",
     "businessZipCode": "98033",
@@ -1173,22 +1021,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6769,
-      "longitude": -122.206,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "789695023623"
   },
   {
     "merchantId": "M040",
-    "legalName": "Home Improvement Demo Store 40",
-    "dbaName": "Home Improvement Demo Store 40",
+    "legalName": "Rainier Home Improvement Partners",
+    "dbaName": "Rainier Home Improvement Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "140 Example Commerce Plaza",
-    "businessAddressLine2": "Bothell",
+    "businessAddressLine1": "18415 101st Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bothell",
     "businessState": "WA",
     "businessZipCode": "98011",
@@ -1203,25 +1047,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7623,
-      "longitude": -122.2054,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "480459748073"
   },
   {
     "merchantId": "M041",
-    "legalName": "Flooring Demo Store 41",
-    "dbaName": "Flooring Demo Store 41",
+    "legalName": "Harbor Flooring Partners",
+    "dbaName": "Harbor Flooring Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "141 Example Commerce Plaza",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98102",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1234,22 +1074,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.623,
-      "longitude": -122.321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "352972064224"
   },
   {
     "merchantId": "M042",
-    "legalName": "Jewelry Demo Store 42",
-    "dbaName": "Jewelry Demo Store 42",
+    "legalName": "Summit Jewelry Partners",
+    "dbaName": "Summit Jewelry Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Jewelry",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an engagement ring, a gold necklace anniversary gift, diamond earrings for a special occasion. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "142 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Redmond",
+    "businessAddressLine1": "15670 NE 85th St",
+    "businessAddressLine2": "",
     "businessCity": "Redmond",
     "businessState": "WA",
     "businessZipCode": "98052",
@@ -1264,22 +1100,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.674,
-      "longitude": -122.1215,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "217140645454"
   },
   {
     "merchantId": "M043",
-    "legalName": "Outdoor Living Demo Store 43",
-    "dbaName": "Outdoor Living Demo Store 43",
+    "legalName": "Juniper Outdoor Living Partners",
+    "dbaName": "Juniper Outdoor Living Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Outdoor Living",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a patio dining set, an outdoor grill and barbecue station, a garden pergola. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "143 Example Commerce Plaza",
-    "businessAddressLine2": "Shoreline",
+    "businessAddressLine1": "17500 Midvale Ave N",
+    "businessAddressLine2": "",
     "businessCity": "Shoreline",
     "businessState": "WA",
     "businessZipCode": "98133",
@@ -1294,25 +1126,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7557,
-      "longitude": -122.3415,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "481301784687"
   },
   {
     "merchantId": "M044",
-    "legalName": "Specialty Retail Demo Store 44",
-    "dbaName": "Specialty Retail Demo Store 44",
+    "legalName": "Alder Specialty Retail Partners",
+    "dbaName": "Alder Specialty Retail Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Specialty Retail",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a professional acoustic guitar, a road bicycle from a specialty bike shop, a sewing machine for a hobby studio. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "144 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1324,22 +1152,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "356821579311"
   },
   {
     "merchantId": "M045",
-    "legalName": "Apparel Demo Store 45",
-    "dbaName": "Apparel Demo Store 45",
+    "legalName": "Willow Apparel Partners",
+    "dbaName": "Willow Apparel Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Apparel",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling formal suits for a new job, winter jackets and boots, wedding guest outfits. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "145 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Bellevue",
+    "businessAddressLine1": "450 110th Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bellevue",
     "businessState": "WA",
     "businessZipCode": "98004",
@@ -1355,22 +1179,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6101,
-      "longitude": -122.2015,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "947241465113"
   },
   {
     "merchantId": "M046",
-    "legalName": "Home Furnishings Demo Store 46",
-    "dbaName": "Home Furnishings Demo Store 46",
+    "legalName": "Maple Home Furnishings Partners",
+    "dbaName": "Maple Home Furnishings Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Furnishings",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a sectional sofa for our living room, a king-size bedroom furniture set, a dining table and six chairs. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "146 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Renton",
+    "businessAddressLine1": "1055 S Grady Way",
+    "businessAddressLine2": "",
     "businessCity": "Renton",
     "businessState": "WA",
     "businessZipCode": "98057",
@@ -1385,22 +1205,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.4829,
-      "longitude": -122.2171,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "564097483977"
   },
   {
     "merchantId": "M047",
-    "legalName": "Appliances Demo Store 47",
-    "dbaName": "Appliances Demo Store 47",
+    "legalName": "Olympic Appliances Partners",
+    "dbaName": "Olympic Appliances Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Appliances",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling an energy-efficient refrigerator, replace my washer and dryer, a new dishwasher. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "147 Example Commerce Plaza",
-    "businessAddressLine2": "Issaquah",
+    "businessAddressLine1": "130 E Sunset Way",
+    "businessAddressLine2": "",
     "businessCity": "Issaquah",
     "businessState": "WA",
     "businessZipCode": "98027",
@@ -1415,25 +1231,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.5301,
-      "longitude": -122.0326,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "491237305249"
   },
   {
     "merchantId": "M048",
-    "legalName": "Electronics Demo Store 48",
-    "dbaName": "Electronics Demo Store 48",
+    "legalName": "Sound Electronics Partners",
+    "dbaName": "Sound Electronics Partners",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Electronics",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling a gaming laptop for school and work, a 65-inch television, a mirrorless camera. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "148 Example Commerce Plaza",
-    "businessAddressLine2": "South Lake Union",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98109",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1445,22 +1257,18 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.629,
-      "longitude": -122.343,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "700060961913"
   },
   {
     "merchantId": "M049",
-    "legalName": "Home Improvement Demo Store 49",
-    "dbaName": "Home Improvement Demo Store 49",
+    "legalName": "Cedar Home Improvement Outlet",
+    "dbaName": "Cedar Home Improvement Outlet",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Home Improvement",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling renovate our kitchen with new cabinets, replace bathroom fixtures and install a vanity, a backyard deck renovation. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "149 Example Commerce Plaza",
-    "businessAddressLine2": "Downtown Kirkland",
+    "businessAddressLine1": "123 5th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Kirkland",
     "businessState": "WA",
     "businessZipCode": "98033",
@@ -1476,22 +1284,18 @@
       "IN_STORE",
       "ECOMMERCE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6769,
-      "longitude": -122.206,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "398044683070"
   },
   {
     "merchantId": "M050",
-    "legalName": "Flooring Demo Store 50",
-    "dbaName": "Flooring Demo Store 50",
+    "legalName": "Evergreen Flooring Outlet",
+    "dbaName": "Evergreen Flooring Outlet",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "Flooring",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Specialty retail store selling install hardwood flooring in our living room, replace old carpet with laminate flooring, porcelain tiles for our bathroom. Products available for purchase; no inventory or prices verified.",
-    "businessAddressLine1": "150 Example Commerce Plaza",
-    "businessAddressLine2": "Bothell",
+    "businessAddressLine1": "18415 101st Ave NE",
+    "businessAddressLine2": "",
     "businessCity": "Bothell",
     "businessState": "WA",
     "businessZipCode": "98011",
@@ -1506,25 +1310,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.7623,
-      "longitude": -122.2054,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "875131111040"
   },
   {
     "merchantId": "M051",
-    "legalName": "Demo External TRAVEL Merchant",
-    "dbaName": "Demo External TRAVEL Merchant",
+    "legalName": "Cascadia Travel Outlet",
+    "dbaName": "Cascadia Travel Outlet",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "TRAVEL",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Travel booking agency selling airline and hotel travel packages, unrelated to PLCC shopping categories.",
-    "businessAddressLine1": "Fictional Demonstration Boulevard",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1536,25 +1336,21 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "206576122377"
   },
   {
     "merchantId": "M052",
-    "legalName": "Demo External AUTOMOTIVE Merchant",
-    "dbaName": "Demo External AUTOMOTIVE Merchant",
+    "legalName": "Rainier Automotive Outlet",
+    "dbaName": "Rainier Automotive Outlet",
     "businessStructure": "Limited Liability Company",
     "industryOptionText": "AUTOMOTIVE",
     "merchantCategoryCodeTestId": "radio-merchantCategoryCode-demo",
     "businessDescription": "Automotive dealership that sells new vehicles; not a PLCC shopping category.",
-    "businessAddressLine1": "Fictional Demonstration Boulevard",
-    "businessAddressLine2": "Capitol Hill",
+    "businessAddressLine1": "1000 4th Ave",
+    "businessAddressLine2": "",
     "businessCity": "Seattle",
     "businessState": "WA",
-    "businessZipCode": "98101",
+    "businessZipCode": "98104",
     "businessCountry": "United States",
     "businessLocationState": "WA",
     "bankName": "REDACTED",
@@ -1566,10 +1362,6 @@
     "salesChannels": [
       "IN_STORE"
     ],
-    "approximateLocation": {
-      "latitude": 47.6062,
-      "longitude": -122.3321,
-      "precision": "CITY_CENTER_SYNTHETIC"
-    }
+    "ecn": "963313576482"
   }
 ]

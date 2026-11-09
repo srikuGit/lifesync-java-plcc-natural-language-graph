@@ -24,6 +24,7 @@ public class GraphRepository {
                 "CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (n:Customer) REQUIRE n.customerId IS UNIQUE",
                 "CREATE CONSTRAINT customer_ecn IF NOT EXISTS FOR (n:Customer) REQUIRE n.ecn IS UNIQUE",
                 "CREATE CONSTRAINT goal_id IF NOT EXISTS FOR (n:Goal) REQUIRE n.goalId IS UNIQUE",
+                "CREATE CONSTRAINT merchant_ecn IF NOT EXISTS FOR (n:Merchant) REQUIRE n.ecn IS UNIQUE",
                 "CREATE CONSTRAINT merchant_id IF NOT EXISTS FOR (n:Merchant) REQUIRE n.merchantId IS UNIQUE",
                 "CREATE CONSTRAINT store_id IF NOT EXISTS FOR (n:Store) REQUIRE n.storeId IS UNIQUE",
                 "CREATE CONSTRAINT category_id IF NOT EXISTS FOR (n:Category) REQUIRE n.categoryId IS UNIQUE",

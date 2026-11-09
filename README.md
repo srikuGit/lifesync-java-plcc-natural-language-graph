@@ -1,3 +1,24 @@
+## Address geocoding and MCP questions
+
+The current customer IDs are **C001**, **C002**, and **C003**. Fictional people and merchants now have realistic names and reproducible random 12-digit ECNs; goal references use the same customer ECNs. Coordinate fields have been removed from source fixtures.
+
+At startup `LocationService` resolves addresses through the **US Census geocoder** and `LocationIngestion` writes latitude/longitude, matched address, provider, timestamp, status and address fingerprint to Neo4j. Successful results are cached in `data/cache/geocoding`; unmatched or unavailable addresses remain unlocated. The public civic addresses are illustrative locations, not claims that these fictional people or businesses occupy them. The UI retains a fictional-data notice without putting “Demo” in names.
+
+The customer screen now accepts questions such as “Which auto loan provider has the lowest APR within 10 miles?”, “Show home purchase providers with offers”, and “How many providers match my car goal?”. It retrieves the customer graph once through MCP, asks Ollama for a validated selection/filter/sort plan, and executes it in Java over that response. No duplicate MCP call or LLM-generated Cypher is needed. Counts and comparisons cover the bounded returned subset, not every provider in the database. `/graph-search` now redirects to this same MCP-backed experience.
+
+Windows CMD:
+
+```bat
+set UI_CONTENT_ENABLED=false
+set NL_QUERY_LLM_ENABLED=true
+docker compose up -d --build
+docker compose --profile models run --rm pull-models
+```
+
+`UI_CONTENT_ENABLED` controls introductions; `NL_QUERY_LLM_ENABLED` independently controls questions. Questions require the configured Ollama chat model. Without it, the screen explicitly shows the unfiltered retrieved graph. Geocoding requires outbound HTTPS to `geocoding.geo.census.gov`; configure `GEOCODING_URL` for a compatible alternative endpoint. No API key is needed. Allow the domain in managed cloud environment settings; preserve TLS verification. Restart after enabling access to retry unresolved addresses. Do not erase database volumes to refresh data.
+
+See [location and query details](docs/location-and-questions.md).
+
 # LifeSync v0.9 — Multi-product customer experience and graph MCP
 
 The landing page now loads a customer's goals across **PLCC, home purchase, home refinancing, and auto loans**, then shows nearby merchants or lending providers with current synthetic offers. Enter `C-DEMO-001`, `C-DEMO-002`, or `C-DEMO-003` and switch customers on the same screen. This is a demo lookup, not authentication.

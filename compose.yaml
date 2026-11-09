@@ -53,6 +53,8 @@ services:
       neo4j:
         condition: service_healthy
     environment:
+      GEOCODING_URL: ${GEOCODING_URL:-https://geocoding.geo.census.gov/geocoder/locations/onelineaddress}
+      NL_QUERY_LLM_ENABLED: ${NL_QUERY_LLM_ENABLED:-true}
       SERVER_ADDRESS: 0.0.0.0
       LEGACY_INGESTION_ENABLED: ${LEGACY_INGESTION_ENABLED:-false}
       UI_CONTENT_ENABLED: ${UI_CONTENT_ENABLED:-true}

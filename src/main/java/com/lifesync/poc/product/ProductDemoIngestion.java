@@ -64,11 +64,11 @@ public class ProductDemoIngestion implements ApplicationRunner {
                     UNWIND $rows AS row
                     MATCH (p:Product {productId:row.productId})-[:SUPPORTS_CATEGORY]->(cat:Category {categoryId:row.category})
                     MERGE (m:Merchant {merchantId:row.merchantId})
-                    SET m.name=row.name,m.description=row.description,m.active=row.active,
+                    SET m.ecn=row.ecn,m.name=row.name,m.description=row.description,m.active=row.active,
                         m.category=row.category,m.categories=[row.category]
                     MERGE (s:Store {storeId:row.storeId})
-                    SET s.city=row.city,s.state=row.state,s.latitude=row.latitude,s.longitude=row.longitude,
-                        s.addressLine='Synthetic demo location'
+                    SET s.city=row.city,s.state=row.state,s.postalCode=row.postalCode,
+                        s.addressLine=row.address
                     MERGE (m)-[:HAS_STORE]->(s)
                     MERGE (m)-[:OFFERS_CATEGORY]->(cat)
                     MERGE (m)-[:SERVES_PRODUCT]->(p)

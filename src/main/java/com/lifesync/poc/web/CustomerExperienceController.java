@@ -9,14 +9,20 @@ import java.util.NoSuchElementException;
 @Controller
 public class CustomerExperienceController {
     private final CustomerExperienceService experience;
-    public CustomerExperienceController(CustomerExperienceService experience) { this.experience=experience; }
+    private final com.lifesync.poc.product.GraphQuestionService questions;
+    public CustomerExperienceController(CustomerExperienceService experience, com.lifesync.poc.product.GraphQuestionService questions) { this.experience=experience; this.questions=questions; }
     @GetMapping({"/","/login","/experience"})
     public String page(@RequestParam(required=false) String customerId,
-                       @RequestParam(defaultValue="") String productId, Model model) {
+                       @RequestParam(defaultValue="") String productId, @RequestParam(defaultValue="") String question, Model model) {
         model.addAttribute("customerIdInput",customerId==null?"":customerId);
         model.addAttribute("productIdInput",productId);
+        model.addAttribute("questionInput",question);
         if (customerId != null && !customerId.isBlank()) {
-            try { model.addAttribute("page",experience.load(customerId.strip(),productId)); }
+            try {
+                var page=experience.load(customerId.strip(),productId);
+                model.addAttribute("page",page);
+                if (!question.isBlank()) model.addAttribute("queryResult",questions.answer(page.graph(),question));
+            }
             catch (IllegalArgumentException | NoSuchElementException ex) { model.addAttribute("error",ex.getMessage()); }
             catch (Exception ex) { model.addAttribute("error","The customer graph is temporarily unavailable. Please retry."); }
         }

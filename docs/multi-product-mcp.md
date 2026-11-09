@@ -1,3 +1,5 @@
+> Current update: see [address geocoding and MCP questions](location-and-questions.md). Customer IDs are now C001–C003; coordinates come from address geocoding, and `/graph-search` uses the MCP question flow. The older descriptions of synthetic coordinate fields below are historical.
+
 # Multi-product customer experience (v0.9)
 
 The default landing page is a synthetic customer-ID lookup and comparison screen.

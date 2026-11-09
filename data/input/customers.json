@@ -3,11 +3,11 @@
     "data": {
       "attributes": {
         "customerId": "C001",
-        "ecn": "ECN-DEMO-00001",
+        "ecn": "254325674257",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 001"
+            "Arjun Campbell"
           ]
         },
         "addressUsageList": [
@@ -17,14 +17,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "1 Fictional Way",
-                "Downtown"
+                "1000 4th Ave"
               ],
-              "address_line_1": "1 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98101",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -32,13 +31,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6062,
-          "longitude": -122.3321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -46,11 +40,11 @@
     "data": {
       "attributes": {
         "customerId": "C002",
-        "ecn": "ECN-DEMO-00002",
+        "ecn": "210288042435",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 002"
+            "Liam Walker"
           ]
         },
         "addressUsageList": [
@@ -60,10 +54,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "2 Fictional Way",
-                "Shoreline"
+                "17500 Midvale Ave N"
               ],
-              "address_line_1": "2 Fictional Way",
+              "address_line_1": "17500 Midvale Ave N",
               "address_line_2": null,
               "city": "Shoreline",
               "stateCode": "WA",
@@ -75,13 +68,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7557,
-          "longitude": -122.3415,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
-        "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatus": "NONE",
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -89,11 +77,11 @@
     "data": {
       "attributes": {
         "customerId": "C003",
-        "ecn": "ECN-DEMO-00003",
+        "ecn": "223791672979",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 003"
+            "Sofia Patel"
           ]
         },
         "addressUsageList": [
@@ -103,10 +91,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "3 Fictional Way",
-                "Downtown Redmond"
+                "15670 NE 85th St"
               ],
-              "address_line_1": "3 Fictional Way",
+              "address_line_1": "15670 NE 85th St",
               "address_line_2": null,
               "city": "Redmond",
               "stateCode": "WA",
@@ -118,13 +105,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.674,
-          "longitude": -122.1215,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
-        "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatus": "UNKNOWN",
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -132,11 +114,11 @@
     "data": {
       "attributes": {
         "customerId": "C004",
-        "ecn": "ECN-DEMO-00004",
+        "ecn": "330108830469",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 004"
+            "Liam Singh"
           ]
         },
         "addressUsageList": [
@@ -146,14 +128,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "4 Fictional Way",
-                "Capitol Hill"
+                "1000 4th Ave"
               ],
-              "address_line_1": "4 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98102",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -161,13 +142,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.623,
-          "longitude": -122.321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -175,11 +151,11 @@
     "data": {
       "attributes": {
         "customerId": "C005",
-        "ecn": "ECN-DEMO-00005",
+        "ecn": "187585444692",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 005"
+            "Henry Morgan"
           ]
         },
         "addressUsageList": [
@@ -189,10 +165,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "5 Fictional Way",
-                "Bothell"
+                "18415 101st Ave NE"
               ],
-              "address_line_1": "5 Fictional Way",
+              "address_line_1": "18415 101st Ave NE",
               "address_line_2": null,
               "city": "Bothell",
               "stateCode": "WA",
@@ -204,13 +179,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7623,
-          "longitude": -122.2054,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -218,11 +188,11 @@
     "data": {
       "attributes": {
         "customerId": "C006",
-        "ecn": "ECN-DEMO-00006",
+        "ecn": "212561179971",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 006"
+            "Arjun Kim"
           ]
         },
         "addressUsageList": [
@@ -232,10 +202,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "6 Fictional Way",
-                "Downtown Kirkland"
+                "123 5th Ave"
               ],
-              "address_line_1": "6 Fictional Way",
+              "address_line_1": "123 5th Ave",
               "address_line_2": null,
               "city": "Kirkland",
               "stateCode": "WA",
@@ -247,13 +216,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6769,
-          "longitude": -122.206,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -261,11 +225,11 @@
     "data": {
       "attributes": {
         "customerId": "C007",
-        "ecn": "ECN-DEMO-00007",
+        "ecn": "515977317514",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 007"
+            "Mateo Hughes"
           ]
         },
         "addressUsageList": [
@@ -275,14 +239,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "7 Fictional Way",
-                "South Lake Union"
+                "1000 4th Ave"
               ],
-              "address_line_1": "7 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98109",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -290,13 +253,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.629,
-          "longitude": -122.343,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -304,11 +262,11 @@
     "data": {
       "attributes": {
         "customerId": "C008",
-        "ecn": "ECN-DEMO-00008",
+        "ecn": "915808340637",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 008"
+            "Liam Williams"
           ]
         },
         "addressUsageList": [
@@ -318,10 +276,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "8 Fictional Way",
-                "Issaquah"
+                "130 E Sunset Way"
               ],
-              "address_line_1": "8 Fictional Way",
+              "address_line_1": "130 E Sunset Way",
               "address_line_2": null,
               "city": "Issaquah",
               "stateCode": "WA",
@@ -333,13 +290,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.5301,
-          "longitude": -122.0326,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -347,11 +299,11 @@
     "data": {
       "attributes": {
         "customerId": "C009",
-        "ecn": "ECN-DEMO-00009",
+        "ecn": "604722108831",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 009"
+            "Henry Ellis"
           ]
         },
         "addressUsageList": [
@@ -361,10 +313,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "9 Fictional Way",
-                "Downtown Renton"
+                "1055 S Grady Way"
               ],
-              "address_line_1": "9 Fictional Way",
+              "address_line_1": "1055 S Grady Way",
               "address_line_2": null,
               "city": "Renton",
               "stateCode": "WA",
@@ -376,13 +327,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.4829,
-          "longitude": -122.2171,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -390,11 +336,11 @@
     "data": {
       "attributes": {
         "customerId": "C010",
-        "ecn": "ECN-DEMO-00010",
+        "ecn": "404654951980",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 010"
+            "Amelia Bennett"
           ]
         },
         "addressUsageList": [
@@ -404,10 +350,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "10 Fictional Way",
-                "Downtown Bellevue"
+                "450 110th Ave NE"
               ],
-              "address_line_1": "10 Fictional Way",
+              "address_line_1": "450 110th Ave NE",
               "address_line_2": null,
               "city": "Bellevue",
               "stateCode": "WA",
@@ -419,13 +364,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6101,
-          "longitude": -122.2015,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -433,11 +373,11 @@
     "data": {
       "attributes": {
         "customerId": "C011",
-        "ecn": "ECN-DEMO-00011",
+        "ecn": "997755209844",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 011"
+            "Priya Singh"
           ]
         },
         "addressUsageList": [
@@ -447,14 +387,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "11 Fictional Way",
-                "Downtown"
+                "1000 4th Ave"
               ],
-              "address_line_1": "11 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98101",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -462,13 +401,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6062,
-          "longitude": -122.3321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -476,11 +410,11 @@
     "data": {
       "attributes": {
         "customerId": "C012",
-        "ecn": "ECN-DEMO-00012",
+        "ecn": "180034225627",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 012"
+            "Maya Campbell"
           ]
         },
         "addressUsageList": [
@@ -490,10 +424,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "12 Fictional Way",
-                "Shoreline"
+                "17500 Midvale Ave N"
               ],
-              "address_line_1": "12 Fictional Way",
+              "address_line_1": "17500 Midvale Ave N",
               "address_line_2": null,
               "city": "Shoreline",
               "stateCode": "WA",
@@ -505,13 +438,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7557,
-          "longitude": -122.3415,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -519,11 +447,11 @@
     "data": {
       "attributes": {
         "customerId": "C013",
-        "ecn": "ECN-DEMO-00013",
+        "ecn": "470572854866",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 013"
+            "Leo Torres"
           ]
         },
         "addressUsageList": [
@@ -533,10 +461,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "13 Fictional Way",
-                "Downtown Redmond"
+                "15670 NE 85th St"
               ],
-              "address_line_1": "13 Fictional Way",
+              "address_line_1": "15670 NE 85th St",
               "address_line_2": null,
               "city": "Redmond",
               "stateCode": "WA",
@@ -548,13 +475,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.674,
-          "longitude": -122.1215,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -562,11 +484,11 @@
     "data": {
       "attributes": {
         "customerId": "C014",
-        "ecn": "ECN-DEMO-00014",
+        "ecn": "293986448733",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 014"
+            "Arjun Williams"
           ]
         },
         "addressUsageList": [
@@ -576,14 +498,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "14 Fictional Way",
-                "Capitol Hill"
+                "1000 4th Ave"
               ],
-              "address_line_1": "14 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98102",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -591,13 +512,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.623,
-          "longitude": -122.321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -605,11 +521,11 @@
     "data": {
       "attributes": {
         "customerId": "C015",
-        "ecn": "ECN-DEMO-00015",
+        "ecn": "855681749500",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 015"
+            "Zara Nguyen"
           ]
         },
         "addressUsageList": [
@@ -619,10 +535,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "15 Fictional Way",
-                "Bothell"
+                "18415 101st Ave NE"
               ],
-              "address_line_1": "15 Fictional Way",
+              "address_line_1": "18415 101st Ave NE",
               "address_line_2": null,
               "city": "Bothell",
               "stateCode": "WA",
@@ -634,13 +549,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7623,
-          "longitude": -122.2054,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -648,11 +558,11 @@
     "data": {
       "attributes": {
         "customerId": "C016",
-        "ecn": "ECN-DEMO-00016",
+        "ecn": "242641763092",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 016"
+            "Maya Torres"
           ]
         },
         "addressUsageList": [
@@ -662,10 +572,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "16 Fictional Way",
-                "Downtown Kirkland"
+                "123 5th Ave"
               ],
-              "address_line_1": "16 Fictional Way",
+              "address_line_1": "123 5th Ave",
               "address_line_2": null,
               "city": "Kirkland",
               "stateCode": "WA",
@@ -677,13 +586,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6769,
-          "longitude": -122.206,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -691,11 +595,11 @@
     "data": {
       "attributes": {
         "customerId": "C017",
-        "ecn": "ECN-DEMO-00017",
+        "ecn": "762232618125",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 017"
+            "Elena Brooks"
           ]
         },
         "addressUsageList": [
@@ -705,14 +609,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "17 Fictional Way",
-                "South Lake Union"
+                "1000 4th Ave"
               ],
-              "address_line_1": "17 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98109",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -720,13 +623,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.629,
-          "longitude": -122.343,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -734,11 +632,11 @@
     "data": {
       "attributes": {
         "customerId": "C018",
-        "ecn": "ECN-DEMO-00018",
+        "ecn": "401786549473",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 018"
+            "Aisha Bennett"
           ]
         },
         "addressUsageList": [
@@ -748,10 +646,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "18 Fictional Way",
-                "Issaquah"
+                "130 E Sunset Way"
               ],
-              "address_line_1": "18 Fictional Way",
+              "address_line_1": "130 E Sunset Way",
               "address_line_2": null,
               "city": "Issaquah",
               "stateCode": "WA",
@@ -763,13 +660,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.5301,
-          "longitude": -122.0326,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -777,11 +669,11 @@
     "data": {
       "attributes": {
         "customerId": "C019",
-        "ecn": "ECN-DEMO-00019",
+        "ecn": "358300638485",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 019"
+            "Grace Morgan"
           ]
         },
         "addressUsageList": [
@@ -791,10 +683,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "19 Fictional Way",
-                "Downtown Renton"
+                "1055 S Grady Way"
               ],
-              "address_line_1": "19 Fictional Way",
+              "address_line_1": "1055 S Grady Way",
               "address_line_2": null,
               "city": "Renton",
               "stateCode": "WA",
@@ -806,13 +697,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.4829,
-          "longitude": -122.2171,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -820,11 +706,11 @@
     "data": {
       "attributes": {
         "customerId": "C020",
-        "ecn": "ECN-DEMO-00020",
+        "ecn": "617320321954",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 020"
+            "Grace Chen"
           ]
         },
         "addressUsageList": [
@@ -834,10 +720,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "20 Fictional Way",
-                "Downtown Bellevue"
+                "450 110th Ave NE"
               ],
-              "address_line_1": "20 Fictional Way",
+              "address_line_1": "450 110th Ave NE",
               "address_line_2": null,
               "city": "Bellevue",
               "stateCode": "WA",
@@ -849,13 +734,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6101,
-          "longitude": -122.2015,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -863,11 +743,11 @@
     "data": {
       "attributes": {
         "customerId": "C021",
-        "ecn": "ECN-DEMO-00021",
+        "ecn": "642989904299",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 021"
+            "Nora Brooks"
           ]
         },
         "addressUsageList": [
@@ -877,14 +757,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "21 Fictional Way",
-                "Downtown"
+                "1000 4th Ave"
               ],
-              "address_line_1": "21 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98101",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -892,13 +771,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6062,
-          "longitude": -122.3321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -906,11 +780,11 @@
     "data": {
       "attributes": {
         "customerId": "C022",
-        "ecn": "ECN-DEMO-00022",
+        "ecn": "418973704731",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 022"
+            "Leo Foster"
           ]
         },
         "addressUsageList": [
@@ -920,10 +794,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "22 Fictional Way",
-                "Shoreline"
+                "17500 Midvale Ave N"
               ],
-              "address_line_1": "22 Fictional Way",
+              "address_line_1": "17500 Midvale Ave N",
               "address_line_2": null,
               "city": "Shoreline",
               "stateCode": "WA",
@@ -935,13 +808,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7557,
-          "longitude": -122.3415,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -949,11 +817,11 @@
     "data": {
       "attributes": {
         "customerId": "C023",
-        "ecn": "ECN-DEMO-00023",
+        "ecn": "417633413391",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 023"
+            "Oliver Parker"
           ]
         },
         "addressUsageList": [
@@ -963,10 +831,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "23 Fictional Way",
-                "Downtown Redmond"
+                "15670 NE 85th St"
               ],
-              "address_line_1": "23 Fictional Way",
+              "address_line_1": "15670 NE 85th St",
               "address_line_2": null,
               "city": "Redmond",
               "stateCode": "WA",
@@ -978,13 +845,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.674,
-          "longitude": -122.1215,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -992,11 +854,11 @@
     "data": {
       "attributes": {
         "customerId": "C024",
-        "ecn": "ECN-DEMO-00024",
+        "ecn": "423154450680",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 024"
+            "Noah Nguyen"
           ]
         },
         "addressUsageList": [
@@ -1006,14 +868,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "24 Fictional Way",
-                "Capitol Hill"
+                "1000 4th Ave"
               ],
-              "address_line_1": "24 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98102",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1021,13 +882,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.623,
-          "longitude": -122.321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1035,11 +891,11 @@
     "data": {
       "attributes": {
         "customerId": "C025",
-        "ecn": "ECN-DEMO-00025",
+        "ecn": "100849853485",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 025"
+            "Maya Reed"
           ]
         },
         "addressUsageList": [
@@ -1049,10 +905,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "25 Fictional Way",
-                "Bothell"
+                "18415 101st Ave NE"
               ],
-              "address_line_1": "25 Fictional Way",
+              "address_line_1": "18415 101st Ave NE",
               "address_line_2": null,
               "city": "Bothell",
               "stateCode": "WA",
@@ -1064,13 +919,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7623,
-          "longitude": -122.2054,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1078,11 +928,11 @@
     "data": {
       "attributes": {
         "customerId": "C026",
-        "ecn": "ECN-DEMO-00026",
+        "ecn": "730494524518",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 026"
+            "Isabella Brooks"
           ]
         },
         "addressUsageList": [
@@ -1092,10 +942,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "26 Fictional Way",
-                "Downtown Kirkland"
+                "123 5th Ave"
               ],
-              "address_line_1": "26 Fictional Way",
+              "address_line_1": "123 5th Ave",
               "address_line_2": null,
               "city": "Kirkland",
               "stateCode": "WA",
@@ -1107,13 +956,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6769,
-          "longitude": -122.206,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1121,11 +965,11 @@
     "data": {
       "attributes": {
         "customerId": "C027",
-        "ecn": "ECN-DEMO-00027",
+        "ecn": "416352393694",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 027"
+            "Mateo Foster"
           ]
         },
         "addressUsageList": [
@@ -1135,14 +979,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "27 Fictional Way",
-                "South Lake Union"
+                "1000 4th Ave"
               ],
-              "address_line_1": "27 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98109",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1150,13 +993,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.629,
-          "longitude": -122.343,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1164,11 +1002,11 @@
     "data": {
       "attributes": {
         "customerId": "C028",
-        "ecn": "ECN-DEMO-00028",
+        "ecn": "394046290298",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 028"
+            "Ethan Patel"
           ]
         },
         "addressUsageList": [
@@ -1178,10 +1016,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "28 Fictional Way",
-                "Issaquah"
+                "130 E Sunset Way"
               ],
-              "address_line_1": "28 Fictional Way",
+              "address_line_1": "130 E Sunset Way",
               "address_line_2": null,
               "city": "Issaquah",
               "stateCode": "WA",
@@ -1193,13 +1030,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.5301,
-          "longitude": -122.0326,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1207,11 +1039,11 @@
     "data": {
       "attributes": {
         "customerId": "C029",
-        "ecn": "ECN-DEMO-00029",
+        "ecn": "417042159633",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 029"
+            "Henry Torres"
           ]
         },
         "addressUsageList": [
@@ -1221,10 +1053,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "29 Fictional Way",
-                "Downtown Renton"
+                "1055 S Grady Way"
               ],
-              "address_line_1": "29 Fictional Way",
+              "address_line_1": "1055 S Grady Way",
               "address_line_2": null,
               "city": "Renton",
               "stateCode": "WA",
@@ -1236,13 +1067,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.4829,
-          "longitude": -122.2171,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1250,11 +1076,11 @@
     "data": {
       "attributes": {
         "customerId": "C030",
-        "ecn": "ECN-DEMO-00030",
+        "ecn": "835552460490",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 030"
+            "Aisha Shah"
           ]
         },
         "addressUsageList": [
@@ -1264,10 +1090,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "30 Fictional Way",
-                "Downtown Bellevue"
+                "450 110th Ave NE"
               ],
-              "address_line_1": "30 Fictional Way",
+              "address_line_1": "450 110th Ave NE",
               "address_line_2": null,
               "city": "Bellevue",
               "stateCode": "WA",
@@ -1279,13 +1104,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6101,
-          "longitude": -122.2015,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1293,11 +1113,11 @@
     "data": {
       "attributes": {
         "customerId": "C031",
-        "ecn": "ECN-DEMO-00031",
+        "ecn": "825244914506",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 031"
+            "Elena Bennett"
           ]
         },
         "addressUsageList": [
@@ -1307,14 +1127,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "31 Fictional Way",
-                "Downtown"
+                "1000 4th Ave"
               ],
-              "address_line_1": "31 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98101",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1322,13 +1141,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6062,
-          "longitude": -122.3321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1336,11 +1150,11 @@
     "data": {
       "attributes": {
         "customerId": "C032",
-        "ecn": "ECN-DEMO-00032",
+        "ecn": "320577213366",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 032"
+            "Henry Foster"
           ]
         },
         "addressUsageList": [
@@ -1350,10 +1164,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "32 Fictional Way",
-                "Shoreline"
+                "17500 Midvale Ave N"
               ],
-              "address_line_1": "32 Fictional Way",
+              "address_line_1": "17500 Midvale Ave N",
               "address_line_2": null,
               "city": "Shoreline",
               "stateCode": "WA",
@@ -1365,13 +1178,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7557,
-          "longitude": -122.3415,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1379,11 +1187,11 @@
     "data": {
       "attributes": {
         "customerId": "C033",
-        "ecn": "ECN-DEMO-00033",
+        "ecn": "199116416263",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 033"
+            "Isabella Chen"
           ]
         },
         "addressUsageList": [
@@ -1393,10 +1201,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "33 Fictional Way",
-                "Downtown Redmond"
+                "15670 NE 85th St"
               ],
-              "address_line_1": "33 Fictional Way",
+              "address_line_1": "15670 NE 85th St",
               "address_line_2": null,
               "city": "Redmond",
               "stateCode": "WA",
@@ -1408,13 +1215,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.674,
-          "longitude": -122.1215,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1422,11 +1224,11 @@
     "data": {
       "attributes": {
         "customerId": "C034",
-        "ecn": "ECN-DEMO-00034",
+        "ecn": "870118483042",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 034"
+            "Sofia Brooks"
           ]
         },
         "addressUsageList": [
@@ -1436,14 +1238,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "34 Fictional Way",
-                "Capitol Hill"
+                "1000 4th Ave"
               ],
-              "address_line_1": "34 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98102",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1451,13 +1252,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.623,
-          "longitude": -122.321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1465,11 +1261,11 @@
     "data": {
       "attributes": {
         "customerId": "C035",
-        "ecn": "ECN-DEMO-00035",
+        "ecn": "899463732622",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 035"
+            "Ethan Foster"
           ]
         },
         "addressUsageList": [
@@ -1479,10 +1275,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "35 Fictional Way",
-                "Bothell"
+                "18415 101st Ave NE"
               ],
-              "address_line_1": "35 Fictional Way",
+              "address_line_1": "18415 101st Ave NE",
               "address_line_2": null,
               "city": "Bothell",
               "stateCode": "WA",
@@ -1494,13 +1289,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7623,
-          "longitude": -122.2054,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1508,11 +1298,11 @@
     "data": {
       "attributes": {
         "customerId": "C036",
-        "ecn": "ECN-DEMO-00036",
+        "ecn": "552265267166",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 036"
+            "Noah Morgan"
           ]
         },
         "addressUsageList": [
@@ -1522,10 +1312,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "36 Fictional Way",
-                "Downtown Kirkland"
+                "123 5th Ave"
               ],
-              "address_line_1": "36 Fictional Way",
+              "address_line_1": "123 5th Ave",
               "address_line_2": null,
               "city": "Kirkland",
               "stateCode": "WA",
@@ -1537,13 +1326,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6769,
-          "longitude": -122.206,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1551,11 +1335,11 @@
     "data": {
       "attributes": {
         "customerId": "C037",
-        "ecn": "ECN-DEMO-00037",
+        "ecn": "559540037803",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 037"
+            "Amelia Patel"
           ]
         },
         "addressUsageList": [
@@ -1565,14 +1349,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "37 Fictional Way",
-                "South Lake Union"
+                "1000 4th Ave"
               ],
-              "address_line_1": "37 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98109",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1580,13 +1363,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.629,
-          "longitude": -122.343,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1594,11 +1372,11 @@
     "data": {
       "attributes": {
         "customerId": "C038",
-        "ecn": "ECN-DEMO-00038",
+        "ecn": "783444956126",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 038"
+            "James Chen"
           ]
         },
         "addressUsageList": [
@@ -1608,10 +1386,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "38 Fictional Way",
-                "Issaquah"
+                "130 E Sunset Way"
               ],
-              "address_line_1": "38 Fictional Way",
+              "address_line_1": "130 E Sunset Way",
               "address_line_2": null,
               "city": "Issaquah",
               "stateCode": "WA",
@@ -1623,13 +1400,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.5301,
-          "longitude": -122.0326,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1637,11 +1409,11 @@
     "data": {
       "attributes": {
         "customerId": "C039",
-        "ecn": "ECN-DEMO-00039",
+        "ecn": "371963227644",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 039"
+            "Grace Rivera"
           ]
         },
         "addressUsageList": [
@@ -1651,10 +1423,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "39 Fictional Way",
-                "Downtown Renton"
+                "1055 S Grady Way"
               ],
-              "address_line_1": "39 Fictional Way",
+              "address_line_1": "1055 S Grady Way",
               "address_line_2": null,
               "city": "Renton",
               "stateCode": "WA",
@@ -1666,13 +1437,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.4829,
-          "longitude": -122.2171,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1680,11 +1446,11 @@
     "data": {
       "attributes": {
         "customerId": "C040",
-        "ecn": "ECN-DEMO-00040",
+        "ecn": "337514847785",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 040"
+            "Grace Sullivan"
           ]
         },
         "addressUsageList": [
@@ -1694,10 +1460,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "40 Fictional Way",
-                "Downtown Bellevue"
+                "450 110th Ave NE"
               ],
-              "address_line_1": "40 Fictional Way",
+              "address_line_1": "450 110th Ave NE",
               "address_line_2": null,
               "city": "Bellevue",
               "stateCode": "WA",
@@ -1709,13 +1474,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6101,
-          "longitude": -122.2015,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1723,11 +1483,11 @@
     "data": {
       "attributes": {
         "customerId": "C041",
-        "ecn": "ECN-DEMO-00041",
+        "ecn": "105663441315",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 041"
+            "Isabella Patel"
           ]
         },
         "addressUsageList": [
@@ -1737,14 +1497,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "41 Fictional Way",
-                "Downtown"
+                "1000 4th Ave"
               ],
-              "address_line_1": "41 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98101",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1752,13 +1511,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6062,
-          "longitude": -122.3321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1766,11 +1520,11 @@
     "data": {
       "attributes": {
         "customerId": "C042",
-        "ecn": "ECN-DEMO-00042",
+        "ecn": "457206182139",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 042"
+            "Lucas Bennett"
           ]
         },
         "addressUsageList": [
@@ -1780,10 +1534,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "42 Fictional Way",
-                "Shoreline"
+                "17500 Midvale Ave N"
               ],
-              "address_line_1": "42 Fictional Way",
+              "address_line_1": "17500 Midvale Ave N",
               "address_line_2": null,
               "city": "Shoreline",
               "stateCode": "WA",
@@ -1795,13 +1548,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7557,
-          "longitude": -122.3415,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1809,11 +1557,11 @@
     "data": {
       "attributes": {
         "customerId": "C043",
-        "ecn": "ECN-DEMO-00043",
+        "ecn": "375662337697",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 043"
+            "Elena Parker"
           ]
         },
         "addressUsageList": [
@@ -1823,10 +1571,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "43 Fictional Way",
-                "Downtown Redmond"
+                "15670 NE 85th St"
               ],
-              "address_line_1": "43 Fictional Way",
+              "address_line_1": "15670 NE 85th St",
               "address_line_2": null,
               "city": "Redmond",
               "stateCode": "WA",
@@ -1838,13 +1585,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.674,
-          "longitude": -122.1215,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1852,11 +1594,11 @@
     "data": {
       "attributes": {
         "customerId": "C044",
-        "ecn": "ECN-DEMO-00044",
+        "ecn": "843873040155",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 044"
+            "Ethan Bennett"
           ]
         },
         "addressUsageList": [
@@ -1866,14 +1608,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "44 Fictional Way",
-                "Capitol Hill"
+                "1000 4th Ave"
               ],
-              "address_line_1": "44 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98102",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -1881,13 +1622,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.623,
-          "longitude": -122.321,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1895,11 +1631,11 @@
     "data": {
       "attributes": {
         "customerId": "C045",
-        "ecn": "ECN-DEMO-00045",
+        "ecn": "542596361772",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 045"
+            "Maya Kim"
           ]
         },
         "addressUsageList": [
@@ -1909,10 +1645,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "45 Fictional Way",
-                "Bothell"
+                "18415 101st Ave NE"
               ],
-              "address_line_1": "45 Fictional Way",
+              "address_line_1": "18415 101st Ave NE",
               "address_line_2": null,
               "city": "Bothell",
               "stateCode": "WA",
@@ -1924,13 +1659,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.7623,
-          "longitude": -122.2054,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1938,11 +1668,11 @@
     "data": {
       "attributes": {
         "customerId": "C046",
-        "ecn": "ECN-DEMO-00046",
+        "ecn": "856675130036",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 046"
+            "Oliver Patel"
           ]
         },
         "addressUsageList": [
@@ -1952,10 +1682,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "46 Fictional Way",
-                "Downtown Kirkland"
+                "123 5th Ave"
               ],
-              "address_line_1": "46 Fictional Way",
+              "address_line_1": "123 5th Ave",
               "address_line_2": null,
               "city": "Kirkland",
               "stateCode": "WA",
@@ -1967,13 +1696,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6769,
-          "longitude": -122.206,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -1981,11 +1705,11 @@
     "data": {
       "attributes": {
         "customerId": "C047",
-        "ecn": "ECN-DEMO-00047",
+        "ecn": "897797496112",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 047"
+            "James Parker"
           ]
         },
         "addressUsageList": [
@@ -1995,14 +1719,13 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "47 Fictional Way",
-                "South Lake Union"
+                "1000 4th Ave"
               ],
-              "address_line_1": "47 Fictional Way",
+              "address_line_1": "1000 4th Ave",
               "address_line_2": null,
               "city": "Seattle",
               "stateCode": "WA",
-              "postalCode": "98109",
+              "postalCode": "98104",
               "countryCode": "US",
               "countryName": "United States"
             }
@@ -2010,13 +1733,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.629,
-          "longitude": -122.343,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -2024,11 +1742,11 @@
     "data": {
       "attributes": {
         "customerId": "C048",
-        "ecn": "ECN-DEMO-00048",
+        "ecn": "142208167094",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 048"
+            "Aisha Patel"
           ]
         },
         "addressUsageList": [
@@ -2038,10 +1756,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "48 Fictional Way",
-                "Issaquah"
+                "130 E Sunset Way"
               ],
-              "address_line_1": "48 Fictional Way",
+              "address_line_1": "130 E Sunset Way",
               "address_line_2": null,
               "city": "Issaquah",
               "stateCode": "WA",
@@ -2053,13 +1770,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.5301,
-          "longitude": -122.0326,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -2067,11 +1779,11 @@
     "data": {
       "attributes": {
         "customerId": "C049",
-        "ecn": "ECN-DEMO-00049",
+        "ecn": "613307752936",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 049"
+            "Grace Nguyen"
           ]
         },
         "addressUsageList": [
@@ -2081,10 +1793,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "49 Fictional Way",
-                "Downtown Renton"
+                "1055 S Grady Way"
               ],
-              "address_line_1": "49 Fictional Way",
+              "address_line_1": "1055 S Grady Way",
               "address_line_2": null,
               "city": "Renton",
               "stateCode": "WA",
@@ -2096,13 +1807,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.4829,
-          "longitude": -122.2171,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "ACTIVE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   },
@@ -2110,11 +1816,11 @@
     "data": {
       "attributes": {
         "customerId": "C050",
-        "ecn": "ECN-DEMO-00050",
+        "ecn": "565211177576",
         "name": {
           "format": null,
           "fullName": [
-            "Demo Customer 050"
+            "Mateo Patel"
           ]
         },
         "addressUsageList": [
@@ -2124,10 +1830,9 @@
             "address": {
               "format": "Freeform",
               "addressLineList": [
-                "50 Fictional Way",
-                "Downtown Bellevue"
+                "450 110th Ave NE"
               ],
-              "address_line_1": "50 Fictional Way",
+              "address_line_1": "450 110th Ave NE",
               "address_line_2": null,
               "city": "Bellevue",
               "stateCode": "WA",
@@ -2139,13 +1844,8 @@
         ],
         "phoneList": [],
         "emailList": [],
-        "approximateLocation": {
-          "latitude": 47.6101,
-          "longitude": -122.2015,
-          "precision": "CITY_CENTER_SYNTHETIC"
-        },
         "plccAccountStatus": "NONE",
-        "plccAccountStatusSource": "SYNTHETIC_DEMO_FIXTURE"
+        "plccAccountStatusSource": "FICTIONAL_FIXTURE"
       }
     }
   }

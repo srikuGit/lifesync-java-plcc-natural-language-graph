@@ -46,3 +46,7 @@ lifesync:
     enabled: ${OFFERS_ENABLED:true}
     base-url: ${OFFERS_BASE_URL:http://localhost:8080/mock-offers}
     api-key: ${OFFERS_API_KEY:}
+
+  geocoding:
+    url: ${GEOCODING_URL:https://geocoding.geo.census.gov/geocoder/locations/onelineaddress}
+    cache-dir: ${GEOCODING_CACHE_DIR:./data/cache/geocoding}
