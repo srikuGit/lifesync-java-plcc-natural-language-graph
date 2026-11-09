@@ -23,6 +23,7 @@ public class CustomerSubgraphService {
                 () -> new NoSuchElementException("No demo customer found."));
         var goals = graph.goals(customerId,filter);
         if (goals.size() > 200) throw new IllegalArgumentException("Customer graph exceeds the demo limit of 200 goals.");
+        var offerSnapshot=offers.snapshot();
         List<CustomerSubgraph.Goal> result = new ArrayList<>();
         for (var g : goals) {
             String status = "MATCHED";
@@ -37,7 +38,7 @@ public class CustomerSubgraphService {
                     double miles = distances.miles(customer.latitude(),customer.longitude(),m.latitude(),m.longitude());
                     if (!Double.isFinite(miles)) continue;
                     unique.putIfAbsent(m.storeId(),new CustomerSubgraph.Provider(m.merchantId(),m.storeId(),
-                        m.name(),m.city(),m.state(),miles,offers.current(g.product(),m.merchantId(),customerId)));
+                        m.name(),m.city(),m.state(),miles,ProductOfferCatalog.eligible(offerSnapshot,g.product(),m.merchantId(),customerId,java.time.LocalDate.now())));
                 }
                 providers = unique.values().stream().sorted(Comparator
                     .comparingDouble(CustomerSubgraph.Provider::distanceMiles)

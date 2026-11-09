@@ -21,9 +21,13 @@ public class ProductOfferCatalog {
         this.path = Path.of(inputDir, "product-offers.json");
     }
     public List<Offer> current(String product, String merchant, String customer) {
+        return eligible(snapshot(),product,merchant,customer,LocalDate.now());
+    }
+    /** One immutable feed snapshot per graph retrieval, rather than one disk read per provider. */
+    public List<Offer> snapshot() {
         try {
             List<Offer> all = Arrays.asList(mapper.readValue(path.toFile(), Offer[].class));
-            return eligible(all, product, merchant, customer, LocalDate.now());
+            return List.copyOf(all);
         } catch (Exception ex) {
             // An unavailable offer feed must never produce invented terms.
             return List.of();

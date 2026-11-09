@@ -1,3 +1,5 @@
+> Current UI: no product dropdown. View goals retrieves all products and renders factual content without an LLM call. Fifty fixture customers each have four product goals. Customer and provider addresses are distinct. Questions use POST /experience/question and a customer-checked, five-minute session snapshot, so no new MCP retrieval occurs. Optional introductions use POST /experience/explain. Both update a server-rendered fragment asynchronously; model work is bounded to two concurrent tasks with a 15-second timeout. The existing GET question links remain compatible but new interactive submissions do not reload the page.
+
 # Address-based location and questions over MCP
 
 ## Location flow

@@ -11,14 +11,14 @@
     },
     {
       "productId": "HOME_PURCHASE",
-      "name": "Home purchase",
+      "name": "Home lending \u00b7 Home purchase",
       "categories": [
         "HOME_PURCHASE"
       ]
     },
     {
       "productId": "HOME_REFINANCE",
-      "name": "Home refinancing",
+      "name": "Home lending \u00b7 Refinancing",
       "categories": [
         "HOME_REFINANCE"
       ]
@@ -61,6 +61,476 @@
       "postalCode": "98052",
       "plccAccountStatus": "UNKNOWN",
       "address": "15670 NE 85th St, Redmond, WA 98052"
+    },
+    {
+      "customerId": "C004",
+      "ecn": "330108830469",
+      "name": "Liam Singh",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C005",
+      "ecn": "187585444692",
+      "name": "Henry Morgan",
+      "city": "Bothell",
+      "state": "WA",
+      "postalCode": "98011",
+      "plccAccountStatus": "NONE",
+      "address": "18415 101st Ave NE, Bothell, WA 98011"
+    },
+    {
+      "customerId": "C006",
+      "ecn": "212561179971",
+      "name": "Arjun Kim",
+      "city": "Kirkland",
+      "state": "WA",
+      "postalCode": "98033",
+      "plccAccountStatus": "NONE",
+      "address": "123 5th Ave, Kirkland, WA 98033"
+    },
+    {
+      "customerId": "C007",
+      "ecn": "515977317514",
+      "name": "Mateo Hughes",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C008",
+      "ecn": "915808340637",
+      "name": "Liam Williams",
+      "city": "Issaquah",
+      "state": "WA",
+      "postalCode": "98027",
+      "plccAccountStatus": "NONE",
+      "address": "130 E Sunset Way, Issaquah, WA 98027"
+    },
+    {
+      "customerId": "C009",
+      "ecn": "604722108831",
+      "name": "Henry Ellis",
+      "city": "Renton",
+      "state": "WA",
+      "postalCode": "98057",
+      "plccAccountStatus": "NONE",
+      "address": "1055 S Grady Way, Renton, WA 98057"
+    },
+    {
+      "customerId": "C010",
+      "ecn": "404654951980",
+      "name": "Amelia Bennett",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "98004",
+      "plccAccountStatus": "ACTIVE",
+      "address": "450 110th Ave NE, Bellevue, WA 98004"
+    },
+    {
+      "customerId": "C011",
+      "ecn": "997755209844",
+      "name": "Priya Singh",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C012",
+      "ecn": "180034225627",
+      "name": "Maya Campbell",
+      "city": "Shoreline",
+      "state": "WA",
+      "postalCode": "98133",
+      "plccAccountStatus": "NONE",
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+    },
+    {
+      "customerId": "C013",
+      "ecn": "470572854866",
+      "name": "Leo Torres",
+      "city": "Redmond",
+      "state": "WA",
+      "postalCode": "98052",
+      "plccAccountStatus": "ACTIVE",
+      "address": "15670 NE 85th St, Redmond, WA 98052"
+    },
+    {
+      "customerId": "C014",
+      "ecn": "293986448733",
+      "name": "Arjun Williams",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C015",
+      "ecn": "855681749500",
+      "name": "Zara Nguyen",
+      "city": "Bothell",
+      "state": "WA",
+      "postalCode": "98011",
+      "plccAccountStatus": "NONE",
+      "address": "18415 101st Ave NE, Bothell, WA 98011"
+    },
+    {
+      "customerId": "C016",
+      "ecn": "242641763092",
+      "name": "Maya Torres",
+      "city": "Kirkland",
+      "state": "WA",
+      "postalCode": "98033",
+      "plccAccountStatus": "ACTIVE",
+      "address": "123 5th Ave, Kirkland, WA 98033"
+    },
+    {
+      "customerId": "C017",
+      "ecn": "762232618125",
+      "name": "Elena Brooks",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C018",
+      "ecn": "401786549473",
+      "name": "Aisha Bennett",
+      "city": "Issaquah",
+      "state": "WA",
+      "postalCode": "98027",
+      "plccAccountStatus": "NONE",
+      "address": "130 E Sunset Way, Issaquah, WA 98027"
+    },
+    {
+      "customerId": "C019",
+      "ecn": "358300638485",
+      "name": "Grace Morgan",
+      "city": "Renton",
+      "state": "WA",
+      "postalCode": "98057",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1055 S Grady Way, Renton, WA 98057"
+    },
+    {
+      "customerId": "C020",
+      "ecn": "617320321954",
+      "name": "Grace Chen",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "98004",
+      "plccAccountStatus": "NONE",
+      "address": "450 110th Ave NE, Bellevue, WA 98004"
+    },
+    {
+      "customerId": "C021",
+      "ecn": "642989904299",
+      "name": "Nora Brooks",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C022",
+      "ecn": "418973704731",
+      "name": "Leo Foster",
+      "city": "Shoreline",
+      "state": "WA",
+      "postalCode": "98133",
+      "plccAccountStatus": "ACTIVE",
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+    },
+    {
+      "customerId": "C023",
+      "ecn": "417633413391",
+      "name": "Oliver Parker",
+      "city": "Redmond",
+      "state": "WA",
+      "postalCode": "98052",
+      "plccAccountStatus": "NONE",
+      "address": "15670 NE 85th St, Redmond, WA 98052"
+    },
+    {
+      "customerId": "C024",
+      "ecn": "423154450680",
+      "name": "Noah Nguyen",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C025",
+      "ecn": "100849853485",
+      "name": "Maya Reed",
+      "city": "Bothell",
+      "state": "WA",
+      "postalCode": "98011",
+      "plccAccountStatus": "ACTIVE",
+      "address": "18415 101st Ave NE, Bothell, WA 98011"
+    },
+    {
+      "customerId": "C026",
+      "ecn": "730494524518",
+      "name": "Isabella Brooks",
+      "city": "Kirkland",
+      "state": "WA",
+      "postalCode": "98033",
+      "plccAccountStatus": "NONE",
+      "address": "123 5th Ave, Kirkland, WA 98033"
+    },
+    {
+      "customerId": "C027",
+      "ecn": "416352393694",
+      "name": "Mateo Foster",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C028",
+      "ecn": "394046290298",
+      "name": "Ethan Patel",
+      "city": "Issaquah",
+      "state": "WA",
+      "postalCode": "98027",
+      "plccAccountStatus": "ACTIVE",
+      "address": "130 E Sunset Way, Issaquah, WA 98027"
+    },
+    {
+      "customerId": "C029",
+      "ecn": "417042159633",
+      "name": "Henry Torres",
+      "city": "Renton",
+      "state": "WA",
+      "postalCode": "98057",
+      "plccAccountStatus": "NONE",
+      "address": "1055 S Grady Way, Renton, WA 98057"
+    },
+    {
+      "customerId": "C030",
+      "ecn": "835552460490",
+      "name": "Aisha Shah",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "98004",
+      "plccAccountStatus": "NONE",
+      "address": "450 110th Ave NE, Bellevue, WA 98004"
+    },
+    {
+      "customerId": "C031",
+      "ecn": "825244914506",
+      "name": "Elena Bennett",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C032",
+      "ecn": "320577213366",
+      "name": "Henry Foster",
+      "city": "Shoreline",
+      "state": "WA",
+      "postalCode": "98133",
+      "plccAccountStatus": "NONE",
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+    },
+    {
+      "customerId": "C033",
+      "ecn": "199116416263",
+      "name": "Isabella Chen",
+      "city": "Redmond",
+      "state": "WA",
+      "postalCode": "98052",
+      "plccAccountStatus": "NONE",
+      "address": "15670 NE 85th St, Redmond, WA 98052"
+    },
+    {
+      "customerId": "C034",
+      "ecn": "870118483042",
+      "name": "Sofia Brooks",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C035",
+      "ecn": "899463732622",
+      "name": "Ethan Foster",
+      "city": "Bothell",
+      "state": "WA",
+      "postalCode": "98011",
+      "plccAccountStatus": "NONE",
+      "address": "18415 101st Ave NE, Bothell, WA 98011"
+    },
+    {
+      "customerId": "C036",
+      "ecn": "552265267166",
+      "name": "Noah Morgan",
+      "city": "Kirkland",
+      "state": "WA",
+      "postalCode": "98033",
+      "plccAccountStatus": "NONE",
+      "address": "123 5th Ave, Kirkland, WA 98033"
+    },
+    {
+      "customerId": "C037",
+      "ecn": "559540037803",
+      "name": "Amelia Patel",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C038",
+      "ecn": "783444956126",
+      "name": "James Chen",
+      "city": "Issaquah",
+      "state": "WA",
+      "postalCode": "98027",
+      "plccAccountStatus": "NONE",
+      "address": "130 E Sunset Way, Issaquah, WA 98027"
+    },
+    {
+      "customerId": "C039",
+      "ecn": "371963227644",
+      "name": "Grace Rivera",
+      "city": "Renton",
+      "state": "WA",
+      "postalCode": "98057",
+      "plccAccountStatus": "NONE",
+      "address": "1055 S Grady Way, Renton, WA 98057"
+    },
+    {
+      "customerId": "C040",
+      "ecn": "337514847785",
+      "name": "Grace Sullivan",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "98004",
+      "plccAccountStatus": "ACTIVE",
+      "address": "450 110th Ave NE, Bellevue, WA 98004"
+    },
+    {
+      "customerId": "C041",
+      "ecn": "105663441315",
+      "name": "Isabella Patel",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C042",
+      "ecn": "457206182139",
+      "name": "Lucas Bennett",
+      "city": "Shoreline",
+      "state": "WA",
+      "postalCode": "98133",
+      "plccAccountStatus": "NONE",
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+    },
+    {
+      "customerId": "C043",
+      "ecn": "375662337697",
+      "name": "Elena Parker",
+      "city": "Redmond",
+      "state": "WA",
+      "postalCode": "98052",
+      "plccAccountStatus": "ACTIVE",
+      "address": "15670 NE 85th St, Redmond, WA 98052"
+    },
+    {
+      "customerId": "C044",
+      "ecn": "843873040155",
+      "name": "Ethan Bennett",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C045",
+      "ecn": "542596361772",
+      "name": "Maya Kim",
+      "city": "Bothell",
+      "state": "WA",
+      "postalCode": "98011",
+      "plccAccountStatus": "NONE",
+      "address": "18415 101st Ave NE, Bothell, WA 98011"
+    },
+    {
+      "customerId": "C046",
+      "ecn": "856675130036",
+      "name": "Oliver Patel",
+      "city": "Kirkland",
+      "state": "WA",
+      "postalCode": "98033",
+      "plccAccountStatus": "ACTIVE",
+      "address": "123 5th Ave, Kirkland, WA 98033"
+    },
+    {
+      "customerId": "C047",
+      "ecn": "897797496112",
+      "name": "James Parker",
+      "city": "Seattle",
+      "state": "WA",
+      "postalCode": "98104",
+      "plccAccountStatus": "NONE",
+      "address": "1000 4th Ave, Seattle, WA 98104"
+    },
+    {
+      "customerId": "C048",
+      "ecn": "142208167094",
+      "name": "Aisha Patel",
+      "city": "Issaquah",
+      "state": "WA",
+      "postalCode": "98027",
+      "plccAccountStatus": "NONE",
+      "address": "130 E Sunset Way, Issaquah, WA 98027"
+    },
+    {
+      "customerId": "C049",
+      "ecn": "613307752936",
+      "name": "Grace Nguyen",
+      "city": "Renton",
+      "state": "WA",
+      "postalCode": "98057",
+      "plccAccountStatus": "ACTIVE",
+      "address": "1055 S Grady Way, Renton, WA 98057"
+    },
+    {
+      "customerId": "C050",
+      "ecn": "565211177576",
+      "name": "Mateo Patel",
+      "city": "Bellevue",
+      "state": "WA",
+      "postalCode": "98004",
+      "plccAccountStatus": "NONE",
+      "address": "450 110th Ave NE, Bellevue, WA 98004"
     }
   ],
   "goals": [
@@ -147,6 +617,1322 @@
       "description": "Finance a replacement family car",
       "productId": "AUTO_LOAN",
       "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-004-1",
+      "customerId": "C004",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-004-2",
+      "customerId": "C004",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-004-3",
+      "customerId": "C004",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-004-4",
+      "customerId": "C004",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-005-1",
+      "customerId": "C005",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-005-2",
+      "customerId": "C005",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-005-3",
+      "customerId": "C005",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-005-4",
+      "customerId": "C005",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-006-1",
+      "customerId": "C006",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-006-2",
+      "customerId": "C006",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-006-3",
+      "customerId": "C006",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-006-4",
+      "customerId": "C006",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-007-1",
+      "customerId": "C007",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-007-2",
+      "customerId": "C007",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-007-3",
+      "customerId": "C007",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-007-4",
+      "customerId": "C007",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-008-1",
+      "customerId": "C008",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-008-2",
+      "customerId": "C008",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-008-3",
+      "customerId": "C008",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-008-4",
+      "customerId": "C008",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-009-1",
+      "customerId": "C009",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-009-2",
+      "customerId": "C009",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-009-3",
+      "customerId": "C009",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-009-4",
+      "customerId": "C009",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-010-1",
+      "customerId": "C010",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-010-2",
+      "customerId": "C010",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-010-3",
+      "customerId": "C010",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-010-4",
+      "customerId": "C010",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-011-1",
+      "customerId": "C011",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-011-2",
+      "customerId": "C011",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-011-3",
+      "customerId": "C011",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-011-4",
+      "customerId": "C011",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-012-1",
+      "customerId": "C012",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-012-2",
+      "customerId": "C012",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-012-3",
+      "customerId": "C012",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-012-4",
+      "customerId": "C012",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-013-1",
+      "customerId": "C013",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-013-2",
+      "customerId": "C013",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-013-3",
+      "customerId": "C013",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-013-4",
+      "customerId": "C013",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-014-1",
+      "customerId": "C014",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-014-2",
+      "customerId": "C014",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-014-3",
+      "customerId": "C014",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-014-4",
+      "customerId": "C014",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-015-1",
+      "customerId": "C015",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-015-2",
+      "customerId": "C015",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-015-3",
+      "customerId": "C015",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-015-4",
+      "customerId": "C015",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-016-1",
+      "customerId": "C016",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-016-2",
+      "customerId": "C016",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-016-3",
+      "customerId": "C016",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-016-4",
+      "customerId": "C016",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-017-1",
+      "customerId": "C017",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-017-2",
+      "customerId": "C017",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-017-3",
+      "customerId": "C017",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-017-4",
+      "customerId": "C017",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-018-1",
+      "customerId": "C018",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-018-2",
+      "customerId": "C018",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-018-3",
+      "customerId": "C018",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-018-4",
+      "customerId": "C018",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-019-1",
+      "customerId": "C019",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-019-2",
+      "customerId": "C019",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-019-3",
+      "customerId": "C019",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-019-4",
+      "customerId": "C019",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-020-1",
+      "customerId": "C020",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-020-2",
+      "customerId": "C020",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-020-3",
+      "customerId": "C020",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-020-4",
+      "customerId": "C020",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-021-1",
+      "customerId": "C021",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-021-2",
+      "customerId": "C021",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-021-3",
+      "customerId": "C021",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-021-4",
+      "customerId": "C021",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-022-1",
+      "customerId": "C022",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-022-2",
+      "customerId": "C022",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-022-3",
+      "customerId": "C022",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-022-4",
+      "customerId": "C022",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-023-1",
+      "customerId": "C023",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-023-2",
+      "customerId": "C023",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-023-3",
+      "customerId": "C023",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-023-4",
+      "customerId": "C023",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-024-1",
+      "customerId": "C024",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-024-2",
+      "customerId": "C024",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-024-3",
+      "customerId": "C024",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-024-4",
+      "customerId": "C024",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-025-1",
+      "customerId": "C025",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-025-2",
+      "customerId": "C025",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-025-3",
+      "customerId": "C025",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-025-4",
+      "customerId": "C025",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-026-1",
+      "customerId": "C026",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-026-2",
+      "customerId": "C026",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-026-3",
+      "customerId": "C026",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-026-4",
+      "customerId": "C026",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-027-1",
+      "customerId": "C027",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-027-2",
+      "customerId": "C027",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-027-3",
+      "customerId": "C027",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-027-4",
+      "customerId": "C027",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-028-1",
+      "customerId": "C028",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-028-2",
+      "customerId": "C028",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-028-3",
+      "customerId": "C028",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-028-4",
+      "customerId": "C028",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-029-1",
+      "customerId": "C029",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-029-2",
+      "customerId": "C029",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-029-3",
+      "customerId": "C029",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-029-4",
+      "customerId": "C029",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-030-1",
+      "customerId": "C030",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-030-2",
+      "customerId": "C030",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-030-3",
+      "customerId": "C030",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-030-4",
+      "customerId": "C030",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-031-1",
+      "customerId": "C031",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-031-2",
+      "customerId": "C031",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-031-3",
+      "customerId": "C031",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-031-4",
+      "customerId": "C031",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-032-1",
+      "customerId": "C032",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-032-2",
+      "customerId": "C032",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-032-3",
+      "customerId": "C032",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-032-4",
+      "customerId": "C032",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-033-1",
+      "customerId": "C033",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-033-2",
+      "customerId": "C033",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-033-3",
+      "customerId": "C033",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-033-4",
+      "customerId": "C033",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-034-1",
+      "customerId": "C034",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-034-2",
+      "customerId": "C034",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-034-3",
+      "customerId": "C034",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-034-4",
+      "customerId": "C034",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-035-1",
+      "customerId": "C035",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-035-2",
+      "customerId": "C035",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-035-3",
+      "customerId": "C035",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-035-4",
+      "customerId": "C035",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-036-1",
+      "customerId": "C036",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-036-2",
+      "customerId": "C036",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-036-3",
+      "customerId": "C036",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-036-4",
+      "customerId": "C036",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-037-1",
+      "customerId": "C037",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-037-2",
+      "customerId": "C037",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-037-3",
+      "customerId": "C037",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-037-4",
+      "customerId": "C037",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-038-1",
+      "customerId": "C038",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-038-2",
+      "customerId": "C038",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-038-3",
+      "customerId": "C038",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-038-4",
+      "customerId": "C038",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-039-1",
+      "customerId": "C039",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-039-2",
+      "customerId": "C039",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-039-3",
+      "customerId": "C039",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-039-4",
+      "customerId": "C039",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-040-1",
+      "customerId": "C040",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-040-2",
+      "customerId": "C040",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-040-3",
+      "customerId": "C040",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-040-4",
+      "customerId": "C040",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-041-1",
+      "customerId": "C041",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-041-2",
+      "customerId": "C041",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-041-3",
+      "customerId": "C041",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-041-4",
+      "customerId": "C041",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-042-1",
+      "customerId": "C042",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-042-2",
+      "customerId": "C042",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-042-3",
+      "customerId": "C042",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-042-4",
+      "customerId": "C042",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-043-1",
+      "customerId": "C043",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-043-2",
+      "customerId": "C043",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-043-3",
+      "customerId": "C043",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-043-4",
+      "customerId": "C043",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-044-1",
+      "customerId": "C044",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-044-2",
+      "customerId": "C044",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-044-3",
+      "customerId": "C044",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-044-4",
+      "customerId": "C044",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-045-1",
+      "customerId": "C045",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-045-2",
+      "customerId": "C045",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-045-3",
+      "customerId": "C045",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-045-4",
+      "customerId": "C045",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-046-1",
+      "customerId": "C046",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-046-2",
+      "customerId": "C046",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-046-3",
+      "customerId": "C046",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-046-4",
+      "customerId": "C046",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-047-1",
+      "customerId": "C047",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-047-2",
+      "customerId": "C047",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-047-3",
+      "customerId": "C047",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-047-4",
+      "customerId": "C047",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-048-1",
+      "customerId": "C048",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-048-2",
+      "customerId": "C048",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-048-3",
+      "customerId": "C048",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-048-4",
+      "customerId": "C048",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-049-1",
+      "customerId": "C049",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-049-2",
+      "customerId": "C049",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-049-3",
+      "customerId": "C049",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-049-4",
+      "customerId": "C049",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
+    },
+    {
+      "goalId": "PG-050-1",
+      "customerId": "C050",
+      "description": "Furnish my home office",
+      "productId": "PLCC",
+      "category": "HOME_FURNISHINGS"
+    },
+    {
+      "goalId": "PG-050-2",
+      "customerId": "C050",
+      "description": "Save for a down payment to buy a home",
+      "productId": "HOME_PURCHASE",
+      "category": "HOME_PURCHASE"
+    },
+    {
+      "goalId": "PG-050-3",
+      "customerId": "C050",
+      "description": "Explore refinancing my current home",
+      "productId": "HOME_REFINANCE",
+      "category": "HOME_REFINANCE"
+    },
+    {
+      "goalId": "PG-050-4",
+      "customerId": "C050",
+      "description": "Finance a replacement family car",
+      "productId": "AUTO_LOAN",
+      "category": "AUTO_LOAN"
     }
   ],
   "merchants": [
@@ -161,7 +1947,7 @@
       "city": "Seattle",
       "state": "WA",
       "ecn": "950768395141",
-      "address": "1000 4th Ave, Seattle, WA 98104",
+      "address": "600 4th Ave, Seattle, WA 98104",
       "postalCode": "98104"
     },
     {
@@ -175,7 +1961,7 @@
       "city": "Bellevue",
       "state": "WA",
       "ecn": "130930709273",
-      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "address": "1111 110th Ave NE, Bellevue, WA 98004",
       "postalCode": "98004"
     },
     {
@@ -189,7 +1975,7 @@
       "city": "Tacoma",
       "state": "WA",
       "ecn": "886283824998",
-      "address": "747 Market St, Tacoma, WA 98402",
+      "address": "1102 Tacoma Ave S, Tacoma, WA 98402",
       "postalCode": "98402"
     },
     {
@@ -203,7 +1989,7 @@
       "city": "Seattle",
       "state": "WA",
       "ecn": "326132780709",
-      "address": "1000 4th Ave, Seattle, WA 98104",
+      "address": "600 4th Ave, Seattle, WA 98104",
       "postalCode": "98104"
     },
     {
@@ -217,7 +2003,7 @@
       "city": "Bellevue",
       "state": "WA",
       "ecn": "521285869918",
-      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "address": "1111 110th Ave NE, Bellevue, WA 98004",
       "postalCode": "98004"
     },
     {
@@ -231,7 +2017,7 @@
       "city": "Tacoma",
       "state": "WA",
       "ecn": "265157360308",
-      "address": "747 Market St, Tacoma, WA 98402",
+      "address": "1102 Tacoma Ave S, Tacoma, WA 98402",
       "postalCode": "98402"
     },
     {
@@ -245,7 +2031,7 @@
       "city": "Seattle",
       "state": "WA",
       "ecn": "604461656209",
-      "address": "1000 4th Ave, Seattle, WA 98104",
+      "address": "600 4th Ave, Seattle, WA 98104",
       "postalCode": "98104"
     },
     {
@@ -259,7 +2045,7 @@
       "city": "Bellevue",
       "state": "WA",
       "ecn": "891875038903",
-      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "address": "1111 110th Ave NE, Bellevue, WA 98004",
       "postalCode": "98004"
     },
     {
@@ -273,7 +2059,7 @@
       "city": "Tacoma",
       "state": "WA",
       "ecn": "149754130854",
-      "address": "747 Market St, Tacoma, WA 98402",
+      "address": "1102 Tacoma Ave S, Tacoma, WA 98402",
       "postalCode": "98402"
     },
     {
@@ -287,7 +2073,7 @@
       "city": "Seattle",
       "state": "WA",
       "ecn": "376848200876",
-      "address": "1000 4th Ave, Seattle, WA 98104",
+      "address": "600 4th Ave, Seattle, WA 98104",
       "postalCode": "98104"
     },
     {
@@ -301,7 +2087,7 @@
       "city": "Bellevue",
       "state": "WA",
       "ecn": "977010812766",
-      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "address": "1111 110th Ave NE, Bellevue, WA 98004",
       "postalCode": "98004"
     },
     {
@@ -315,7 +2101,7 @@
       "city": "Tacoma",
       "state": "WA",
       "ecn": "689246852976",
-      "address": "747 Market St, Tacoma, WA 98402",
+      "address": "1102 Tacoma Ave S, Tacoma, WA 98402",
       "postalCode": "98402"
     }
   ]

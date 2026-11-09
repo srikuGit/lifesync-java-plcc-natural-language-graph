@@ -1,0 +1,27 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><body>
+<div th:fragment="results">
+<p th:if="${page.source == 'GRAPH_GROUNDED_LLM'}" class="notice">AI introductions use the displayed customer facts. Exact offer terms remain below.</p>
+<section class="panel pad" th:if="${queryResult != null}"><h2>Graph query results</h2><p th:text="${queryResult.message}"></p><p th:text="|${queryResult.goalCount} goals · ${queryResult.providerCount} provider matches · ${queryResult.offerCount} offers|"></p></section>
+<section class="panel pad" th:each="goal : ${queryResult != null ? queryResult.graph.goals : page.graph.goals}">
+<span class="pill" th:text="${goal.productName}">Product</span>
+<h2 th:text="${goal.description}">Goal</h2>
+<p th:text="${page.introductions[goal.goalId]}">Introduction</p>
+<p class="muted" th:if="${!#lists.isEmpty(goal.providers)}">Nearest five providers by straight-line distance.
+Offers within each provider are ordered by highest discount for PLCC, or lowest APR then fees for loans.
+Different loan terms and costs may not be directly comparable.</p>
+<p th:if="${queryResult != null and #lists.isEmpty(goal.providers)}">No providers in the retrieved subset match this query.</p>
+<div class="cards">
+<article class="merchant" th:each="provider : ${goal.providers}">
+<div class="merchant-title"><h3 th:text="${provider.name}">Provider</h3>
+<span class="distance" th:text="${provider.distanceLabel()}">Distance</span></div>
+<p><span th:text="${provider.city}">City</span>, <span th:text="${provider.state}">State</span></p>
+<p th:if="${#lists.isEmpty(provider.offers)}">No current offers available.</p>
+<div class="reason" th:each="offer, stat : ${provider.offers}">
+<span class="pill" th:if="${stat.first}">Top offer by this product's comparison rule</span>
+<h4 th:text="${offer.title}">Offer</h4>
+<p th:if="${offer.discountPercent != null}" th:text="|${offer.discountPercent}% demo discount|"></p>
+<p th:if="${offer.apr != null}" th:text="|${offer.apr}% demo APR · ${offer.termMonths} months · $${offer.fees} fees|"></p>
+<p th:text="${offer.terms}">Terms</p>
+<p class="muted" th:text="|Valid ${offer.validFrom} through ${offer.validUntil}|"></p>
+</div></article></div></section>
+</div></body></html>

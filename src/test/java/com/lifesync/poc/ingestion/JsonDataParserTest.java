@@ -34,6 +34,23 @@ class JsonDataParserTest {
     }
 
     @Test
+    void everyFixtureCustomerHasAllProductsAndProvidersUseDistinctAddresses() throws Exception {
+        var root=mapper.readTree(new File("data/input/products-demo.json"));
+        assertEquals(50,root.path("customers").size());
+        assertEquals(200,root.path("goals").size());
+        var customerAddresses=new java.util.HashSet<String>();
+        for(var customer:root.path("customers")) {
+            customerAddresses.add(customer.path("address").asText());
+            var products=new java.util.HashSet<String>();
+            for(var goal:root.path("goals")) if(goal.path("customerId").equals(customer.path("customerId")))
+                products.add(goal.path("productId").asText());
+            assertEquals(Set.of("PLCC","HOME_PURCHASE","HOME_REFINANCE","AUTO_LOAN"),products);
+        }
+        for(var merchant:root.path("merchants"))
+            assertFalse(customerAddresses.contains(merchant.path("address").asText()),"Customer/provider address collision");
+    }
+
+    @Test
     void onlyAllowListedMerchantFieldsAreRetained() throws Exception {
         List<Merchant> merchants = parser.readMerchants(mapper.readTree(new File("data/input/merchants.json")));
         String json = mapper.writeValueAsString(merchants);

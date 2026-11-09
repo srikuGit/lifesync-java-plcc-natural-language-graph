@@ -19,6 +19,13 @@ addresses={
  'Kirkland':('123 5th Ave','98033'), 'Issaquah':('130 E Sunset Way','98027'),
  'Bellevue':('450 110th Ave NE','98004'), 'Renton':('1055 S Grady Way','98057'),
  'Tacoma':('747 Market St','98402')}
+# Distinct public example addresses for providers; never reuse customer anchors.
+provider_addresses={
+ 'Seattle':('600 4th Ave','98104'), 'Shoreline':('345 NE 175th St','98155'),
+ 'Redmond':('15990 NE 85th St','98052'), 'Bothell':('18215 98th Ave NE','98011'),
+ 'Kirkland':('308 Kirkland Ave','98033'), 'Issaquah':('10 W Sunset Way','98027'),
+ 'Bellevue':('1111 110th Ave NE','98004'), 'Renton':('100 Mill Ave S','98057'),
+ 'Tacoma':('1102 Tacoma Ave S','98402')}
 first=['Amelia','Oliver','Priya','Ethan','Sofia','Noah','Maya','Lucas','Isabella','Liam','Aisha','James','Elena','Henry','Zara','Leo','Nora','Arjun','Grace','Mateo']
 last=['Bennett','Patel','Chen','Rivera','Morgan','Brooks','Shah','Williams','Nguyen','Foster','Reed','Sullivan','Kim','Hughes','Torres','Campbell','Ellis','Parker','Singh','Walker']
 names=[a+' '+b for a in first for b in last];rng.shuffle(names)
@@ -40,20 +47,32 @@ for i,m in enumerate(merchants):
  name=brands[i%len(brands)]+' '+category+' '+['Collective','Market','Gallery','Partners','Outlet'][i//len(brands)]
  m.update(ecn=ecn(),legalName=name,dbaName=name)
  m['businessDescription']=re.sub('(?i)demo|synthetic','fictional',m['businessDescription'])
- street,zip=addresses[m['businessCity']];m.update(businessAddressLine1=street,businessAddressLine2='',businessZipCode=zip)
+ street,zip=provider_addresses[m['businessCity']];m.update(businessAddressLine1=street,businessAddressLine2='',businessZipCode=zip)
  m.pop('approximateLocation',None)
 save('merchants.json',merchants)
 product=read('products-demo.json');idmap={}
-for i,c in enumerate(product['customers']):
- old=c['customerId'];source=customers[i]['data']['attributes'];idmap[old]=source['customerId']
- source['plccAccountStatus']=c['plccAccountStatus']
+prior={c['customerId']:c for c in product['customers']}
+product['customers']=[]
+for i,entry in enumerate(customers):
+ source=entry['data']['attributes'];cid=source['customerId']
+ if cid in prior: source['plccAccountStatus']=prior[cid]['plccAccountStatus']
  a=source['addressUsageList'][0]['address']
- c.update(customerId=source['customerId'],ecn=source['ecn'],name=source['name']['fullName'][0],city=a['city'],postalCode=a['postalCode'],
-          address=f"{a['address_line_1']}, {a['city']}, WA {a['postalCode']}")
- c.pop('latitude',None);c.pop('longitude',None)
-for g in product['goals']:g['customerId']=idmap.get(g['customerId'],g['customerId'])
+ product['customers'].append(dict(customerId=cid,ecn=source['ecn'],name=source['name']['fullName'][0],
+     city=a['city'],state='WA',postalCode=a['postalCode'],plccAccountStatus=source['plccAccountStatus'],
+     address=f"{a['address_line_1']}, {a['city']}, WA {a['postalCode']}"))
+ idmap[cid]=cid
+product['goals']=[]
+for i,c in enumerate(product['customers'],1):
+ for j,p in enumerate(product['products'],1):
+  product['goals'].append(dict(goalId=f'PG-{i:03d}-{j}',customerId=c['customerId'],
+      description=['Furnish my home office','Save for a down payment to buy a home',
+                   'Explore refinancing my current home','Finance a replacement family car'][j-1],
+      productId=p['productId'],category=p['categories'][0]))
+for p in product['products']:
+ if p['productId']=='HOME_PURCHASE':p['name']='Home lending · Home purchase'
+ if p['productId']=='HOME_REFINANCE':p['name']='Home lending · Refinancing'
 for i,m in enumerate(product['merchants']):
- city=m['city'];street,zip=addresses[city]
+ city=m['city'];street,zip=provider_addresses[city]
  m.update(ecn=ecn(),name=brands[i]+' '+{'PLCC':'Home Furnishings','HOME_PURCHASE':'Home Lending','HOME_REFINANCE':'Mortgage Partners','AUTO_LOAN':'Auto Finance'}[m['productId']],
           description={'PLCC':'Home office furniture and furnishings retailer.','HOME_PURCHASE':'Home purchase financing provider.','HOME_REFINANCE':'Mortgage refinancing provider.','AUTO_LOAN':'Vehicle purchase financing provider.'}[m['productId']],
           address=f'{street}, {city}, WA {zip}',postalCode=zip)

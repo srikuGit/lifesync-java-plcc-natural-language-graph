@@ -26,7 +26,7 @@ class CustomerExperienceServiceTest {
         when(models.getIfAvailable()).thenReturn(chat);
         when(chat.call(anyString())).thenReturn("[{\"goalId\":\"G1\",\"text\":\"Explore nearby home lending providers for your purchase goal.\"}]");
         var service=new CustomerExperienceService(client,models,new ObjectMapper(),true);
-        var page=service.load("PRIVATE-ID","");
+        var page=service.compose(service.load("PRIVATE-ID","").graph());
         assertEquals("GRAPH_GROUNDED_LLM",page.source());
         assertSame(graph,page.graph());
         verify(client).customerGraph("PRIVATE-ID","");
@@ -50,6 +50,12 @@ class CustomerExperienceServiceTest {
         }
         when(chat.call(anyString())).thenThrow(new IllegalStateException("Unavailable"));
         assertEquals("FACTUAL_TEMPLATE",service.compose(graph).source());
+    }
+    @Test void initialLoadNeverWaitsForLlmEvenWhenEnabled() {
+        when(client.customerGraph("PRIVATE-ID", "")).thenReturn(graph);
+        var page=new CustomerExperienceService(client,models,new ObjectMapper(),true).load("PRIVATE-ID", "");
+        assertEquals("FACTUAL_TEMPLATE",page.source());
+        verifyNoInteractions(models);
     }
     @Test void disabledLlmStillLoadsMcpAndRendersAllGoals() {
         when(client.customerGraph("PRIVATE-ID","")).thenReturn(graph);

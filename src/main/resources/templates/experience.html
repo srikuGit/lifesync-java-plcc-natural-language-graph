@@ -4,23 +4,18 @@
 <title>LifeSync · Your goals</title><link rel="stylesheet" href="/css/app.css"></head>
 <body>
 <header class="top"><div class="shell nav"><a class="brand" href="/">LifeSync <small>DEMO BANK</small></a>
-<nav><a href="/">Your goals</a><a href="/graph-search">Ask the graph</a><a href="/automation">Legacy automation</a></nav></div></header>
+<nav><a href="/">Your goals</a><a href="/automation">Legacy automation</a></nav></div></header>
 <main class="shell">
 <section class="hero"><div><div class="eyebrow">A PLAN FOR WHAT COMES NEXT</div>
 <h1>Your goals. Nearby possibilities.</h1><p>Explore shopping, buying a home, refinancing, and auto financing in one place.</p></div></section>
 <section class="panel pad">
-<h2 th:text="${page == null ? 'Welcome to LifeSync' : 'Find another customer or filter your goals'}">Welcome</h2>
+<h2 th:text="${page == null ? 'Welcome to LifeSync' : 'Find another customer'}">Welcome</h2>
 <p>Enter a synthetic customer ID to view their goals. This demo lookup does not authenticate a customer.</p>
-<form class="searchform" method="get" action="/experience">
+<form id="customer-form" class="searchform" method="get" action="/experience">
 <label for="customerId">Customer ID<input id="customerId" name="customerId" maxlength="64" required
  placeholder="C001" th:value="${customerIdInput}"></label>
-<label for="productId">Product<select id="productId" name="productId" class="product-select">
-<option value="" th:selected="${productIdInput == ''}">All products</option>
-<option value="PLCC" th:selected="${productIdInput == 'PLCC'}">PLCC shopping</option>
-<option value="HOME_PURCHASE" th:selected="${productIdInput == 'HOME_PURCHASE'}">Home purchase</option>
-<option value="HOME_REFINANCE" th:selected="${productIdInput == 'HOME_REFINANCE'}">Home refinancing</option>
-<option value="AUTO_LOAN" th:selected="${productIdInput == 'AUTO_LOAN'}">Auto loans</option>
-</select></label><label for="question">Ask your graph<input id="question" name="question" maxlength="500" placeholder="Which home loan provider has the lowest APR within 10 miles?" th:value="${questionInput}"></label><button class="btn" type="submit">View goals</button></form>
+<button class="btn" type="submit">View goals</button></form>
+<p id="load-status" role="status" aria-live="polite"></p>
 <div class="chips"><a href="/experience?customerId=C001">C001 · Seattle</a>
 <a href="/experience?customerId=C002">C002 · Shoreline</a>
 <a href="/experience?customerId=C003">C003 · Redmond</a></div>
@@ -30,32 +25,29 @@
 <h2 th:text="${page.graph.displayName}">Customer</h2>
 <p><span th:text="${page.graph.customerId}">ID</span> ·
 <span th:text="${#lists.size(page.graph.goals)}">0</span> goals</p>
-<p th:if="${page.source == 'GRAPH_GROUNDED_LLM'}">AI-generated introductions use this customer's retrieved facts. Compare the exact offer terms below.</p>
-<p th:if="${#lists.isEmpty(page.graph.goals)}">No goals found for the selected product.</p></section>
-<section class="panel pad" th:if="${queryResult != null}"><h2>Graph query results</h2><p th:text="${queryResult.message}"></p><p th:text="|${queryResult.goalCount} goals · ${queryResult.providerCount} provider matches · ${queryResult.offerCount} offers|"></p></section>
-<section class="panel pad" th:each="goal : ${queryResult != null ? queryResult.graph.goals : page.graph.goals}">
-<span class="pill" th:text="${goal.productName}">Product</span>
-<h2 th:text="${goal.description}">Goal</h2>
-<p th:text="${page.introductions[goal.goalId]}">Introduction</p>
-<p class="muted" th:if="${!#lists.isEmpty(goal.providers)}">Nearest five providers by straight-line distance.
-Offers within each provider are ordered by highest discount for PLCC, or lowest APR then fees for loans.
-Different loan terms and costs may not be directly comparable.</p>
-<p th:if="${queryResult != null and #lists.isEmpty(goal.providers)}">No providers in the retrieved subset match this query.</p>
-<div class="cards">
-<article class="merchant" th:each="provider : ${goal.providers}">
-<div class="merchant-title"><h3 th:text="${provider.name}">Provider</h3>
-<span class="distance" th:text="|${#numbers.formatDecimal(provider.distanceMiles,1,1)} mi|">Distance</span></div>
-<p><span th:text="${provider.city}">City</span>, <span th:text="${provider.state}">State</span></p>
-<p th:if="${#lists.isEmpty(provider.offers)}">No current offers available.</p>
-<div class="reason" th:each="offer, stat : ${provider.offers}">
-<span class="pill" th:if="${stat.first}">Top offer by this product's comparison rule</span>
-<h4 th:text="${offer.title}">Offer</h4>
-<p th:if="${offer.discountPercent != null}" th:text="|${offer.discountPercent}% demo discount|"></p>
-<p th:if="${offer.apr != null}" th:text="|${offer.apr}% demo APR · ${offer.termMonths} months · $${offer.fees} fees|"></p>
-<p th:text="${offer.terms}">Terms</p>
-<p class="muted" th:text="|Valid ${offer.validFrom} through ${offer.validUntil}|"></p>
-</div></article></div></section></div>
+<div class="product-overview"><div><strong>PLCC shopping</strong><span>Furniture, appliances and electronics</span></div>
+<div><strong>Home lending</strong><span>Buying a home and refinancing</span></div>
+<div><strong>Auto loans</strong><span>Vehicle purchase financing</span></div></div>
+<p th:if="${#lists.isEmpty(page.graph.goals)}">No goals found for this customer.</p></section>
+<section id="ask-goals" class="panel pad">
+<h2>Ask about these goals and offers</h2>
+<p>Use this optional search to narrow the results below or compare nearby providers. It uses only this customer's loaded goals and offers.</p>
+<form id="question-form" class="searchform" method="get" action="/experience">
+<input type="hidden" name="customerId" th:value="${page.graph.customerId}">
+<label for="question">Your question<input id="question" name="question" maxlength="500" required
+ placeholder="Which auto loan provider has the lowest APR within 10 miles?" th:value="${questionInput}"></label>
+<button class="btn" type="submit">Ask about my goals</button>
+</form>
+<div class="chips"><button type="button" class="btn secondary question-example" data-question="Show my home lending goals, including buying and refinancing">Home lending goals</button>
+<button type="button" class="btn secondary question-example" data-question="Which auto loan provider has the lowest APR within 10 miles?">Compare auto loans</button>
+<button type="button" class="btn secondary question-example" data-question="Show shopping offers with at least 15% discount">Shopping discounts</button></div>
+<div class="actions"><a class="btn secondary" th:href="@{/experience(customerId=${page.graph.customerId})}">Refresh all goals and offers</a>
+<button id="explain-goals" type="button" class="btn secondary">Explain all goals with AI</button></div>
+<p id="question-status" role="status" aria-live="polite"></p>
+</section>
+<div id="goal-results" aria-busy="false"><div th:replace="~{fragments/customer-goals :: results}"></div></div>
+</div>
 <p class="footnote">Synthetic demo only. Providers, locations, discounts, and loan terms are fictional.
 Loan matching is product relevance, not a credit decision or offer of credit. PLCC merchant access requires an ACTIVE demo account.
 Customer-ID lookup and the local MCP endpoint are not production authentication. No email is sent.</p>
-</main></body></html>
+</main><script src="/js/experience.js" defer></script></body></html>

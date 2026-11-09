@@ -1,3 +1,11 @@
+## Faster goals page and clearer product navigation
+
+**View goals** now loads every product without a dropdown or LLM wait. All 50 fixture customers, C001–C050, have PLCC shopping, home purchase, refinancing, and auto-loan goals. Home purchase and refinancing are clearly labeled **Home lending**.
+
+Customers and providers now use different address fixtures. Restart after rebuilding to geocode changed provider addresses; the cache keys change automatically. Distances are never inflated: exact co-locations display “Same mapped location”, and nonzero distances below 0.1 mile display “<0.1 mi”.
+
+After loading a customer, use **Ask about these goals and offers** to narrow or compare the displayed results. Example buttons show home lending, auto-loan APR, and shopping-discount questions. Questions run asynchronously and reuse the session's loaded customer graph for up to five minutes; they do not reload MCP. **Refresh all goals and offers** obtains fresh data. Switching customers invalidates the previous snapshot. Optional **Explain all goals with AI** is separate from the initial load. AI work has a 15-second server limit and bounded concurrency, with explicit fallback when unavailable. Live provider/model speed still depends on your environment.
+
 ## Address geocoding and MCP questions
 
 The current customer IDs are **C001**, **C002**, and **C003**. Fictional people and merchants now have realistic names and reproducible random 12-digit ECNs; goal references use the same customer ECNs. Coordinate fields have been removed from source fixtures.
