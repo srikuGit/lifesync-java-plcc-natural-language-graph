@@ -11,7 +11,7 @@ async function ask(path) {
   const results = document.querySelector('#goal-results');
   const buttons = [...document.querySelectorAll('#ask-goals button')];
   const timeout = new AbortController();
-  const timer = setTimeout(() => timeout.abort(), 20000);
+  const timer = setTimeout(() => timeout.abort(), 65000);
   buttons.forEach(b => { b.disabled = true; });
   results.setAttribute('aria-busy', 'true');
   status.textContent = 'Working on your question. Your loaded goals remain available below…';

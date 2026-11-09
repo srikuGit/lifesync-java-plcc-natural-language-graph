@@ -10,6 +10,16 @@ public class PlccContactService {
     public static final String CONSENT_TEXT="I agree that a representative may contact me to explain PLCC account details. This is a request for information, not an account application.";
     private final Driver driver;
     public PlccContactService(Driver driver){this.driver=driver;}
+    public boolean hasConsent(String customerId) {
+        try(var session=driver.session()) {
+            return session.executeRead(tx->tx.run("""
+                MATCH (:Customer {customerId:$customer})-[:REQUESTED_CONTACT]->(r:PlccContactRequest)
+                WHERE r.productId='PLCC' AND r.consentGranted=true
+                    AND coalesce(r.status,'') <> 'WITHDRAWN'
+                RETURN r.requestId LIMIT 1
+                """,Map.of("customer",customerId)).hasNext());
+        }
+    }
     public boolean request(String customerId) {
         try(var session=driver.session()) {
             return session.executeWrite(tx->tx.run("""

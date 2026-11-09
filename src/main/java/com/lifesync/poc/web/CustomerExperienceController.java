@@ -13,11 +13,12 @@ import java.util.NoSuchElementException;
 public class CustomerExperienceController {
     private final CustomerExperienceService experience;
     private final GraphQuestionService questions;
+    private final com.lifesync.poc.consent.PlccContactService contacts;
     static final String SNAPSHOT="customerGraphSnapshot";
     record Snapshot(CustomerSubgraph graph,long loadedAt) {}
     public record Question(String customerId,String question) {}
-    public CustomerExperienceController(CustomerExperienceService experience,GraphQuestionService questions) {
-        this.experience=experience; this.questions=questions;
+    public CustomerExperienceController(CustomerExperienceService experience,GraphQuestionService questions,com.lifesync.poc.consent.PlccContactService contacts) {
+        this.experience=experience; this.questions=questions; this.contacts=contacts;
     }
     @GetMapping({"/","/login","/experience"})
     public String page(@RequestParam(required=false) String customerId,
@@ -27,15 +28,20 @@ public class CustomerExperienceController {
         if (customerId!=null && !customerId.isBlank()) {
             session.removeAttribute(SNAPSHOT);
             try {
-                // Always load every product. Initial rendering never waits for a model call.
+                // Load only PLCC for the customer UI. Initial rendering never waits for a model call.
                 var page=experience.load(customerId.strip(),"PLCC");
                 session.setAttribute(SNAPSHOT,new Snapshot(page.graph(),System.currentTimeMillis()));
                 model.addAttribute("page",page);
                 if(page.graph().goals().stream().anyMatch(g->"PLCC_ACCOUNT_RESTRICTED".equals(g.status()))) {
-                    String token=java.util.UUID.randomUUID().toString();
-                    session.setAttribute("plccContactToken",token);
-                    model.addAttribute("contactToken",token);
-                    model.addAttribute("consentText",com.lifesync.poc.consent.PlccContactService.CONSENT_TEXT);
+                    boolean saved=contacts.hasConsent(page.graph().customerId());
+                    model.addAttribute("contactSaved",saved);
+                    if(saved) session.removeAttribute("plccContactToken");
+                    else {
+                        String token=java.util.UUID.randomUUID().toString();
+                        session.setAttribute("plccContactToken",token);
+                        model.addAttribute("contactToken",token);
+                        model.addAttribute("consentText",com.lifesync.poc.consent.PlccContactService.CONSENT_TEXT);
+                    }
                 }
                 // Preserve old question links; interactive questions use the separate POST endpoint.
                 if(!question.isBlank()) model.addAttribute("queryResult",questions.answer(page.graph(),question));

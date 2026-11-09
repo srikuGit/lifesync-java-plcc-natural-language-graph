@@ -5,7 +5,7 @@
 <section class="panel pad" th:each="goal : ${queryResult != null ? queryResult.graph.goals : page.graph.goals}">
 <span class="pill" th:text="${goal.productName}">Product</span>
 <h2 th:text="${goal.description}">Goal</h2>
-<p th:text="${page.introductions[goal.goalId]}">Introduction</p>
+<p th:if="${!#strings.isEmpty(page.introductions[goal.goalId])}" th:text="${page.introductions[goal.goalId]}">Introduction</p>
 <p class="muted" th:if="${!#lists.isEmpty(goal.providers)}">Nearest five providers by straight-line distance.
 Offers within each merchant are ordered by highest discount. Eligibility and exclusions still apply.</p>
 <p th:if="${queryResult != null and #lists.isEmpty(goal.providers)}">No providers in the retrieved subset match this query.</p>

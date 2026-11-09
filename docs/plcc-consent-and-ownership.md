@@ -12,6 +12,12 @@ Customers with non-ACTIVE PLCC status see a voluntary information/contact prompt
 instead of the former account-required wording. No merchants are disclosed and
 UNKNOWN status is not treated as proof that someone lacks an account.
 
+Consent is shown once, in the dedicated contact panel, never repeated in goal
+introductions. After submission, the panel shows one saved-request confirmation
+instead of another checkbox form. The page reads the saved Neo4j consent on later
+visits too, so refreshing or opening another session does not ask again unless
+consent was withdrawn.
+
 An unchecked checkbox states the permission explicitly. A POST to
 `/experience/plcc-contact` verifies the checkbox, a single-use session token,
 the matching loaded customer and snapshot age. The database rechecks that the

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LifeSync · Your goals</title><link rel="stylesheet" href="/css/app.css"></head>
+<title>LifeSync · Your goals</title><link rel="stylesheet" href="/css/app.css?v=2"></head>
 <body>
 <header class="top"><div class="shell nav"><a class="brand" href="/">LifeSync <small>DEMO BANK</small></a>
 <nav><a href="/">Your goals</a></nav></div></header>
@@ -27,7 +27,12 @@
 <span th:text="${#lists.size(page.graph.goals)}">0</span> goals</p>
 <div class="product-overview"><div><strong>PLCC shopping</strong><span>Furniture, appliances and electronics</span></div></div>
 <p th:if="${#lists.isEmpty(page.graph.goals)}">No goals found for this customer.</p></section>
-<section class="panel pad" th:if="${contactToken != null}">
+<section id="plcc-contact" class="panel pad" th:if="${contactToken != null or contactSaved == true}">
+<div th:if="${contactSaved == true}">
+<h2>PLCC contact request received</h2>
+<p role="status" th:text="${consentNotice != null ? consentNotice : 'Your consent to representative contact is saved. A PLCC information request has already been recorded. No actual call is initiated by this demonstration.'}"></p>
+</div>
+<div th:unless="${contactSaved == true}">
 <h2>Would you like to learn about PLCC?</h2>
 <p>With your permission, a representative can contact you to explain PLCC account details. Giving consent does not open an account or confirm eligibility.</p>
 <form method="post" action="/experience/plcc-contact">
@@ -36,8 +41,7 @@
 <label class="consent-choice"><input type="checkbox" name="permission" value="true" required><span th:text="${consentText}"></span></label>
 <button class="btn" type="submit">I agree — request a call about PLCC</button>
 </form><p class="muted">This demonstration records your request in Neo4j. It does not initiate an actual call.</p>
-</section>
-<p role="status" class="notice" th:if="${consentNotice}" th:text="${consentNotice}"></p>
+</div></section>
 <section id="ask-goals" class="panel pad">
 <h2>Ask about these goals and offers</h2>
 <p>Use this optional search to narrow the results below or compare nearby providers. It uses only this customer's loaded goals and offers.</p>
@@ -59,4 +63,4 @@
 <p class="footnote">Synthetic demo only. Providers, locations, discounts, and loan terms are fictional.
 PLCC merchant access requires an ACTIVE demo account. Contact consent does not change account status.
 Customer-ID lookup and the local MCP endpoint are not production authentication. No email is sent.</p>
-</main><script src="/js/experience.js" defer></script></body></html>
+</main><script src="/js/experience.js?v=2" defer></script></body></html>

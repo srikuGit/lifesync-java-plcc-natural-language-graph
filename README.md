@@ -1,3 +1,17 @@
+## Troubleshooting “Ask about my goals”
+
+The graph lookup can work even when Ollama question interpretation is unavailable. For the default chat model, run in Windows CMD:
+
+```bat
+docker compose exec ollama ollama list
+docker compose exec ollama ollama pull qwen2.5:1.5b
+docker compose logs --tail=100 app ollama
+```
+
+If you changed `OLLAMA_CHAT_MODEL`, install that model instead. `NL_QUERY_LLM_ENABLED` controls questions independently of `UI_CONTENT_ENABLED`.
+
+Question requests now use an Ollama JSON schema constrained to the loaded goal IDs and supported filters. Invalid output is still rejected. Failure messages and app logs distinguish AI_DISABLED, MODEL_NOT_FOUND, MODEL_TIMEOUT, MODEL_BUSY, INVALID_PLAN and OLLAMA_UNAVAILABLE; logs do not include questions or raw model output. Ollama keeps a loaded model for five minutes by default instead of unloading after five seconds. Model work defaults to a 30-second deadline; set `AI_TIMEOUT_SECONDS` (5–60 seconds) for your CPU, then recreate the app. Initial page loading still makes no model call.
+
 ## Current customer UI: PLCC only, opt-in contact and single goal ownership
 
 The customer screen now requests **only PLCC data through MCP**, including its question and AI-explanation flows. Home purchase, refinancing and auto-loan products/goals remain in Neo4j and accessible through the MCP product filter; they are not shown in the customer UI.
@@ -12,7 +26,7 @@ The shared-goal issue was caused by obsolete `HAS_GOAL` edges left behind when f
 
 Customers and providers now use different address fixtures. Restart after rebuilding to geocode changed provider addresses; the cache keys change automatically. Distances are never inflated: exact co-locations display “Same mapped location”, and nonzero distances below 0.1 mile display “<0.1 mi”.
 
-After loading a customer, use **Ask about these goals and offers** to narrow or compare the displayed results. Example buttons show home lending, auto-loan APR, and shopping-discount questions. Questions run asynchronously and reuse the session's loaded customer graph for up to five minutes; they do not reload MCP. **Refresh all goals and offers** obtains fresh data. Switching customers invalidates the previous snapshot. Optional **Explain all goals with AI** is separate from the initial load. AI work has a 15-second server limit and bounded concurrency, with explicit fallback when unavailable. Live provider/model speed still depends on your environment.
+After loading a customer, use **Ask about these goals and offers** to narrow or compare the displayed results. Example buttons show home lending, auto-loan APR, and shopping-discount questions. Questions run asynchronously and reuse the session's loaded customer graph for up to five minutes; they do not reload MCP. **Refresh all goals and offers** obtains fresh data. Switching customers invalidates the previous snapshot. Optional **Explain all goals with AI** is separate from the initial load. AI work has a 30-second default server limit and bounded concurrency, with explicit fallback when unavailable. Live provider/model speed still depends on your environment.
 
 ## Address geocoding and MCP questions
 

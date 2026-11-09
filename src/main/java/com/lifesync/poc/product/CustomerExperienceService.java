@@ -36,7 +36,7 @@ public class CustomerExperienceService {
         Map<String,String> fallback=new LinkedHashMap<>();
         subgraph.goals().forEach(g -> fallback.put(g.goalId(),
             switch (g.status()) {
-                case "PLCC_ACCOUNT_RESTRICTED" -> "Would you like a representative to contact you and explain PLCC account details? Use the consent form on this page.";
+                case "PLCC_ACCOUNT_RESTRICTED" -> "";
                 case "NO_CUSTOMER_LOCATION" -> "Add a customer location to find nearby providers.";
                 case "NO_MATCHING_PROVIDERS" -> "No matching located providers were found for this goal.";
                 default -> "Explore nearby providers for this goal and compare the available synthetic offers below.";

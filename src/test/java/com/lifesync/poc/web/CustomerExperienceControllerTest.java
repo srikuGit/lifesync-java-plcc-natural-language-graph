@@ -11,10 +11,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class CustomerExperienceControllerTest {
     final CustomerExperienceService experience=mock(CustomerExperienceService.class);
     final GraphQuestionService questions=mock(GraphQuestionService.class);
+    final com.lifesync.poc.consent.PlccContactService contacts=mock(com.lifesync.poc.consent.PlccContactService.class);
     final CustomerSubgraph graph=new CustomerSubgraph("C001","Alex",List.of());
     final CustomerExperienceService.Page page=new CustomerExperienceService.Page(graph,Map.of(),"FACTUAL_TEMPLATE");
     MockMvc mvc;
-    @BeforeEach void setup(){mvc=MockMvcBuilders.standaloneSetup(new CustomerExperienceController(experience,questions)).setViewResolvers((name,locale)->new org.springframework.web.servlet.view.json.MappingJackson2JsonView()).build();}
+    @BeforeEach void setup(){mvc=MockMvcBuilders.standaloneSetup(new CustomerExperienceController(experience,questions,contacts)).setViewResolvers((name,locale)->new org.springframework.web.servlet.view.json.MappingJackson2JsonView()).build();}
     @Test void initialPageLoadsOnlyPlccWithoutModelOrQuestionWork() throws Exception {
         when(experience.load("C001","PLCC")).thenReturn(page);
         mvc.perform(get("/experience").param("customerId","C001").param("productId","PLCC"))
@@ -42,4 +43,15 @@ class CustomerExperienceControllerTest {
             .content("{\"customerId\":\"C001\",\"question\":\"Show goals\"}")).andExpect(status().isConflict());
         verifyNoInteractions(questions,experience);
     }
+    @Test void savedConsentSuppressesTheFormAndClearsOldToken() throws Exception {
+        var restricted=new CustomerSubgraph("C002","Person",List.of(new CustomerSubgraph.Goal("G2","Furniture","PLCC","PLCC",List.of(),"PLCC_ACCOUNT_RESTRICTED",List.of())));
+        when(experience.load("C002","PLCC")).thenReturn(new CustomerExperienceService.Page(restricted,Map.of(),"FACTUAL_TEMPLATE"));
+        when(contacts.hasConsent("C002")).thenReturn(true);
+        var session=new MockHttpSession();session.setAttribute("plccContactToken","stale-token");
+        mvc.perform(get("/experience").session(session).param("customerId","C002"))
+            .andExpect(status().isOk()).andExpect(model().attribute("contactSaved",true))
+            .andExpect(model().attributeDoesNotExist("contactToken"));
+        org.junit.jupiter.api.Assertions.assertNull(session.getAttribute("plccContactToken"));
+    }
+
 }
