@@ -89,7 +89,7 @@ public class GraphQuestionService {
             results.add(new CustomerSubgraph.Goal(g.goalId(),g.description(),g.productId(),g.productName(),g.categories(),g.status(),providers));
         }
         return result(new CustomerSubgraph(graph.customerId(),graph.displayName(),List.copyOf(results)),
-            "Results from the current MCP subset, ordered by "+sort.toLowerCase(Locale.ROOT)+". Counts cover the displayed subset (at most five nearby providers per goal), not the entire database. Loan APR and fees do not establish total cost or approval.","MCP_GRAPH_QUERY");
+            "Results from the current MCP subset, ordered by "+sort.toLowerCase(Locale.ROOT)+". Counts cover the displayed subset (at most five nearby providers per goal), not the entire database. Offer conditions and exclusions still apply.","MCP_GRAPH_QUERY");
     }
     private static double best(CustomerSubgraph.Provider p,String kind) {
         return p.offers().stream().mapToDouble(o->switch(kind) {

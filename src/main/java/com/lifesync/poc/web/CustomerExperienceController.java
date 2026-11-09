@@ -28,9 +28,15 @@ public class CustomerExperienceController {
             session.removeAttribute(SNAPSHOT);
             try {
                 // Always load every product. Initial rendering never waits for a model call.
-                var page=experience.load(customerId.strip(),"");
+                var page=experience.load(customerId.strip(),"PLCC");
                 session.setAttribute(SNAPSHOT,new Snapshot(page.graph(),System.currentTimeMillis()));
                 model.addAttribute("page",page);
+                if(page.graph().goals().stream().anyMatch(g->"PLCC_ACCOUNT_RESTRICTED".equals(g.status()))) {
+                    String token=java.util.UUID.randomUUID().toString();
+                    session.setAttribute("plccContactToken",token);
+                    model.addAttribute("contactToken",token);
+                    model.addAttribute("consentText",com.lifesync.poc.consent.PlccContactService.CONSENT_TEXT);
+                }
                 // Preserve old question links; interactive questions use the separate POST endpoint.
                 if(!question.isBlank()) model.addAttribute("queryResult",questions.answer(page.graph(),question));
             } catch(IllegalArgumentException | NoSuchElementException ex) {model.addAttribute("error",ex.getMessage());}

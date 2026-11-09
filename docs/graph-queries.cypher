@@ -1,3 +1,21 @@
+// Current multi-product catalog: PLCC, home purchase, refinancing and auto loans.
+// :PLCC is the legacy card master; :Product is the shared product catalog.
+MATCH (p:Product)-[r:SUPPORTS_CATEGORY]->(cat:Category)
+RETURN p,r,cat;
+
+// Count categories by product to verify ingestion.
+MATCH (p:Product)-[:SUPPORTS_CATEGORY]->(cat:Category)
+RETURN p.productId AS product,p.name AS name,collect(cat.categoryId) AS categories
+ORDER BY product;
+
+// All goal/product/category paths for one customer (no merchant disclosure).
+MATCH path=(c:Customer {customerId:'C001'})-[:HAS_GOAL]->(g:Goal)
+      -[:CLASSIFIED_AS]->(cat:Category)<-[:SUPPORTS_CATEGORY]-(p:Product)
+WHERE p.productId=coalesce(g.productId,'PLCC')
+RETURN path;
+
+// Legacy queries below intentionally show only parts of the graph.
+
 // Open http://localhost:7474 and paste one query at a time.
 
 // 1. Customer -> Goal -> Category <- Merchant -> Store

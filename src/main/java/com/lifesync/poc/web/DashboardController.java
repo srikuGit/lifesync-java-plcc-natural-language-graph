@@ -107,20 +107,19 @@ public class DashboardController {
         var goal=graph.goal(goalId);
         if(goal.isEmpty()) return "redirect:/customers";
         String safe=goalId.replaceAll("[^A-Za-z0-9_-]", "");
-        String cypher;
-        if(goal.get().plccHolder()) {
-            cypher="MATCH (c:Customer {plccAccountStatus:'ACTIVE'})-[r1:HAS_GOAL]->"
-                +"(g:Goal {goalId:'"+safe+"'})-[r2:CLASSIFIED_AS]->(cat:Category) "
-                +"<-[r3:SUPPORTS_CATEGORY]-(p:PLCC) "
-                +"MATCH (m:Merchant)-[r4:OFFERS_CATEGORY]->(cat) "
-                +"MATCH (m)-[r5:HAS_STORE]->(s:Store) "
-                +"RETURN c,r1,g,r2,cat,r3,p,r4,m,r5,s LIMIT 30;";
-        } else {
-            // Never surface merchant nodes or stores on a prospect's graph page.
-            cypher="MATCH (c:Customer)-[r1:HAS_GOAL]->(g:Goal {goalId:'"+safe
-                +"'})-[r2:CLASSIFIED_AS]->(cat:Category) "
-                +"<-[r3:SUPPORTS_CATEGORY]-(p:PLCC) RETURN c,r1,g,r2,cat,r3,p LIMIT 30;";
-        }
+        String cypher="MATCH (c:Customer)-[r1:HAS_GOAL]->(g:Goal {goalId:'"+safe+"'}) "
+            +"OPTIONAL MATCH (g)-[r2:CLASSIFIED_AS]->(cat:Category) "
+            +"OPTIONAL MATCH (p:Product)-[r3:SUPPORTS_CATEGORY]->(cat) "
+            +"WHERE p.productId=coalesce(g.productId,'PLCC') "
+            +"OPTIONAL MATCH (m:Merchant {active:true})-[r4:OFFERS_CATEGORY]->(cat) "
+            +"WHERE p.productId <> 'PLCC' OR c.plccAccountStatus='ACTIVE' "
+            +"OPTIONAL MATCH (m)-[r5:HAS_STORE]->(s:Store) "
+            +"RETURN c,r1,g,r2,cat,r3,p,r4,m,r5,s LIMIT 100;";
+        model.addAttribute("catalogCypher","MATCH (p:Product)-[r:SUPPORTS_CATEGORY]->(cat:Category) RETURN p,r,cat;");
+        String customerId=goal.get().customerId().replaceAll("[^A-Za-z0-9_-]", "");
+        model.addAttribute("customerCypher",cypher.replace(
+            "(c:Customer)-[r1:HAS_GOAL]->(g:Goal {goalId:'"+safe+"'})",
+            "(c:Customer {customerId:'"+customerId+"'})-[r1:HAS_GOAL]->(g:Goal)"));
         model.addAttribute("cypher",cypher);
         return "graph";
     }

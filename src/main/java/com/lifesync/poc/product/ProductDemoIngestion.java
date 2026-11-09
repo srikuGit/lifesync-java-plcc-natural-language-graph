@@ -26,10 +26,17 @@ public class ProductDemoIngestion implements ApplicationRunner {
                           List<Map<String,Object>> goals, List<Map<String,Object>> merchants) {}
     @Override public void run(ApplicationArguments args) throws Exception {
         Fixture fixture = mapper.readValue(input.toFile(),Fixture.class);
+        validateOwnership(fixture);
         graph.createSchema();
         try (var session = driver.session()) {
             session.run("CREATE CONSTRAINT product_id IF NOT EXISTS FOR (p:Product) REQUIRE p.productId IS UNIQUE").consume();
             session.executeWrite(tx -> {
+                tx.run("""
+                    UNWIND $rows AS row
+                    MATCH (old:Customer)-[r:HAS_GOAL]->(g:Goal {goalId:row.goalId})
+                    WHERE old.customerId <> row.customerId
+                    DELETE r
+                    """,Map.of("rows",fixture.goals())).consume();
                 tx.run("""
                     UNWIND $rows AS row
                     MERGE (p:Product {productId:row.productId}) SET p.name=row.name
@@ -55,6 +62,7 @@ public class ProductDemoIngestion implements ApplicationRunner {
                     MERGE (g:Goal {goalId:row.goalId})
                     SET g.description=row.description,g.productId=row.productId,g.ecn=c.ecn,
                         g.category=row.category,g.categories=[row.category],g.goalType=row.productId,
+                        g.ownerCustomerId=c.customerId,
                         g.status='PRODUCT_DEMO',g.classificationSource='CURATED_SYNTHETIC_FIXTURE'
                     MERGE (c)-[:HAS_GOAL]->(g)
                     MERGE (g)-[:FOR_PRODUCT]->(p)
@@ -77,4 +85,14 @@ public class ProductDemoIngestion implements ApplicationRunner {
             });
         }
     }
+    static void validateOwnership(Fixture fixture) {
+        Set<Object> ids=new HashSet<>();
+        Set<Object> customers=new HashSet<>();
+        fixture.customers().forEach(c->customers.add(c.get("customerId")));
+        for(var goal:fixture.goals()) {
+            if(goal.get("goalId")==null || !ids.add(goal.get("goalId")) || !customers.contains(goal.get("customerId")))
+                throw new IllegalArgumentException("Each fixture goal must have one valid customer owner");
+        }
+    }
+
 }

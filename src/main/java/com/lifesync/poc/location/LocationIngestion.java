@@ -11,7 +11,7 @@ import java.util.*;
 
 /** Runs after both ingestion paths, replacing fixture coordinates with address-derived results. */
 @Component
-@Order(2)
+@Order(3)
 public class LocationIngestion implements ApplicationRunner {
     private final Driver driver;
     private final LocationService locations;
@@ -50,7 +50,7 @@ public class LocationIngestion implements ApplicationRunner {
         update("Store","storeId",stores);
         try (var s=driver.session()) {
             merchantEcns.forEach((id,ecn)->s.run("MATCH (m:Merchant {merchantId:$id}) SET m.ecn=$ecn",Map.of("id",id,"ecn",ecn)).consume());
-            s.run("MATCH (c:Customer)-[:HAS_GOAL]->(g:Goal) SET g.ecn=c.ecn").consume();
+            // Source ECNs are set by goal ingestion. Never overwrite them from possibly stale owner edges.
         }
     }
     private void update(String label,String key,Map<String,String> addresses) {

@@ -1,3 +1,11 @@
+## Current customer UI: PLCC only, opt-in contact and single goal ownership
+
+The customer screen now requests **only PLCC data through MCP**, including its question and AI-explanation flows. Home purchase, refinancing and auto-loan products/goals remain in Neo4j and accessible through the MCP product filter; they are not shown in the customer UI.
+
+For customers without an ACTIVE PLCC account, the screen offers an unchecked consent box to request representative contact about PLCC details. An explicit POST records a customer-linked `PlccContactRequest` with `REQUESTED` status, consent text/version and timestamp. It does not open an account, change account status, reveal restricted merchants, or initiate a real call in this demonstration.
+
+The shared-goal issue was caused by obsolete `HAS_GOAL` edges left behind when fixture customer identities changed. Both ingestion paths now remove incorrect ownership edges before attaching the authoritative owner. Startup repairs existing relationships using source ECNs before geocoding. It does not delete customers, goals, products or volumes. Unknown ambiguous owners cause a clear startup error instead of guessing. See [ownership and consent details](docs/plcc-consent-and-ownership.md).
+
 ## Faster goals page and clearer product navigation
 
 **View goals** now loads every product without a dropdown or LLM wait. All 50 fixture customers, C001–C050, have PLCC shopping, home purchase, refinancing, and auto-loan goals. Home purchase and refinancing are clearly labeled **Home lending**.

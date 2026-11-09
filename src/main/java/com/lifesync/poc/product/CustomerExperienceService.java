@@ -25,7 +25,9 @@ public class CustomerExperienceService {
             throw new IllegalArgumentException("Enter a valid customer ID.");
         if (product != null && !product.isBlank() && !CustomerSubgraphService.PRODUCTS.contains(product))
             throw new IllegalArgumentException("Choose a supported product.");
-        CustomerSubgraph subgraph=graph.customerGraph(customer,product);
+        CustomerSubgraph retrieved=graph.customerGraph(customer,"PLCC");
+        CustomerSubgraph subgraph=new CustomerSubgraph(retrieved.customerId(),retrieved.displayName(),
+            retrieved.goals().stream().filter(g->"PLCC".equals(g.productId())).toList());
         return factual(subgraph);
     }
     private record OfferFact(String title, String terms, Double discountPercent, Double apr, Double fees, Integer termMonths) {}
@@ -34,7 +36,7 @@ public class CustomerExperienceService {
         Map<String,String> fallback=new LinkedHashMap<>();
         subgraph.goals().forEach(g -> fallback.put(g.goalId(),
             switch (g.status()) {
-                case "PLCC_ACCOUNT_RESTRICTED" -> "An active PLCC account is required to view these merchants.";
+                case "PLCC_ACCOUNT_RESTRICTED" -> "Would you like a representative to contact you and explain PLCC account details? Use the consent form on this page.";
                 case "NO_CUSTOMER_LOCATION" -> "Add a customer location to find nearby providers.";
                 case "NO_MATCHING_PROVIDERS" -> "No matching located providers were found for this goal.";
                 default -> "Explore nearby providers for this goal and compare the available synthetic offers below.";

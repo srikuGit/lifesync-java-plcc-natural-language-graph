@@ -15,11 +15,11 @@ class CustomerExperienceControllerTest {
     final CustomerExperienceService.Page page=new CustomerExperienceService.Page(graph,Map.of(),"FACTUAL_TEMPLATE");
     MockMvc mvc;
     @BeforeEach void setup(){mvc=MockMvcBuilders.standaloneSetup(new CustomerExperienceController(experience,questions)).setViewResolvers((name,locale)->new org.springframework.web.servlet.view.json.MappingJackson2JsonView()).build();}
-    @Test void initialPageLoadsAllProductsWithoutModelOrQuestionWork() throws Exception {
-        when(experience.load("C001","")).thenReturn(page);
+    @Test void initialPageLoadsOnlyPlccWithoutModelOrQuestionWork() throws Exception {
+        when(experience.load("C001","PLCC")).thenReturn(page);
         mvc.perform(get("/experience").param("customerId","C001").param("productId","PLCC"))
             .andExpect(status().isOk()).andExpect(view().name("experience"));
-        verify(experience).load("C001","");verify(experience,never()).compose(any());verifyNoInteractions(questions);
+        verify(experience).load("C001","PLCC");verify(experience,never()).compose(any());verifyNoInteractions(questions);
     }
     @Test void questionReusesLoadedSnapshotWithoutAnotherMcpRetrieval() throws Exception {
         var session=new MockHttpSession();

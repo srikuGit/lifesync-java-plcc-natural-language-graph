@@ -5,6 +5,9 @@
 <nav><a href="/">Your goals</a><a href="/automation">Automation</a><a href="/customers">Customer search</a></nav></div></header><main class="shell">
 <div class="hero"><div><div class="eyebrow">KNOWLEDGE GRAPH</div><h1>Explore customer-to-merchant relationships</h1><p>Open Neo4j Browser, paste this query and choose Graph view.</p></div></div>
 <section class="panel pad"><h2 th:text="|Graph for ${goalId}|">Goal graph</h2>
-<pre class="code" th:text="${cypher}"></pre><p><a class="btn" href="http://localhost:7474" target="_blank" rel="noopener">Open Neo4j Browser</a></p>
+<p>This first query shows the selected goal. Use the queries below to see every product/category or every goal for this customer.</p>
+<pre class="code" th:text="${cypher}"></pre>
+<h2>All products and their categories</h2><pre class="code" th:text="${catalogCypher}"></pre>
+<h2>All goals and products for this customer</h2><pre class="code" th:text="${customerCypher}"></pre><p><a class="btn" href="http://localhost:7474" target="_blank" rel="noopener">Open Neo4j Browser</a></p>
 <p class="muted">Neo4j Browser uses the Neo4j credentials configured in compose.yaml. A graph edge means category-level merchant relevance, not verified stock availability.</p></section>
 </main></body></html>

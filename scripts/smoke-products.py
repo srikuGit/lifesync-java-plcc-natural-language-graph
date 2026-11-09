@@ -74,9 +74,12 @@ for index in range(1, 4):
         assert customer in html
         assert 'role="alert"' not in html, "UI returned an error"
         for goal in result["goals"]:
-            assert goal["description"] in html, "UI omitted a customer goal"
-            for provider in goal["providers"]:
-                assert provider["name"] in html, "UI omitted a provider"
+            if goal["productId"] == "PLCC":
+                assert goal["description"] in html, "UI omitted a PLCC goal"
+                for provider in goal["providers"]:
+                    assert provider["name"] in html, "UI omitted a PLCC provider"
+            else:
+                assert goal["description"] not in html, "Non-PLCC goal leaked into customer UI"
         if index != 1:
             assert "Home Furnishings" not in html, "Restricted PLCC merchant leaked"
     print(customer, "customer scope, products, account gates, distance, offers and UI passed")

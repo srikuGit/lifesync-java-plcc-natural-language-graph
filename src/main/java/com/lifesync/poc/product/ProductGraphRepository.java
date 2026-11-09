@@ -18,7 +18,8 @@ public class ProductGraphRepository {
     public List<GoalFact> goals(String customerId, String productId) {
         try (Session session = driver.session()) {
             return session.executeRead(tx -> tx.run("""
-                MATCH (:Customer {customerId:$customer})-[:HAS_GOAL]->(g:Goal)
+                MATCH (c:Customer {customerId:$customer})-[:HAS_GOAL]->(g:Goal)
+                WHERE g.ecn=c.ecn AND coalesce(g.ownerCustomerId,c.customerId)=c.customerId
                 WITH g, coalesce(g.productId,'PLCC') AS product
                 WHERE $product = '' OR product = $product
                 OPTIONAL MATCH (p:Product {productId:product})
@@ -36,7 +37,8 @@ public class ProductGraphRepository {
             return session.executeRead(tx -> tx.run("""
                 MATCH (c:Customer {customerId:$customer})-[:HAS_GOAL]->(g:Goal {goalId:$goal})
                       -[:CLASSIFIED_AS]->(cat:Category)<-[:SUPPORTS_CATEGORY]-(p:Product {productId:$product})
-                WHERE coalesce(g.productId,'PLCC') = p.productId
+                WHERE g.ecn=c.ecn AND coalesce(g.ownerCustomerId,c.customerId)=c.customerId
+                    AND coalesce(g.productId,'PLCC') = p.productId
                     AND (p.productId <> 'PLCC' OR c.plccAccountStatus = 'ACTIVE')
                 MATCH (m:Merchant {active:true})-[:OFFERS_CATEGORY]->(cat)
                 MATCH (m)-[:HAS_STORE]->(s:Store)

@@ -4,10 +4,10 @@
 <title>LifeSync · Your goals</title><link rel="stylesheet" href="/css/app.css"></head>
 <body>
 <header class="top"><div class="shell nav"><a class="brand" href="/">LifeSync <small>DEMO BANK</small></a>
-<nav><a href="/">Your goals</a><a href="/automation">Legacy automation</a></nav></div></header>
+<nav><a href="/">Your goals</a></nav></div></header>
 <main class="shell">
 <section class="hero"><div><div class="eyebrow">A PLAN FOR WHAT COMES NEXT</div>
-<h1>Your goals. Nearby possibilities.</h1><p>Explore shopping, buying a home, refinancing, and auto financing in one place.</p></div></section>
+<h1>Your goals. Nearby possibilities.</h1><p>Explore your PLCC shopping goals and nearby merchant offers.</p></div></section>
 <section class="panel pad">
 <h2 th:text="${page == null ? 'Welcome to LifeSync' : 'Find another customer'}">Welcome</h2>
 <p>Enter a synthetic customer ID to view their goals. This demo lookup does not authenticate a customer.</p>
@@ -25,21 +25,30 @@
 <h2 th:text="${page.graph.displayName}">Customer</h2>
 <p><span th:text="${page.graph.customerId}">ID</span> ·
 <span th:text="${#lists.size(page.graph.goals)}">0</span> goals</p>
-<div class="product-overview"><div><strong>PLCC shopping</strong><span>Furniture, appliances and electronics</span></div>
-<div><strong>Home lending</strong><span>Buying a home and refinancing</span></div>
-<div><strong>Auto loans</strong><span>Vehicle purchase financing</span></div></div>
+<div class="product-overview"><div><strong>PLCC shopping</strong><span>Furniture, appliances and electronics</span></div></div>
 <p th:if="${#lists.isEmpty(page.graph.goals)}">No goals found for this customer.</p></section>
+<section class="panel pad" th:if="${contactToken != null}">
+<h2>Would you like to learn about PLCC?</h2>
+<p>With your permission, a representative can contact you to explain PLCC account details. Giving consent does not open an account or confirm eligibility.</p>
+<form method="post" action="/experience/plcc-contact">
+<input type="hidden" name="customerId" th:value="${page.graph.customerId}">
+<input type="hidden" name="token" th:value="${contactToken}">
+<label class="consent-choice"><input type="checkbox" name="permission" value="true" required><span th:text="${consentText}"></span></label>
+<button class="btn" type="submit">I agree — request a call about PLCC</button>
+</form><p class="muted">This demonstration records your request in Neo4j. It does not initiate an actual call.</p>
+</section>
+<p role="status" class="notice" th:if="${consentNotice}" th:text="${consentNotice}"></p>
 <section id="ask-goals" class="panel pad">
 <h2>Ask about these goals and offers</h2>
 <p>Use this optional search to narrow the results below or compare nearby providers. It uses only this customer's loaded goals and offers.</p>
 <form id="question-form" class="searchform" method="get" action="/experience">
 <input type="hidden" name="customerId" th:value="${page.graph.customerId}">
 <label for="question">Your question<input id="question" name="question" maxlength="500" required
- placeholder="Which auto loan provider has the lowest APR within 10 miles?" th:value="${questionInput}"></label>
+ placeholder="Which nearby stores have the highest discount?" th:value="${questionInput}"></label>
 <button class="btn" type="submit">Ask about my goals</button>
 </form>
-<div class="chips"><button type="button" class="btn secondary question-example" data-question="Show my home lending goals, including buying and refinancing">Home lending goals</button>
-<button type="button" class="btn secondary question-example" data-question="Which auto loan provider has the lowest APR within 10 miles?">Compare auto loans</button>
+<div class="chips"><button type="button" class="btn secondary question-example" data-question="Show my PLCC shopping goals">My shopping goals</button>
+<button type="button" class="btn secondary question-example" data-question="Which shopping providers are within 5 miles?">Stores within 5 miles</button>
 <button type="button" class="btn secondary question-example" data-question="Show shopping offers with at least 15% discount">Shopping discounts</button></div>
 <div class="actions"><a class="btn secondary" th:href="@{/experience(customerId=${page.graph.customerId})}">Refresh all goals and offers</a>
 <button id="explain-goals" type="button" class="btn secondary">Explain all goals with AI</button></div>
@@ -48,6 +57,6 @@
 <div id="goal-results" aria-busy="false"><div th:replace="~{fragments/customer-goals :: results}"></div></div>
 </div>
 <p class="footnote">Synthetic demo only. Providers, locations, discounts, and loan terms are fictional.
-Loan matching is product relevance, not a credit decision or offer of credit. PLCC merchant access requires an ACTIVE demo account.
+PLCC merchant access requires an ACTIVE demo account. Contact consent does not change account status.
 Customer-ID lookup and the local MCP endpoint are not production authentication. No email is sent.</p>
 </main><script src="/js/experience.js" defer></script></body></html>

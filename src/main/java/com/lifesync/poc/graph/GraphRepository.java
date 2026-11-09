@@ -20,6 +20,7 @@ public class GraphRepository {
     public void createSchema() {
         List<String> statements = List.of(
                 "CREATE CONSTRAINT plcc_program_id IF NOT EXISTS FOR (n:PLCC) REQUIRE n.programId IS UNIQUE",
+                "CREATE CONSTRAINT plcc_contact_id IF NOT EXISTS FOR (n:PlccContactRequest) REQUIRE n.requestId IS UNIQUE",
                 "CREATE CONSTRAINT consent_request_id IF NOT EXISTS FOR (n:ConsentRequest) REQUIRE n.requestId IS UNIQUE",
                 "CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (n:Customer) REQUIRE n.customerId IS UNIQUE",
                 "CREATE CONSTRAINT customer_ecn IF NOT EXISTS FOR (n:Customer) REQUIRE n.ecn IS UNIQUE",
@@ -161,6 +162,10 @@ public class GraphRepository {
                             +GoalClassificationService.VERSION+"|"+String.join(",",categories)
                             +"|"+classification.confidence()+"|"+classification.source());
                     tx.run("""
+                        MATCH (old:Customer)-[r:HAS_GOAL]->(:Goal {goalId:$goalId})
+                        WHERE old.ecn <> $ecn DELETE r
+                        """,p("goalId",g.goalId(),"ecn",g.ecn())).consume();
+                    tx.run("""
                         MERGE (g:Goal {goalId:$goalId})
                         WITH g, (g.inputFingerprint IS NULL OR g.inputFingerprint <> $fp
                             OR g.classificationFingerprint IS NULL
@@ -178,6 +183,7 @@ public class GraphRepository {
                         WITH g
                         MATCH (c:Customer {ecn:$ecn})
                         MERGE (c)-[:HAS_GOAL]->(g)
+                        SET g.ownerCustomerId=c.customerId
                         """, p("goalId", g.goalId(), "ecn", g.ecn(),
                             "description", g.description(), "type", g.goalType(),
                             "rawCategory", g.rawCategory(), "cat", primary,

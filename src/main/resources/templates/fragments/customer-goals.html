@@ -7,8 +7,7 @@
 <h2 th:text="${goal.description}">Goal</h2>
 <p th:text="${page.introductions[goal.goalId]}">Introduction</p>
 <p class="muted" th:if="${!#lists.isEmpty(goal.providers)}">Nearest five providers by straight-line distance.
-Offers within each provider are ordered by highest discount for PLCC, or lowest APR then fees for loans.
-Different loan terms and costs may not be directly comparable.</p>
+Offers within each merchant are ordered by highest discount. Eligibility and exclusions still apply.</p>
 <p th:if="${queryResult != null and #lists.isEmpty(goal.providers)}">No providers in the retrieved subset match this query.</p>
 <div class="cards">
 <article class="merchant" th:each="provider : ${goal.providers}">
