@@ -39,7 +39,7 @@ public class ProductGraphRepository {
                       -[:CLASSIFIED_AS]->(cat:Category)<-[:SUPPORTS_CATEGORY]-(p:Product {productId:$product})
                 WHERE g.ecn=c.ecn AND coalesce(g.ownerCustomerId,c.customerId)=c.customerId
                     AND coalesce(g.productId,'PLCC') = p.productId
-                    AND (p.productId <> 'PLCC' OR c.plccAccountStatus = 'ACTIVE')
+                    AND p.productId='PLCC' AND c.plccAccountStatus='ACTIVE'
                 MATCH (m:Merchant {active:true})-[:OFFERS_CATEGORY]->(cat)
                 MATCH (m)-[:HAS_STORE]->(s:Store)
                 WHERE s.latitude IS NOT NULL AND s.longitude IS NOT NULL
@@ -53,6 +53,19 @@ public class ProductGraphRepository {
                     r.get("name").asString(),r.get("category").asString(),r.get("description").asString(""),
                     r.get("city").asString(""),r.get("state").asString(""),r.get("address").asString(""),
                     r.get("lat").asDouble(),r.get("lon").asDouble())));
+        }
+    }
+    public Optional<CustomerProfile> profile(String customerId) {
+        try (Session session=driver.session()) {
+            return session.executeRead(tx -> tx.run("""
+                MATCH (c:Customer {customerId:$customer})
+                RETURN c.customerId AS id,coalesce(c.firstName,c.name,'') AS first,
+                    coalesce(c.lastName,'') AS last,coalesce(c.city,'') AS city,
+                    coalesce(c.state,'') AS state,coalesce(c.plccAccountStatus,'UNKNOWN') AS account
+                """,Map.of("customer",customerId)).list(r -> new CustomerProfile(
+                    r.get("id").asString(),r.get("first").asString(),r.get("last").asString(),
+                    r.get("city").asString(),r.get("state").asString(),r.get("account").asString()))
+                .stream().findFirst());
         }
     }
     public Optional<com.lifesync.poc.domain.Models.Customer> customer(String id) {

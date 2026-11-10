@@ -10,6 +10,8 @@ spring:
       username: ${NEO4J_USER:neo4j}
       password: ${NEO4J_PASSWORD:localDemoPassword123}
   ai:
+    retry:
+      max-attempts: 1
     ollama:
       base-url: ${OLLAMA_URL:http://localhost:11434}
       chat:
@@ -31,7 +33,7 @@ lifesync:
   semantic-classification-relative-margin: ${SEMANTIC_CLASSIFICATION_RELATIVE_MARGIN:0.09}
   llm-explanations-enabled: ${LLM_EXPLANATIONS_ENABLED:true}
   nl-query-llm-enabled: ${NL_QUERY_LLM_ENABLED:true}
-  vector-enabled: ${VECTOR_ENABLED:true}
+  vector-enabled: ${VECTOR_ENABLED:false}
   vector-model: ${OLLAMA_EMBED_MODEL:nomic-embed-text}
   vector-backfill-batch-size: ${VECTOR_BACKFILL_BATCH_SIZE:2}
   vector-backfill-delay-ms: ${VECTOR_BACKFILL_DELAY_MS:45000}

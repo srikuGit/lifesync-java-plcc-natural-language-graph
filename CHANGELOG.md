@@ -1,3 +1,11 @@
+## Unreleased — Conversational GraphRAG and manual campaign previews
+
+- Show structured customer profile details first; retrieve goals through MCP only after a chat request.
+- List all product goals without merchants/offers, and disclose PLCC details only on explicit requests for eligible ACTIVE holders.
+- Add schema-constrained conversational actions, bounded Java/MCP dispatch, session-isolated follow-ups and cached-detail eligibility rechecks.
+- Add separate manual ACTIVE-holder email preview campaigns with persisted run statuses, bounded background generation and current-fact rendering; no email delivery.
+- Add profile/goal/merchant MCP tools, structured fixture names, updated smoke checks, browser validation and regression tests.
+
 ## v0.9.0
 
 - Add home purchase, home refinancing and auto financing alongside PLCC, with curated synthetic product/customer/goal/provider fixtures and an external synthetic offer feed.

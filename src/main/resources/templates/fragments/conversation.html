@@ -1,0 +1,34 @@
+<!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><body>
+<div th:fragment="turn"><div data-assistant-history th:if="${reply.showConsent}"><div th:replace="~{fragments/conversation :: history(${messages})}"></div></div><div data-assistant-reply th:unless="${reply.showConsent}"><div th:replace="~{fragments/conversation :: assistant(${reply})}"></div></div>
+<div data-contact-content><div th:replace="~{fragments/conversation :: contact}"></div></div></div>
+<div th:fragment="history(messages)">
+<article class="chat-message assistant welcome-message"><strong>LifeSync assistant</strong><p>Hello! What would you like to explore today?</p></article>
+<th:block th:each="message : ${messages}">
+<article class="chat-message user" th:if="${message.role == 'user'}"><strong>You</strong><p th:text="${message.text}"></p></article>
+<th:block th:if="${message.role == 'assistant'}"><div th:replace="~{fragments/conversation :: assistant(${message.reply})}"></div></th:block>
+</th:block></div>
+<article th:fragment="assistant(reply)" class="chat-message assistant">
+<strong>LifeSync assistant</strong><p class="assistant-text" th:text="${reply.message}"></p>
+<div class="conversation-results" th:if="${reply.graph != null}">
+<p class="muted" th:if="${#lists.isEmpty(reply.graph.goals)}">No matching goals.</p>
+<section class="chat-goal" th:each="goal : ${reply.graph.goals}">
+<span class="pill" th:text="${goal.productName}">Product</span><h3 th:text="${goal.description}">Goal</h3>
+<p class="muted" th:text="${goal.goalId}">Goal ID</p>
+<div th:if="${reply.showProviders and goal.productId == 'PLCC'}">
+<p class="muted" th:if="${#lists.isEmpty(goal.providers) and goal.status != 'PLCC_ACCOUNT_RESTRICTED'}">No located merchants match these filters.</p>
+<div class="cards"><article class="merchant" th:each="provider : ${goal.providers}">
+<div class="merchant-title"><h4 th:text="${provider.name}">Merchant</h4><span class="distance" th:text="${provider.distanceLabel()}">Distance</span></div>
+<p th:text="|${provider.city}, ${provider.state}|"></p><p th:if="${#lists.isEmpty(provider.offers)}">No current offers available.</p>
+<div class="reason" th:each="offer : ${provider.offers}"><strong th:text="${offer.title}">Offer</strong>
+<p th:if="${offer.discountPercent != null}" th:text="|${offer.discountPercent}% illustrative discount|"></p>
+<p th:text="${offer.terms}"></p><small th:text="|Valid ${offer.validFrom} through ${offer.validUntil}|"></small></div>
+</article></div></div></section>
+<p class="muted" th:if="${reply.showProviders}">Up to five matching nearby providers per goal. Distances are straight-line miles; offer terms and eligibility apply.</p>
+</div></article>
+<section th:fragment="contact" id="plcc-contact" class="panel pad" th:if="${contactToken != null or contactSaved == true}">
+<div th:if="${contactSaved == true}"><h2>PLCC contact request received</h2><p role="status">Your consent is saved and a PLCC information request has been recorded. This demonstration does not initiate an actual call.</p></div>
+<div th:unless="${contactSaved == true}"><h2>Would you like to learn about PLCC?</h2><p>With your permission, a representative can contact you to explain PLCC account details. This does not open an account or confirm eligibility.</p>
+<form method="post" action="/experience/plcc-contact"><input type="hidden" name="customerId" th:value="${contactCustomerId}"><input type="hidden" name="token" th:value="${contactToken}">
+<label class="consent-choice"><input type="checkbox" name="permission" value="true" required><span th:text="${consentText}"></span></label>
+<button class="btn" type="submit">I agree — request a call about PLCC</button></form><p class="muted">This demonstration records the request but does not initiate a call.</p></div></section>
+</body></html>

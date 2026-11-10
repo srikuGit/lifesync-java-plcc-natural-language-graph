@@ -1,74 +1,82 @@
 package com.lifesync.poc.web;
 
+import com.lifesync.poc.conversation.*;
 import com.lifesync.poc.product.*;
+import com.lifesync.poc.consent.PlccContactService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
-import java.util.NoSuchElementException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.util.*;
 
 @Controller
 public class CustomerExperienceController {
-    private final CustomerExperienceService experience;
-    private final GraphQuestionService questions;
-    private final com.lifesync.poc.consent.PlccContactService contacts;
     static final String SNAPSHOT="customerGraphSnapshot";
+    static final String CONVERSATION="customerConversation";
+    static final String TOKEN="conversationToken";
     record Snapshot(CustomerSubgraph graph,long loadedAt) {}
-    public record Question(String customerId,String question) {}
-    public CustomerExperienceController(CustomerExperienceService experience,GraphQuestionService questions,com.lifesync.poc.consent.PlccContactService contacts) {
-        this.experience=experience; this.questions=questions; this.contacts=contacts;
-    }
+    public record Question(String customerId,String question,String conversationId,String token) {}
+    private final ConversationService conversations;
+    private final PlccContactService contacts;
+    public CustomerExperienceController(ConversationService conversations,PlccContactService contacts){this.conversations=conversations;this.contacts=contacts;}
     @GetMapping({"/","/login","/experience"})
-    public String page(@RequestParam(required=false) String customerId,
-                       @RequestParam(defaultValue="") String question,Model model,HttpSession session) {
+    public String page(@RequestParam(required=false) String customerId,@RequestParam(defaultValue="") String question,
+                       Model model,HttpSession session){
         model.addAttribute("customerIdInput",customerId==null?"":customerId);
         model.addAttribute("questionInput",question);
-        if (customerId!=null && !customerId.isBlank()) {
-            session.removeAttribute(SNAPSHOT);
+        if(customerId!=null&&!customerId.isBlank()) {
             try {
-                // Load only PLCC for the customer UI. Initial rendering never waits for a model call.
-                var page=experience.load(customerId.strip(),"PLCC");
-                session.setAttribute(SNAPSHOT,new Snapshot(page.graph(),System.currentTimeMillis()));
-                model.addAttribute("page",page);
-                if(page.graph().goals().stream().anyMatch(g->"PLCC_ACCOUNT_RESTRICTED".equals(g.status()))) {
-                    boolean saved=contacts.hasConsent(page.graph().customerId());
-                    model.addAttribute("contactSaved",saved);
-                    if(saved) session.removeAttribute("plccContactToken");
-                    else {
-                        String token=java.util.UUID.randomUUID().toString();
-                        session.setAttribute("plccContactToken",token);
-                        model.addAttribute("contactToken",token);
-                        model.addAttribute("consentText",com.lifesync.poc.consent.PlccContactService.CONSENT_TEXT);
-                    }
-                }
-                // Preserve old question links; interactive questions use the separate POST endpoint.
-                if(!question.isBlank()) model.addAttribute("queryResult",questions.answer(page.graph(),question));
-            } catch(IllegalArgumentException | NoSuchElementException ex) {model.addAttribute("error",ex.getMessage());}
-            catch(Exception ex) {model.addAttribute("error","The customer graph is temporarily unavailable. Please retry.");}
+                ConversationState state=(ConversationState)session.getAttribute(CONVERSATION);
+                if(state==null||!state.profile().customerId().equals(customerId.strip())){
+                    state=conversations.start(customerId.strip());
+                    session.setAttribute(CONVERSATION,state);session.setAttribute(TOKEN,UUID.randomUUID().toString());
+                    session.removeAttribute(SNAPSHOT);session.removeAttribute("plccContactToken");
+                } else conversations.refreshProfile(state);
+                model.addAttribute("conversation",state);model.addAttribute("profile",state.profile());
+                model.addAttribute("messages",state.messages());model.addAttribute("chatToken",session.getAttribute(TOKEN));
+                consent(state.lastReply(),model,session);
+            } catch(IllegalArgumentException|NoSuchElementException ex){model.addAttribute("error",ex.getMessage());}
+            catch(Exception ex){model.addAttribute("error","Customer details are temporarily unavailable. Please retry.");}
         }
         return "experience";
     }
-    @PostMapping(value="/experience/question",consumes="application/json")
-    public String question(@RequestBody Question request,Model model,HttpSession session) {
-        var graph=snapshot(request.customerId(),session);
-        if(request.question()==null || request.question().isBlank() || request.question().length()>500)
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Enter a question of up to 500 characters.");
-        model.addAttribute("page",experience.factual(graph));
-        model.addAttribute("queryResult",questions.answer(graph,request.question()));
-        return "fragments/customer-goals :: results";
+    @PostMapping(value={"/experience/chat","/experience/question"},consumes="application/json")
+    public String chat(@RequestBody Question request,Model model,HttpSession session){
+        ConversationState state=validated(request,session);
+        ConversationState.Reply reply;
+        try{reply=conversations.turn(state,request.question());}
+        catch(IllegalArgumentException ex){throw new ResponseStatusException(HttpStatus.BAD_REQUEST,ex.getMessage());}
+        catch(IllegalStateException ex){throw new ResponseStatusException(HttpStatus.CONFLICT,ex.getMessage());}
+        if(session.getAttribute(CONVERSATION)!=state)throw new ResponseStatusException(HttpStatus.CONFLICT,"Customer selection changed. Reload this page.");
+        model.addAttribute("reply",reply);model.addAttribute("messages",state.messages());consent(reply,model,session);
+        return "fragments/conversation :: turn";
     }
-    @PostMapping(value="/experience/explain",consumes="application/json")
-    public String explain(@RequestBody Question request,Model model,HttpSession session) {
-        model.addAttribute("page",experience.compose(snapshot(request.customerId(),session)));
-        return "fragments/customer-goals :: results";
+    @PostMapping(value="/experience/reset",consumes="application/json")
+    @ResponseBody public Map<String,String> reset(@RequestBody Question request,HttpSession session){
+        var state=validated(request,session);
+        if(!state.resetIfIdle())throw new ResponseStatusException(HttpStatus.CONFLICT,"Wait for the current reply before starting a new chat.");
+        session.removeAttribute(SNAPSHOT);session.removeAttribute("plccContactToken");
+        return Map.of("status","cleared");
     }
-    private CustomerSubgraph snapshot(String customer,HttpSession session) {
-        Object value=session.getAttribute(SNAPSHOT);
-        if(!(value instanceof Snapshot saved) || customer==null || !customer.equals(saved.graph().customerId())
-                || System.currentTimeMillis()-saved.loadedAt()>300_000)
-            throw new ResponseStatusException(HttpStatus.CONFLICT,"Reload this customer's goals before asking a question.");
-        return saved.graph();
+    private ConversationState validated(Question q,HttpSession session){
+        Object value=session.getAttribute(CONVERSATION);String expected=(String)session.getAttribute(TOKEN);
+        if(!(value instanceof ConversationState state)||q.customerId()==null||!q.customerId().equals(state.profile().customerId())
+            ||q.conversationId()==null||!q.conversationId().equals(state.id())||q.token()==null||expected==null||q.token().length()>100
+            ||!MessageDigest.isEqual(expected.getBytes(StandardCharsets.UTF_8),q.token().getBytes(StandardCharsets.UTF_8)))
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN,"Reload the selected customer before sending a message.");
+        return state;
+    }
+    private void consent(ConversationState.Reply reply,Model model,HttpSession session){
+        if(reply==null||!reply.showConsent()||reply.graph()==null)return;
+        session.setAttribute(SNAPSHOT,new Snapshot(reply.graph(),System.currentTimeMillis()));
+        boolean saved=contacts.hasConsent(reply.graph().customerId());model.addAttribute("contactSaved",saved);
+        if(saved)session.removeAttribute("plccContactToken");
+        else {String token=UUID.randomUUID().toString();session.setAttribute("plccContactToken",token);
+            model.addAttribute("contactToken",token);model.addAttribute("contactCustomerId",reply.graph().customerId());
+            model.addAttribute("consentText",PlccContactService.CONSENT_TEXT);}
     }
 }

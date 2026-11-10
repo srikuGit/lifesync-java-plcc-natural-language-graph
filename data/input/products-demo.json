@@ -40,7 +40,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Arjun",
+      "lastName": "Campbell"
     },
     {
       "customerId": "C002",
@@ -50,7 +52,9 @@
       "state": "WA",
       "postalCode": "98133",
       "plccAccountStatus": "NONE",
-      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133",
+      "firstName": "Liam",
+      "lastName": "Walker"
     },
     {
       "customerId": "C003",
@@ -60,7 +64,9 @@
       "state": "WA",
       "postalCode": "98052",
       "plccAccountStatus": "UNKNOWN",
-      "address": "15670 NE 85th St, Redmond, WA 98052"
+      "address": "15670 NE 85th St, Redmond, WA 98052",
+      "firstName": "Sofia",
+      "lastName": "Patel"
     },
     {
       "customerId": "C004",
@@ -70,7 +76,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Liam",
+      "lastName": "Singh"
     },
     {
       "customerId": "C005",
@@ -80,7 +88,9 @@
       "state": "WA",
       "postalCode": "98011",
       "plccAccountStatus": "NONE",
-      "address": "18415 101st Ave NE, Bothell, WA 98011"
+      "address": "18415 101st Ave NE, Bothell, WA 98011",
+      "firstName": "Henry",
+      "lastName": "Morgan"
     },
     {
       "customerId": "C006",
@@ -90,7 +100,9 @@
       "state": "WA",
       "postalCode": "98033",
       "plccAccountStatus": "NONE",
-      "address": "123 5th Ave, Kirkland, WA 98033"
+      "address": "123 5th Ave, Kirkland, WA 98033",
+      "firstName": "Arjun",
+      "lastName": "Kim"
     },
     {
       "customerId": "C007",
@@ -100,7 +112,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Mateo",
+      "lastName": "Hughes"
     },
     {
       "customerId": "C008",
@@ -110,7 +124,9 @@
       "state": "WA",
       "postalCode": "98027",
       "plccAccountStatus": "NONE",
-      "address": "130 E Sunset Way, Issaquah, WA 98027"
+      "address": "130 E Sunset Way, Issaquah, WA 98027",
+      "firstName": "Liam",
+      "lastName": "Williams"
     },
     {
       "customerId": "C009",
@@ -120,7 +136,9 @@
       "state": "WA",
       "postalCode": "98057",
       "plccAccountStatus": "NONE",
-      "address": "1055 S Grady Way, Renton, WA 98057"
+      "address": "1055 S Grady Way, Renton, WA 98057",
+      "firstName": "Henry",
+      "lastName": "Ellis"
     },
     {
       "customerId": "C010",
@@ -130,7 +148,9 @@
       "state": "WA",
       "postalCode": "98004",
       "plccAccountStatus": "ACTIVE",
-      "address": "450 110th Ave NE, Bellevue, WA 98004"
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "firstName": "Amelia",
+      "lastName": "Bennett"
     },
     {
       "customerId": "C011",
@@ -140,7 +160,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Priya",
+      "lastName": "Singh"
     },
     {
       "customerId": "C012",
@@ -150,7 +172,9 @@
       "state": "WA",
       "postalCode": "98133",
       "plccAccountStatus": "NONE",
-      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133",
+      "firstName": "Maya",
+      "lastName": "Campbell"
     },
     {
       "customerId": "C013",
@@ -160,7 +184,9 @@
       "state": "WA",
       "postalCode": "98052",
       "plccAccountStatus": "ACTIVE",
-      "address": "15670 NE 85th St, Redmond, WA 98052"
+      "address": "15670 NE 85th St, Redmond, WA 98052",
+      "firstName": "Leo",
+      "lastName": "Torres"
     },
     {
       "customerId": "C014",
@@ -170,7 +196,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Arjun",
+      "lastName": "Williams"
     },
     {
       "customerId": "C015",
@@ -180,7 +208,9 @@
       "state": "WA",
       "postalCode": "98011",
       "plccAccountStatus": "NONE",
-      "address": "18415 101st Ave NE, Bothell, WA 98011"
+      "address": "18415 101st Ave NE, Bothell, WA 98011",
+      "firstName": "Zara",
+      "lastName": "Nguyen"
     },
     {
       "customerId": "C016",
@@ -190,7 +220,9 @@
       "state": "WA",
       "postalCode": "98033",
       "plccAccountStatus": "ACTIVE",
-      "address": "123 5th Ave, Kirkland, WA 98033"
+      "address": "123 5th Ave, Kirkland, WA 98033",
+      "firstName": "Maya",
+      "lastName": "Torres"
     },
     {
       "customerId": "C017",
@@ -200,7 +232,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Elena",
+      "lastName": "Brooks"
     },
     {
       "customerId": "C018",
@@ -210,7 +244,9 @@
       "state": "WA",
       "postalCode": "98027",
       "plccAccountStatus": "NONE",
-      "address": "130 E Sunset Way, Issaquah, WA 98027"
+      "address": "130 E Sunset Way, Issaquah, WA 98027",
+      "firstName": "Aisha",
+      "lastName": "Bennett"
     },
     {
       "customerId": "C019",
@@ -220,7 +256,9 @@
       "state": "WA",
       "postalCode": "98057",
       "plccAccountStatus": "ACTIVE",
-      "address": "1055 S Grady Way, Renton, WA 98057"
+      "address": "1055 S Grady Way, Renton, WA 98057",
+      "firstName": "Grace",
+      "lastName": "Morgan"
     },
     {
       "customerId": "C020",
@@ -230,7 +268,9 @@
       "state": "WA",
       "postalCode": "98004",
       "plccAccountStatus": "NONE",
-      "address": "450 110th Ave NE, Bellevue, WA 98004"
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "firstName": "Grace",
+      "lastName": "Chen"
     },
     {
       "customerId": "C021",
@@ -240,7 +280,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Nora",
+      "lastName": "Brooks"
     },
     {
       "customerId": "C022",
@@ -250,7 +292,9 @@
       "state": "WA",
       "postalCode": "98133",
       "plccAccountStatus": "ACTIVE",
-      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133",
+      "firstName": "Leo",
+      "lastName": "Foster"
     },
     {
       "customerId": "C023",
@@ -260,7 +304,9 @@
       "state": "WA",
       "postalCode": "98052",
       "plccAccountStatus": "NONE",
-      "address": "15670 NE 85th St, Redmond, WA 98052"
+      "address": "15670 NE 85th St, Redmond, WA 98052",
+      "firstName": "Oliver",
+      "lastName": "Parker"
     },
     {
       "customerId": "C024",
@@ -270,7 +316,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Noah",
+      "lastName": "Nguyen"
     },
     {
       "customerId": "C025",
@@ -280,7 +328,9 @@
       "state": "WA",
       "postalCode": "98011",
       "plccAccountStatus": "ACTIVE",
-      "address": "18415 101st Ave NE, Bothell, WA 98011"
+      "address": "18415 101st Ave NE, Bothell, WA 98011",
+      "firstName": "Maya",
+      "lastName": "Reed"
     },
     {
       "customerId": "C026",
@@ -290,7 +340,9 @@
       "state": "WA",
       "postalCode": "98033",
       "plccAccountStatus": "NONE",
-      "address": "123 5th Ave, Kirkland, WA 98033"
+      "address": "123 5th Ave, Kirkland, WA 98033",
+      "firstName": "Isabella",
+      "lastName": "Brooks"
     },
     {
       "customerId": "C027",
@@ -300,7 +352,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Mateo",
+      "lastName": "Foster"
     },
     {
       "customerId": "C028",
@@ -310,7 +364,9 @@
       "state": "WA",
       "postalCode": "98027",
       "plccAccountStatus": "ACTIVE",
-      "address": "130 E Sunset Way, Issaquah, WA 98027"
+      "address": "130 E Sunset Way, Issaquah, WA 98027",
+      "firstName": "Ethan",
+      "lastName": "Patel"
     },
     {
       "customerId": "C029",
@@ -320,7 +376,9 @@
       "state": "WA",
       "postalCode": "98057",
       "plccAccountStatus": "NONE",
-      "address": "1055 S Grady Way, Renton, WA 98057"
+      "address": "1055 S Grady Way, Renton, WA 98057",
+      "firstName": "Henry",
+      "lastName": "Torres"
     },
     {
       "customerId": "C030",
@@ -330,7 +388,9 @@
       "state": "WA",
       "postalCode": "98004",
       "plccAccountStatus": "NONE",
-      "address": "450 110th Ave NE, Bellevue, WA 98004"
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "firstName": "Aisha",
+      "lastName": "Shah"
     },
     {
       "customerId": "C031",
@@ -340,7 +400,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Elena",
+      "lastName": "Bennett"
     },
     {
       "customerId": "C032",
@@ -350,7 +412,9 @@
       "state": "WA",
       "postalCode": "98133",
       "plccAccountStatus": "NONE",
-      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133",
+      "firstName": "Henry",
+      "lastName": "Foster"
     },
     {
       "customerId": "C033",
@@ -360,7 +424,9 @@
       "state": "WA",
       "postalCode": "98052",
       "plccAccountStatus": "NONE",
-      "address": "15670 NE 85th St, Redmond, WA 98052"
+      "address": "15670 NE 85th St, Redmond, WA 98052",
+      "firstName": "Isabella",
+      "lastName": "Chen"
     },
     {
       "customerId": "C034",
@@ -370,7 +436,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Sofia",
+      "lastName": "Brooks"
     },
     {
       "customerId": "C035",
@@ -380,7 +448,9 @@
       "state": "WA",
       "postalCode": "98011",
       "plccAccountStatus": "NONE",
-      "address": "18415 101st Ave NE, Bothell, WA 98011"
+      "address": "18415 101st Ave NE, Bothell, WA 98011",
+      "firstName": "Ethan",
+      "lastName": "Foster"
     },
     {
       "customerId": "C036",
@@ -390,7 +460,9 @@
       "state": "WA",
       "postalCode": "98033",
       "plccAccountStatus": "NONE",
-      "address": "123 5th Ave, Kirkland, WA 98033"
+      "address": "123 5th Ave, Kirkland, WA 98033",
+      "firstName": "Noah",
+      "lastName": "Morgan"
     },
     {
       "customerId": "C037",
@@ -400,7 +472,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "ACTIVE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Amelia",
+      "lastName": "Patel"
     },
     {
       "customerId": "C038",
@@ -410,7 +484,9 @@
       "state": "WA",
       "postalCode": "98027",
       "plccAccountStatus": "NONE",
-      "address": "130 E Sunset Way, Issaquah, WA 98027"
+      "address": "130 E Sunset Way, Issaquah, WA 98027",
+      "firstName": "James",
+      "lastName": "Chen"
     },
     {
       "customerId": "C039",
@@ -420,7 +496,9 @@
       "state": "WA",
       "postalCode": "98057",
       "plccAccountStatus": "NONE",
-      "address": "1055 S Grady Way, Renton, WA 98057"
+      "address": "1055 S Grady Way, Renton, WA 98057",
+      "firstName": "Grace",
+      "lastName": "Rivera"
     },
     {
       "customerId": "C040",
@@ -430,7 +508,9 @@
       "state": "WA",
       "postalCode": "98004",
       "plccAccountStatus": "ACTIVE",
-      "address": "450 110th Ave NE, Bellevue, WA 98004"
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "firstName": "Grace",
+      "lastName": "Sullivan"
     },
     {
       "customerId": "C041",
@@ -440,7 +520,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Isabella",
+      "lastName": "Patel"
     },
     {
       "customerId": "C042",
@@ -450,7 +532,9 @@
       "state": "WA",
       "postalCode": "98133",
       "plccAccountStatus": "NONE",
-      "address": "17500 Midvale Ave N, Shoreline, WA 98133"
+      "address": "17500 Midvale Ave N, Shoreline, WA 98133",
+      "firstName": "Lucas",
+      "lastName": "Bennett"
     },
     {
       "customerId": "C043",
@@ -460,7 +544,9 @@
       "state": "WA",
       "postalCode": "98052",
       "plccAccountStatus": "ACTIVE",
-      "address": "15670 NE 85th St, Redmond, WA 98052"
+      "address": "15670 NE 85th St, Redmond, WA 98052",
+      "firstName": "Elena",
+      "lastName": "Parker"
     },
     {
       "customerId": "C044",
@@ -470,7 +556,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "Ethan",
+      "lastName": "Bennett"
     },
     {
       "customerId": "C045",
@@ -480,7 +568,9 @@
       "state": "WA",
       "postalCode": "98011",
       "plccAccountStatus": "NONE",
-      "address": "18415 101st Ave NE, Bothell, WA 98011"
+      "address": "18415 101st Ave NE, Bothell, WA 98011",
+      "firstName": "Maya",
+      "lastName": "Kim"
     },
     {
       "customerId": "C046",
@@ -490,7 +580,9 @@
       "state": "WA",
       "postalCode": "98033",
       "plccAccountStatus": "ACTIVE",
-      "address": "123 5th Ave, Kirkland, WA 98033"
+      "address": "123 5th Ave, Kirkland, WA 98033",
+      "firstName": "Oliver",
+      "lastName": "Patel"
     },
     {
       "customerId": "C047",
@@ -500,7 +592,9 @@
       "state": "WA",
       "postalCode": "98104",
       "plccAccountStatus": "NONE",
-      "address": "1000 4th Ave, Seattle, WA 98104"
+      "address": "1000 4th Ave, Seattle, WA 98104",
+      "firstName": "James",
+      "lastName": "Parker"
     },
     {
       "customerId": "C048",
@@ -510,7 +604,9 @@
       "state": "WA",
       "postalCode": "98027",
       "plccAccountStatus": "NONE",
-      "address": "130 E Sunset Way, Issaquah, WA 98027"
+      "address": "130 E Sunset Way, Issaquah, WA 98027",
+      "firstName": "Aisha",
+      "lastName": "Patel"
     },
     {
       "customerId": "C049",
@@ -520,7 +616,9 @@
       "state": "WA",
       "postalCode": "98057",
       "plccAccountStatus": "ACTIVE",
-      "address": "1055 S Grady Way, Renton, WA 98057"
+      "address": "1055 S Grady Way, Renton, WA 98057",
+      "firstName": "Grace",
+      "lastName": "Nguyen"
     },
     {
       "customerId": "C050",
@@ -530,7 +628,9 @@
       "state": "WA",
       "postalCode": "98004",
       "plccAccountStatus": "NONE",
-      "address": "450 110th Ave NE, Bellevue, WA 98004"
+      "address": "450 110th Ave NE, Bellevue, WA 98004",
+      "firstName": "Mateo",
+      "lastName": "Patel"
     }
   ],
   "goals": [

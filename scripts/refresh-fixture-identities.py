@@ -31,7 +31,7 @@ last=['Bennett','Patel','Chen','Rivera','Morgan','Brooks','Shah','Williams','Ngu
 names=[a+' '+b for a in first for b in last];rng.shuffle(names)
 customers=read('customers.json');mapping={}
 for i,x in enumerate(customers):
- c=x['data']['attributes'];old=c['ecn'];c['ecn']=ecn();mapping[old]=c['ecn'];c['name']['fullName']=[names[i]]
+ c=x['data']['attributes'];old=c['ecn'];c['ecn']=ecn();mapping[old]=c['ecn'];c['name']['fullName']=[names[i]];c['name']['firstName'],c['name']['lastName']=names[i].split(' ',1)
  a=c['addressUsageList'][0]['address'];street,zip=addresses[a['city']]
  a.update(addressLineList=[street],address_line_1=street,address_line_2=None,postalCode=zip)
  c.pop('approximateLocation',None)
@@ -57,7 +57,7 @@ for i,entry in enumerate(customers):
  source=entry['data']['attributes'];cid=source['customerId']
  if cid in prior: source['plccAccountStatus']=prior[cid]['plccAccountStatus']
  a=source['addressUsageList'][0]['address']
- product['customers'].append(dict(customerId=cid,ecn=source['ecn'],name=source['name']['fullName'][0],
+ product['customers'].append(dict(customerId=cid,ecn=source['ecn'],name=source['name']['fullName'][0],firstName=source['name']['firstName'],lastName=source['name']['lastName'],
      city=a['city'],state='WA',postalCode=a['postalCode'],plccAccountStatus=source['plccAccountStatus'],
      address=f"{a['address_line_1']}, {a['city']}, WA {a['postalCode']}"))
  idmap[cid]=cid

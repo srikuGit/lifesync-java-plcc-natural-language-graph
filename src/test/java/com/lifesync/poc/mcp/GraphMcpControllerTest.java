@@ -49,4 +49,25 @@ class GraphMcpControllerTest {
             .content("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"ping\"}")).andExpect(status().isBadRequest());
         mvc.perform(get("/mcp")).andExpect(status().isMethodNotAllowed());
     }
+    @Test void profileAndGoalToolsAreSeparateAndStrictlyValidateArguments() throws Exception {
+        when(graph.profile("C1")).thenReturn(new CustomerProfile("C1","Priya","Shah","Seattle","WA","ACTIVE"));
+        when(graph.listGoals("C1")).thenReturn(new CustomerSubgraph("C1","Priya Shah",List.of()));
+        rpc("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"get_customer_profile\",\"arguments\":{\"customerId\":\"C1\"}}}")
+            .andExpect(jsonPath("$.result.isError").value(false));
+        verify(graph).profile("C1");verify(graph,never()).listGoals(anyString());
+        rpc("{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\"params\":{\"name\":\"list_customer_goals\",\"arguments\":{\"customerId\":\"C1\"}}}")
+            .andExpect(jsonPath("$.result.isError").value(false));
+        verify(graph).listGoals("C1");
+        rpc("{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\"params\":{\"name\":\"get_customer_profile\",\"arguments\":{\"customerId\":\"C1\",\"goalIds\":[]}}}")
+            .andExpect(jsonPath("$.error.code").value(-32602));
+    }
+    @Test void merchantToolParsesTypedFiltersAndRejectsCoercion() throws Exception {
+        when(graph.findPlccMerchants("C1",List.of("G1"),5.,15.,2)).thenReturn(new CustomerSubgraph("C1","Person",List.of()));
+        rpc("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"find_plcc_merchants\",\"arguments\":{\"customerId\":\"C1\",\"goalIds\":[\"G1\"],\"maxDistanceMiles\":5,\"minDiscountPercent\":15,\"limit\":2}}}")
+            .andExpect(jsonPath("$.result.isError").value(false));
+        verify(graph).findPlccMerchants("C1",List.of("G1"),5.,15.,2);
+        rpc("{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\"params\":{\"name\":\"find_plcc_merchants\",\"arguments\":{\"customerId\":\"C1\",\"maxDistanceMiles\":\"5\"}}}")
+            .andExpect(jsonPath("$.error.code").value(-32602));
+    }
+
 }

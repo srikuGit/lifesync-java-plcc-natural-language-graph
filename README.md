@@ -1,3 +1,11 @@
+# Conversational GraphRAG and manual campaign previews
+
+Enter a customer ID to see **first name, last name and a chat window**. No goals or offers are shown automatically. Ask **“Show my goals”** to list all product goals, then ask about shops/discounts for eligible PLCC merchant and offer details. Other product goals remain basic-only. Follow-up questions reuse bounded customer-session context.
+
+A separate **Campaign previews** page starts a manual background job for **ACTIVE PLCC holders only**. It creates email previews and records progress; it never sends email or changes consent.
+
+See [the conversational architecture and setup](docs/conversational-graphrag.md) and [manual campaign workflow](docs/manual-campaigns.md). These instructions supersede the historical UI descriptions below.
+
 ## Troubleshooting “Ask about my goals”
 
 The graph lookup can work even when Ollama question interpretation is unavailable. For the default chat model, run in Windows CMD:
