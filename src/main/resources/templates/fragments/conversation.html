@@ -2,13 +2,13 @@
 <div th:fragment="turn"><div data-assistant-history th:if="${reply.showConsent}"><div th:replace="~{fragments/conversation :: history(${messages})}"></div></div><div data-assistant-reply th:unless="${reply.showConsent}"><div th:replace="~{fragments/conversation :: assistant(${reply})}"></div></div>
 <div data-contact-content><div th:replace="~{fragments/conversation :: contact}"></div></div></div>
 <div th:fragment="history(messages)">
-<article class="chat-message assistant welcome-message"><strong>DEMO bank assistant</strong><p>Hello! What would you like to explore today?</p></article>
+<article class="chat-message assistant welcome-message"><strong>Banker assistant</strong><p>Hello! What would you like to explore today?</p></article>
 <th:block th:each="message : ${messages}">
 <article class="chat-message user" th:if="${message.role == 'user'}"><strong>You</strong><p th:text="${message.text}"></p></article>
 <th:block th:if="${message.role == 'assistant'}"><div th:replace="~{fragments/conversation :: assistant(${message.reply})}"></div></th:block>
 </th:block></div>
 <article th:fragment="assistant(reply)" class="chat-message assistant">
-<strong>DEMO bank assistant</strong><p class="assistant-text" th:text="${reply.message}"></p>
+<strong>Banker assistant</strong><p class="assistant-text" th:text="${reply.message}"></p>
 <div class="conversation-results" th:if="${reply.graph != null}">
 <p class="muted" th:if="${#lists.isEmpty(reply.graph.goals)}">No matching goals.</p>
 <section class="chat-goal" th:each="goal : ${reply.graph.goals}">

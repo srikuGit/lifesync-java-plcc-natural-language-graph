@@ -19,7 +19,7 @@ public class CustomerExperienceController {
     static final String CONVERSATION="customerConversation";
     static final String TOKEN="conversationToken";
     record Snapshot(CustomerSubgraph graph,long loadedAt) {}
-    public record Question(String customerId,String question,String conversationId,String token) {}
+    public record Question(String customerId,String question,String conversationId,String token,String action) {}
     private final ConversationService conversations;
     private final PlccContactService contacts;
     public CustomerExperienceController(ConversationService conversations,PlccContactService contacts){this.conversations=conversations;this.contacts=contacts;}
@@ -48,7 +48,7 @@ public class CustomerExperienceController {
     public String chat(@RequestBody Question request,Model model,HttpSession session){
         ConversationState state=validated(request,session);
         ConversationState.Reply reply;
-        try{reply=conversations.turn(state,request.question());}
+        try{reply=request.action()==null?conversations.turn(state,request.question()):conversations.turn(state,request.question(),request.action());}
         catch(IllegalArgumentException ex){throw new ResponseStatusException(HttpStatus.BAD_REQUEST,ex.getMessage());}
         catch(IllegalStateException ex){throw new ResponseStatusException(HttpStatus.CONFLICT,ex.getMessage());}
         if(session.getAttribute(CONVERSATION)!=state)throw new ResponseStatusException(HttpStatus.CONFLICT,"Customer selection changed. Reload this page.");

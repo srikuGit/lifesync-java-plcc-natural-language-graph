@@ -1,3 +1,19 @@
+## Updating the running demo
+
+The customer pages use **DEMO bank** branding and the chat is **Banker assistant**.
+After pulling changes, rebuild the app image; restarting an existing image keeps its old pages and JavaScript:
+
+```sh
+git pull origin main
+docker compose up -d --build --no-deps app
+```
+
+Reload the page and start a new conversation. The **Show my goals**, **Find discounts**,
+and **Shops near me** buttons invoke explicit customer-scoped graph actions. Shopping
+buttons select only PLCC goals and do not require model interpretation. Free-text
+questions still use Ollama. Account restrictions and successful address geocoding
+still determine whether nearby shops and offers can be displayed.
+
 # Conversational GraphRAG and manual campaign previews
 
 Enter a customer ID to see **first name, last name and a chat window**. No goals or offers are shown automatically. Ask **“Show my goals”** to list all product goals, then ask about shops/discounts for eligible PLCC merchant and offer details. Other product goals remain basic-only. Follow-up questions reuse bounded customer-session context.

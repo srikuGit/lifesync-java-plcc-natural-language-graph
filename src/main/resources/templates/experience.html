@@ -1,6 +1,6 @@
 <!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DEMO bank · Your assistant</title><link rel="stylesheet" href="/css/app.css?v=3"></head>
+<title>DEMO bank · Banker assistant</title><link rel="stylesheet" href="/css/app.css?v=3"></head>
 <body><header class="top"><div class="shell nav"><a class="brand" href="/">DEMO bank</a>
 <nav><a href="/">Customer assistant</a><a href="/campaigns">Campaign previews</a></nav></div></header>
 <main class="shell"><section class="hero"><div><div class="eyebrow">YOUR NEXT STEP STARTS WITH A CONVERSATION</div>
@@ -20,14 +20,14 @@
 <div><dt>Customer ID</dt><dd th:text="${profile.customerId}">ID</dd></div>
 <div><dt>Location</dt><dd th:text="|${profile.city}, ${profile.state}|">Location</dd></div>
 </dl></section>
-<section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your DEMO bank assistant</h2>
+<section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your Banker assistant</h2>
 <p>Ask to see your goals first. Merchant and offer details are available on request for eligible PLCC shopping goals.</p></div>
 <button id="reset-chat" class="btn secondary" type="button">New chat</button></div>
 <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
 <div th:replace="~{fragments/conversation :: history(${messages})}"></div></div>
-<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-question="Show my goals">Show my goals</button>
-<button type="button" class="btn secondary chat-example" data-question="Where can I get shopping discounts?">Find discounts</button>
-<button type="button" class="btn secondary chat-example" data-question="Show shops near me">Shops near me</button></div>
+<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="Show my goals">Show my goals</button>
+<button type="button" class="btn secondary chat-example" data-action="OFFERS" data-question="Where can I get shopping discounts?">Find discounts</button>
+<button type="button" class="btn secondary chat-example" data-action="MERCHANTS" data-question="Show shops near me">Shops near me</button></div>
 <form id="chat-form" class="searchform" th:attr="data-customer=${profile.customerId},data-conversation=${conversation.id()},data-token=${chatToken}">
 <label for="chat-question">Message<input id="chat-question" name="question" maxlength="500" required autocomplete="off"
 placeholder="Ask about your goals…" th:value="${questionInput}"></label><button class="btn" type="submit">Send</button></form>
@@ -36,4 +36,4 @@ placeholder="Ask about your goals…" th:value="${questionInput}"></label><butto
 <div id="contact-panel"><div th:replace="~{fragments/conversation :: contact}"></div></div>
 </div>
 <p class="footnote">Fictional data and illustrative locations/offers only. Home lending and auto-loan goals can be listed; their provider and offer details are not displayed. Chat cannot open accounts, send emails or change consent. Email campaigns generate previews only.</p>
-</main><script src="/js/experience.js?v=4" defer></script></body></html>
+</main><script src="/js/experience.js?v=5" defer></script></body></html>

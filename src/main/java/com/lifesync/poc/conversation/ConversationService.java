@@ -17,7 +17,9 @@ public class ConversationService {
         return new ConversationState(tools.customerProfile(customer));
     }
     public void refreshProfile(ConversationState state){state.updateProfile(tools.customerProfile(state.profile().customerId()));}
-    public ConversationState.Reply turn(ConversationState state,String question){
+    public ConversationState.Reply turn(ConversationState state,String question){return turn(state,question,null);}
+    public ConversationState.Reply turn(ConversationState state,String question,String action){
+        if(action!=null&&!Set.of("GOALS","MERCHANTS","OFFERS").contains(action))throw new IllegalArgumentException("Unknown assistant action.");
         if(question==null||question.isBlank()||question.length()>500)throw new IllegalArgumentException("Enter a question of up to 500 characters.");
         if(!state.busy.compareAndSet(false,true))throw new IllegalStateException("Another reply is being prepared. Please wait.");
         int toolCalls=0;
@@ -27,7 +29,10 @@ public class ConversationService {
                 state.retrievedAt=System.currentTimeMillis();state.lastResult=null;state.previous=null;
             }
             if(state.lastResult!=null){refreshProfile(state);toolCalls++;}
-            var plan=planner.plan(state,state.goals,question);
+            // Example buttons carry an explicit action, so shopping requests cannot be misclassified as lending.
+            var plan=action==null?planner.plan(state,state.goals,question):new ConversationPlanner.Plan(action,
+                state.goals.goals().stream().filter(g->action.equals("GOALS")||"PLCC".equals(g.productId()))
+                    .map(CustomerSubgraph.Goal::goalId).toList(),false,null,null,"DISTANCE",action.equals("OFFERS"),null,"");
             if(plan.action().equals("HELP"))return save(state,question,new ConversationState.Reply(
                 "I can list your goals, find nearby PLCC shops and compare available shopping discounts. Try ‘Show my goals’ or ‘Show shops near me’.","ASSISTANT_HELP",null,false,false,toolCalls));
             if(plan.action().equals("EXPLAIN")) {

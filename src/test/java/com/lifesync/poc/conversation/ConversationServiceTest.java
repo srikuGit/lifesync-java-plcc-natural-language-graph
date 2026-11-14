@@ -60,6 +60,20 @@ class ConversationServiceTest {
         verify(mcp,times(2)).plccMerchants("C1",List.of("G1"),null,null,5);
         assertEquals(5,state.previous.limit());assertNull(state.previous.maxDistanceMiles());assertFalse(state.previous.offersOnly());
     }
+    @Test void discountsButtonAfterAllGoalsFetchesOnlyPlccOffersWithoutModelPlanning() {
+        var state=service.start("C1");
+        service.turn(state,"Show my goals","GOALS");
+        when(mcp.plccMerchants("C1",List.of("G1"),null,0d,5)).thenReturn(details());
+        var reply=service.turn(state,"Where can I get shopping discounts?","OFFERS");
+        assertEquals("MCP_PLCC_RESULTS",reply.source());assertEquals(1,reply.graph().goals().size());
+        assertEquals("G1",reply.graph().goals().getFirst().goalId());
+        assertFalse(reply.graph().goals().getFirst().providers().isEmpty());
+        verify(mcp).plccMerchants("C1",List.of("G1"),null,0d,5);verifyNoInteractions(planner);
+    }
+    @Test void shortcutRejectsUnknownActionBeforeCallingTools() {
+        assertThrows(IllegalArgumentException.class,()->service.turn(new ConversationState(profile),"Discounts","RUN_CYPHER"));
+        verifyNoInteractions(mcp,planner);
+    }
     @Test void revokedAccountRedactsCachedDetailsAndExplanations() throws Exception {
         var state=service.start("C1");state.goals=goals;state.retrievedAt=System.currentTimeMillis();state.lastResult=details();
         state.add("Shops",new ConversationState.Reply("Cedar Furnishings is nearby","MCP_PLCC_RESULTS",details(),true,false,1));

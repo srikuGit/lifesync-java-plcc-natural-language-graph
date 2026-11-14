@@ -34,6 +34,15 @@ class CustomerExperienceControllerTest {
             .andExpect(status().isOk()).andExpect(model().attribute("reply",reply));
         verify(conversations).turn(state,"Show my goals");
     }
+    @Test void discountButtonDispatchesExplicitShoppingAction() throws Exception {
+        var reply=new ConversationState.Reply("Shopping offers","MCP_PLCC_RESULTS",null,true,false,1);
+        when(conversations.turn(state,"Show my goals","OFFERS")).thenReturn(reply);
+        mvc.perform(post("/experience/chat").session(session()).contentType("application/json")
+            .content(body("C001").replace("}",",\"action\":\"OFFERS\"}")))
+            .andExpect(status().isOk()).andExpect(model().attribute("reply",reply));
+        verify(conversations).turn(state,"Show my goals","OFFERS");
+        verify(conversations,never()).turn(any(),anyString());
+    }
     @Test void foreignCustomerMissingTokenOrOldConversationCannotRunTools() throws Exception {
         mvc.perform(post("/experience/chat").session(session()).contentType("application/json").content(body("C002"))).andExpect(status().isForbidden());
         mvc.perform(post("/experience/chat").session(session()).contentType("application/json").content(body("C001").replace("token\"}","wrong\"}"))).andExpect(status().isForbidden());
