@@ -40,7 +40,7 @@ lifesync:
   scheduler-enabled: ${SCHEDULER_ENABLED:false}
   scheduler-batch-size: ${SCHEDULER_BATCH_SIZE:2}
   scheduler-delay-ms: ${SCHEDULER_DELAY_MS:90000}
-  demo-bank-name: LifeSync PLCC concept demo
+  demo-bank-name: DEMO bank
   public-base-url: ${PUBLIC_BASE_URL:http://localhost:8080}
   consent:
     secret: ${CONSENT_SECRET:}

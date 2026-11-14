@@ -18,7 +18,7 @@ class ProductOfferCatalogTest {
             offer("foreign","PLCC","C2","2030-01-01",99.,null,null),
             offer("expired","PLCC",null,"2025-01-01",99.,null,null),
             offer("loan","AUTO_LOAN",null,"2030-01-01",null,1.,0.));
-        assertEquals(List.of("b","a"),ProductOfferCatalog.eligible(offers,"PLCC","M1","C1",TODAY)
+        assertEquals(List.of("b"),ProductOfferCatalog.eligible(offers,"PLCC","M1","C1",TODAY)
             .stream().map(ProductOfferCatalog.Offer::offerId).toList());
         assertTrue(ProductOfferCatalog.eligible(offers,"PLCC","OTHER","C1",TODAY).isEmpty());
     }

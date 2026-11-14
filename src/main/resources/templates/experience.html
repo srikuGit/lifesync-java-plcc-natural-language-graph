@@ -1,15 +1,15 @@
 <!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LifeSync · Your assistant</title><link rel="stylesheet" href="/css/app.css?v=3"></head>
-<body><header class="top"><div class="shell nav"><a class="brand" href="/">LifeSync <small>DEMO BANK</small></a>
+<title>DEMO bank · Your assistant</title><link rel="stylesheet" href="/css/app.css?v=3"></head>
+<body><header class="top"><div class="shell nav"><a class="brand" href="/">DEMO bank</a>
 <nav><a href="/">Customer assistant</a><a href="/campaigns">Campaign previews</a></nav></div></header>
 <main class="shell"><section class="hero"><div><div class="eyebrow">YOUR NEXT STEP STARTS WITH A CONVERSATION</div>
 <h1>How can we help with your goals?</h1><p>Start with your customer ID, then ask about your goals, nearby shops or PLCC discounts.</p></div></section>
-<section class="panel pad"><h2 th:text="${profile == null ? 'Welcome to LifeSync' : 'Choose a customer'}">Welcome</h2>
-<form id="customer-form" class="searchform" method="get" action="/experience"><label for="customerId">Customer ID
-<input id="customerId" name="customerId" maxlength="64" required placeholder="C001" th:value="${customerIdInput}"></label>
+<section class="panel pad"><h2 th:text="${profile == null ? 'Welcome to DEMO bank' : 'Choose a customer'}">Welcome</h2>
+<form id="customer-form" class="searchform" method="get" action="/experience"><input type="hidden" name="fresh" value="true"><label for="customerId">Customer ID
+<input id="customerId" name="customerId" autocomplete="off" maxlength="64" required placeholder="C001" th:value="${customerIdInput}"></label>
 <button class="btn" type="submit">Start conversation</button></form><p id="load-status" role="status" aria-live="polite"></p>
-<div class="chips"><a href="/experience?customerId=C001">C001</a><a href="/experience?customerId=C002">C002</a><a href="/experience?customerId=C003">C003</a></div>
+<div class="chips"><a href="/experience?fresh=true&amp;customerId=C001">C001</a><a href="/experience?fresh=true&amp;customerId=C002">C002</a><a href="/experience?fresh=true&amp;customerId=C003">C003</a></div>
 <p class="muted">Fictional customer lookup for this demo; customer ID is not authentication.</p>
 <p role="alert" class="error" th:if="${error}" th:text="${error}"></p></section>
 <div th:if="${profile != null}">
@@ -20,7 +20,7 @@
 <div><dt>Customer ID</dt><dd th:text="${profile.customerId}">ID</dd></div>
 <div><dt>Location</dt><dd th:text="|${profile.city}, ${profile.state}|">Location</dd></div>
 </dl></section>
-<section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your LifeSync assistant</h2>
+<section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your DEMO bank assistant</h2>
 <p>Ask to see your goals first. Merchant and offer details are available on request for eligible PLCC shopping goals.</p></div>
 <button id="reset-chat" class="btn secondary" type="button">New chat</button></div>
 <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
@@ -36,4 +36,4 @@ placeholder="Ask about your goals…" th:value="${questionInput}"></label><butto
 <div id="contact-panel"><div th:replace="~{fragments/conversation :: contact}"></div></div>
 </div>
 <p class="footnote">Fictional data and illustrative locations/offers only. Home lending and auto-loan goals can be listed; their provider and offer details are not displayed. Chat cannot open accounts, send emails or change consent. Email campaigns generate previews only.</p>
-</main><script src="/js/experience.js?v=3" defer></script></body></html>
+</main><script src="/js/experience.js?v=4" defer></script></body></html>

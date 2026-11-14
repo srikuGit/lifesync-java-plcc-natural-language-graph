@@ -36,12 +36,29 @@ class ConversationServiceTest {
     }
     @Test void followupPreservesOfferFiltersAndSortAndUsesBoundedTools() throws Exception {
         var state=service.start("C1");when(mcp.plccMerchants(eq("C1"),eq(List.of("G1")),any(),any(),eq(5))).thenReturn(details());
-        when(planner.plan(eq(state),eq(goals),eq("Discounts"))).thenReturn(new ConversationPlanner.Plan("OFFERS",List.of("G1"),false,null,15.,"DISCOUNT",true,1,""));
-        assertEquals(2,service.turn(state,"Discounts").toolCalls());
+        when(planner.plan(eq(state),eq(goals),eq("Top one shop with discounts"))).thenReturn(new ConversationPlanner.Plan("OFFERS",List.of("G1"),false,null,15.,"DISCOUNT",true,1,""));
+        assertEquals(2,service.turn(state,"Top one shop with discounts").toolCalls());
         when(planner.plan(eq(state),eq(goals),eq("Within five miles"))).thenReturn(new ConversationPlanner.Plan("MERCHANTS",List.of(),true,5.,null,null,null,null,""));
         var result=service.turn(state,"Within five miles");assertTrue(result.toolCalls()<=3);
         verify(mcp).plccMerchants("C1",List.of("G1"),5.,15.,5);
         assertEquals("DISCOUNT",state.previous.sort());assertTrue(state.previous.offersOnly());assertEquals(1,state.previous.limit());
+    }
+    @Test void generalShopRequestIgnoresUnrequestedModelLimitAndNamedGoalResetsPreviousFilters() throws Exception {
+        var state=service.start("C1");
+        var first=details().goals().getFirst().providers().getFirst();
+        var providers=List.of(first,new CustomerSubgraph.Provider("M2","S2","Second shop","Seattle","WA",3.,first.offers()),
+            new CustomerSubgraph.Provider("M3","S3","Third shop","Seattle","WA",4.,first.offers()));
+        var found=new CustomerSubgraph("C1","Alex Walker",List.of(new CustomerSubgraph.Goal("G1","Furniture","PLCC","PLCC",plcc.categories(),"MATCHED",providers)));
+        when(mcp.plccMerchants(eq("C1"),eq(List.of("G1")),any(),any(),eq(5))).thenReturn(found);
+        String question="Shops that can help me with Furniture";
+        when(planner.plan(eq(state),eq(goals),eq(question))).thenReturn(
+            new ConversationPlanner.Plan("MERCHANTS",List.of("G1"),false,null,null,"DISTANCE",false,1,""),
+            new ConversationPlanner.Plan("MERCHANTS",List.of("G1"),true,null,null,null,null,3,""));
+        assertEquals(3,service.turn(state,question).graph().goals().getFirst().providers().size());
+        state.previous=new ConversationPlanner.Plan("OFFERS",List.of("G1"),false,1.,20.,"DISCOUNT",true,1,"");
+        assertEquals(3,service.turn(state,question).graph().goals().getFirst().providers().size());
+        verify(mcp,times(2)).plccMerchants("C1",List.of("G1"),null,null,5);
+        assertEquals(5,state.previous.limit());assertNull(state.previous.maxDistanceMiles());assertFalse(state.previous.offersOnly());
     }
     @Test void revokedAccountRedactsCachedDetailsAndExplanations() throws Exception {
         var state=service.start("C1");state.goals=goals;state.retrievedAt=System.currentTimeMillis();state.lastResult=details();

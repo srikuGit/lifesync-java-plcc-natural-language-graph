@@ -24,7 +24,7 @@ class CustomerExperienceControllerTest {
         when(conversations.start("C001")).thenReturn(state);
         mvc.perform(get("/experience").param("customerId","C001").param("question","Show my goals"))
             .andExpect(status().isOk()).andExpect(model().attribute("profile",state.profile()))
-            .andExpect(model().attribute("messages",List.of()));
+            .andExpect(model().attribute("messages",List.of())).andExpect(model().attribute("questionInput","")).andExpect(model().attribute("customerIdInput",""));
         verify(conversations).start("C001");verify(conversations,never()).turn(any(),anyString());verifyNoInteractions(contacts);
     }
     @Test void validatedChatUsesTheCurrentSessionCustomer() throws Exception {
@@ -47,6 +47,18 @@ class CustomerExperienceControllerTest {
             .andExpect(model().attribute("profile",other.profile())).andExpect(model().attribute("messages",List.of()));
         org.junit.jupiter.api.Assertions.assertNull(session.getAttribute("plccContactToken"));
         org.junit.jupiter.api.Assertions.assertSame(other,session.getAttribute(CustomerExperienceController.CONVERSATION));
+    }
+    @Test void startingSameCustomerAgainClearsPriorSearchAndConsent() throws Exception {
+        var session=session();session.setAttribute("plccContactToken","old-token");
+        session.setAttribute(CustomerExperienceController.SNAPSHOT,"old-search");
+        state.add("Old search",new ConversationState.Reply("Old results","GRAPH",null,false,false,0));
+        var fresh=new ConversationState(state.profile());when(conversations.start("C001")).thenReturn(fresh);
+        mvc.perform(get("/experience").session(session).param("customerId","C001").param("fresh","true").param("question","Old search"))
+            .andExpect(model().attribute("messages",List.of())).andExpect(model().attribute("questionInput","")).andExpect(model().attribute("customerIdInput",""));
+        org.junit.jupiter.api.Assertions.assertSame(fresh,session.getAttribute(CustomerExperienceController.CONVERSATION));
+        org.junit.jupiter.api.Assertions.assertNull(session.getAttribute(CustomerExperienceController.SNAPSHOT));
+        org.junit.jupiter.api.Assertions.assertNull(session.getAttribute("plccContactToken"));
+        org.junit.jupiter.api.Assertions.assertNotEquals("token",session.getAttribute(CustomerExperienceController.TOKEN));
     }
     @Test void savedConsentStillSuppressesTheFormAfterMerchantRequest() throws Exception {
         var graph=new CustomerSubgraph("C001","Alex",List.of(new CustomerSubgraph.Goal("G1","Furniture","PLCC","PLCC",List.of(),"PLCC_ACCOUNT_RESTRICTED",List.of())));

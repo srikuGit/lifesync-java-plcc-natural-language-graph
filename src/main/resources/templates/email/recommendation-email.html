@@ -3,7 +3,7 @@
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:24px;background:#f3f6fa;font-family:Arial,sans-serif;color:#16253a">
 <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;max-width:680px;margin:auto;background:#fff;border-radius:12px;overflow:hidden">
-<tr><td style="background:#102a46;padding:26px 32px;color:white"><strong style="font-size:22px" th:text="${bankName}">LifeSync</strong><p style="font-size:12px">PLCC SAVINGS GOAL DEMONSTRATION</p></td></tr>
+<tr><td style="background:#102a46;padding:26px 32px;color:white"><strong style="font-size:22px" th:text="${bankName}">DEMO bank</strong><p style="font-size:12px">PLCC SAVINGS GOAL DEMONSTRATION</p></td></tr>
 <tr><td style="padding:28px 32px">
 <h1 style="font-size:23px" th:text="|Hello ${customerName},|">Hello,</h1>
 <p>Thank you for planning your next milestone with us.</p>
@@ -27,7 +27,7 @@
 </div>
 <p th:if="${#lists.isEmpty(merchants)}">No eligible merchant recommendations were found.</p>
 <p>We hope these resources help you explore your purchase options.</p>
-<p>Best regards,<br><strong th:text="${bankName}">LifeSync</strong></p>
+<p>Best regards,<br><strong th:text="${bankName}">DEMO bank</strong></p>
 </td></tr>
 <tr><td style="background:#f3f6fa;color:#5e6f81;padding:20px 32px;font-size:12px">
 <strong>POC PREVIEW — NOT SENT.</strong> This is a fictional demonstration, not an official Wells Fargo communication or verified PLCC offer.

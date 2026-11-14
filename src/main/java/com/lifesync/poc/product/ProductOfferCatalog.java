@@ -48,7 +48,7 @@ public class ProductOfferCatalog {
                         ? valid(o.discountPercent(), 100)
                         : valid(o.apr(), 100) && valid(o.fees(), Double.MAX_VALUE)
                             && o.termMonths() != null && o.termMonths() > 0)
-                .sorted(order.thenComparing(Offer::offerId)).limit(3).toList();
+                .sorted(order.thenComparing(Offer::offerId)).limit("PLCC".equals(product) ? 1 : 3).toList();
     }
     private static boolean valid(Double n, double max) {
         return n != null && Double.isFinite(n) && n >= 0 && n <= max;

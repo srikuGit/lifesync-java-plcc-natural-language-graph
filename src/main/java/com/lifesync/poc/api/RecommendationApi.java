@@ -23,7 +23,7 @@ public class RecommendationApi {
     }
 
     @GetMapping("/health")
-    public Map<String, String> health() { return Map.of("status", "UP", "service", "LifeSync Java POC"); }
+    public Map<String, String> health() { return Map.of("status", "UP", "service", "DEMO bank demo"); }
 
     @GetMapping("/vectors/status")
     public Object vectorStatus() { return graph.vectorStats(embeddingModel); }

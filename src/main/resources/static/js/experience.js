@@ -1,5 +1,5 @@
 const customerForm=document.querySelector('#customer-form');
-customerForm?.addEventListener('submit',()=>{customerForm.querySelector('button').disabled=true;document.querySelector('#load-status').textContent='Loading customer details…';});
+customerForm?.addEventListener('submit',()=>{customerForm.querySelector('button').disabled=true;document.querySelector('#conversation')?.setAttribute('hidden','');document.querySelector('#contact-panel')?.replaceChildren();document.querySelector('#load-status').textContent='Loading customer details…';});
 const form=document.querySelector('#chat-form');
 const messages=document.querySelector('#chat-messages');
 const status=document.querySelector('#chat-status');

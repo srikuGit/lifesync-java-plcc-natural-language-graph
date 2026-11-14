@@ -38,8 +38,11 @@ public class ConversationService {
                     text="These merchants match the categories of your PLCC shopping goals. Compare the displayed locations, discounts and offer conditions.";
                 return save(state,question,new ConversationState.Reply(text,"GRAPH_GROUNDED_EXPLANATION",state.lastResult,true,restricted(state.lastResult),toolCalls));
             }
+            // A named goal starts a fresh search; model-selected limits must not silently hide shops.
+            boolean namedGoal=state.goals.goals().stream().anyMatch(g->normalized(question).contains(normalized(g.description())));
+            boolean reusePrevious=plan.reusePrevious()&&!namedGoal;
             var selected=new ArrayList<>(plan.goalIds());
-            if(plan.reusePrevious()&&state.previous!=null&&selected.isEmpty()) {
+            if(reusePrevious&&state.previous!=null&&selected.isEmpty()) {
                 selected.addAll(state.previous.goalIds());
                 if(!plan.action().equals("GOALS")) selected.removeIf(id->state.goals.goals().stream().anyMatch(g->g.goalId().equals(id)&&!"PLCC".equals(g.productId())));
             }
@@ -62,10 +65,11 @@ public class ConversationService {
             if(!selected.isEmpty()&&selected.stream().anyMatch(id->state.goals.goals().stream().anyMatch(g->g.goalId().equals(id)&&!"PLCC".equals(g.productId()))))
                 return save(state,question,new ConversationState.Reply("I can list home lending and auto-loan goals, but cannot show merchants or offers for those products.","PRODUCT_POLICY",null,false,false,toolCalls));
             Double distance=plan.maxDistanceMiles(),discount=plan.minDiscountPercent();
-            if(plan.reusePrevious()&&state.previous!=null){if(distance==null)distance=state.previous.maxDistanceMiles();if(discount==null)discount=state.previous.minDiscountPercent();}
-            String sort=plan.sort()!=null?plan.sort():plan.reusePrevious()&&state.previous!=null&&state.previous.sort()!=null?state.previous.sort():"DISTANCE";
-            boolean offersOnly=(plan.offersOnly()!=null?plan.offersOnly():plan.reusePrevious()&&state.previous!=null&&Boolean.TRUE.equals(state.previous.offersOnly()))||plan.action().equals("OFFERS");
-            int limit=plan.limit()!=null?plan.limit():plan.reusePrevious()&&state.previous!=null&&state.previous.limit()!=null?state.previous.limit():5;
+            if(reusePrevious&&state.previous!=null){if(distance==null)distance=state.previous.maxDistanceMiles();if(discount==null)discount=state.previous.minDiscountPercent();}
+            String sort=plan.sort()!=null?plan.sort():reusePrevious&&state.previous!=null&&state.previous.sort()!=null?state.previous.sort():"DISTANCE";
+            boolean offersOnly=(plan.offersOnly()!=null?plan.offersOnly():reusePrevious&&state.previous!=null&&Boolean.TRUE.equals(state.previous.offersOnly()))||plan.action().equals("OFFERS");
+            Integer requestedLimit=requestedShopLimit(question);
+            int limit=requestedLimit!=null?requestedLimit:reusePrevious&&state.previous!=null&&state.previous.limit()!=null?state.previous.limit():5;
             Double toolDiscount=discount!=null?discount:offersOnly?0d:null;
             var found=tools.plccMerchants(state.profile().customerId(),plcc,distance,toolDiscount,5);toolCalls++;
             if(toolCalls>3)throw new IllegalStateException("Tool budget exceeded");
@@ -97,6 +101,13 @@ public class ConversationService {
             org.slf4j.LoggerFactory.getLogger(getClass()).warn("Conversation fallback: {}",code);
             return save(state,question,new ConversationState.Reply("I couldn't complete that request. Please retry or use one of the example questions. Your customer selection has not changed. ["+code+"]","GRAPH_FALLBACK",null,false,false,toolCalls));
         } finally {state.busy.set(false);}
+    }
+    private static String normalized(String text){return text.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]+"," ").strip();}
+    private static Integer requestedShopLimit(String question){
+        var match=java.util.regex.Pattern.compile("(?i)\\b(one|two|three|four|five|[1-5])\\s+(?:(?:nearest|closest|best|matching)\\s+)?(?:shops?|stores?|merchants?|providers?|results?)\\b").matcher(question);
+        if(!match.find())return null;
+        return switch(match.group(1).toLowerCase(Locale.ROOT)){
+            case "one"->1;case "two"->2;case "three"->3;case "four"->4;case "five"->5;default->Integer.valueOf(match.group(1));};
     }
     private boolean restricted(CustomerSubgraph g){return g.goals().stream().anyMatch(goal->"PLCC_ACCOUNT_RESTRICTED".equals(goal.status()));}
     private ConversationState.Reply save(ConversationState s,String q,ConversationState.Reply reply){s.add(q,reply);return reply;}

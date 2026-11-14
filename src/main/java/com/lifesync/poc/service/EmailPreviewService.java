@@ -23,12 +23,12 @@ public class EmailPreviewService {
     private final String bankName;
     public EmailPreviewService(TemplateEngine templates,GraphRepository graph,
             OffersClient offers,ConsentLinkService consent,
-            @Value("${lifesync.demo-bank-name:LifeSync PLCC concept demo}") String bankName) {
+            @Value("${lifesync.demo-bank-name:DEMO bank}") String bankName) {
         this.templates=templates;this.graph=graph;this.offers=offers;this.consent=consent;
         this.bankName=bankName;
     }
     public String subjectHolder(GoalDetail g) {
-        return "Explore nearby merchants for your LifeSync goal";
+        return "Explore nearby merchants for your DEMO bank goal";
     }
     public String subjectInvitation(GoalDetail g) {
         return "Explore PLCC options for your savings goal — demo invitation";

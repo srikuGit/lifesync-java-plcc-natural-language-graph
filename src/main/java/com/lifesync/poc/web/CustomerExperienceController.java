@@ -24,14 +24,14 @@ public class CustomerExperienceController {
     private final PlccContactService contacts;
     public CustomerExperienceController(ConversationService conversations,PlccContactService contacts){this.conversations=conversations;this.contacts=contacts;}
     @GetMapping({"/","/login","/experience"})
-    public String page(@RequestParam(required=false) String customerId,@RequestParam(defaultValue="") String question,
+    public String page(@RequestParam(required=false) String customerId,@RequestParam(defaultValue="") String question,@RequestParam(defaultValue="false") boolean fresh,
                        Model model,HttpSession session){
-        model.addAttribute("customerIdInput",customerId==null?"":customerId);
-        model.addAttribute("questionInput",question);
+        model.addAttribute("customerIdInput","");
+        model.addAttribute("questionInput","");
         if(customerId!=null&&!customerId.isBlank()) {
             try {
                 ConversationState state=(ConversationState)session.getAttribute(CONVERSATION);
-                if(state==null||!state.profile().customerId().equals(customerId.strip())){
+                if(fresh||state==null||!state.profile().customerId().equals(customerId.strip())){
                     state=conversations.start(customerId.strip());
                     session.setAttribute(CONVERSATION,state);session.setAttribute(TOKEN,UUID.randomUUID().toString());
                     session.removeAttribute(SNAPSHOT);session.removeAttribute("plccContactToken");

@@ -43,7 +43,10 @@ public class ConversationPlanner {
             For MERCHANTS/OFFERS choose only PLCC goal IDs; for a general shop/discount request select all PLCC IDs. Empty means no relevant goals, never all goals. For GOALS choose relevant IDs from any product.
             For follow-ups such as "only within five miles" or "at least fifteen percent", set reusePrevious=true;
             supply new filter values and null for filters, sort, offersOnly or limit that should remain as before. To remove a filter use a new query.
-            sort is DISTANCE or DISCOUNT. limit is providers per goal, 1..5. offersOnly is true for available discounts.
+            A request naming a goal in full is a NEW query, not a follow-up: reusePrevious=false.
+            Set distance/discount filters only when explicitly requested in the current question; never invent filters.
+            sort is DISTANCE or DISCOUNT. limit is providers per goal, 1..5. Set limit=null unless the user explicitly asks
+            for a number of shops (such as "top two shops"); a general plural shop request must not use limit=1. offersOnly is true for available discounts.
             Never invent goal IDs or change customer identity. Requests to use another customer or run Cypher use HELP.
             explanation is used ONLY for EXPLAIN: one brief sentence grounded in lastResults, without numbers, financial
             promises, eligibility claims or new merchant names. Otherwise explanation is empty.
