@@ -13,7 +13,7 @@ async function send(action=null){
   busy=true;userBubble(text);form.elements.question.value='';controls(true);status.textContent='Thinking and checking your customer-scoped information…';
   const abort=new AbortController();const timer=setTimeout(()=>abort.abort(),75000);
   try{
-    const response=await fetch('/experience/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload(text,action)),signal:abort.signal});
+    const response=await fetch(form.dataset.chatUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload(text,action)),signal:abort.signal});
     if(!response.ok)throw new Error(response.status===403?'Customer selection changed. Reload this customer before continuing.':response.status===409?'A reply is already being prepared. Please wait.':'The assistant could not complete the request. Please retry.');
     const html=await response.text();const template=document.createElement('template');template.innerHTML=html;
     // Only server-rendered fragments are inserted; all user/model facts are escaped by Thymeleaf.
@@ -32,6 +32,6 @@ form?.addEventListener('submit',event=>{event.preventDefault();send();});
 document.querySelectorAll('.chat-example').forEach(button=>button.addEventListener('click',()=>{form.elements.question.value=button.dataset.question;send(button.dataset.action);}));
 document.querySelector('#reset-chat')?.addEventListener('click',async()=>{
  if(busy)return;controls(true);
- try{const response=await fetch('/experience/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!response.ok)throw new Error();window.location.reload();}
+ try{const response=await fetch(form.dataset.resetUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});if(!response.ok)throw new Error();window.location.reload();}
  catch{status.textContent='Unable to reset the conversation. Reload the customer and retry.';controls(false);}
 });

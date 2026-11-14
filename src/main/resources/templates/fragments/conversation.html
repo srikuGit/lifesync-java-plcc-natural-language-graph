@@ -28,7 +28,7 @@
 <section th:fragment="contact" id="plcc-contact" class="panel pad" th:if="${contactToken != null or contactSaved == true}">
 <div th:if="${contactSaved == true}"><h2>PLCC contact request received</h2><p role="status">Your consent is saved and a PLCC information request has been recorded. This demonstration does not initiate an actual call.</p></div>
 <div th:unless="${contactSaved == true}"><h2>Would you like to learn about PLCC?</h2><p>With your permission, a representative can contact you to explain PLCC account details. This does not open an account or confirm eligibility.</p>
-<form method="post" action="/experience/plcc-contact"><input type="hidden" name="customerId" th:value="${contactCustomerId}"><input type="hidden" name="token" th:value="${contactToken}">
+<form method="post" action="/experience/plcc-contact" th:action="@{/experience/plcc-contact}"><input type="hidden" name="customerId" th:value="${contactCustomerId}"><input type="hidden" name="token" th:value="${contactToken}">
 <label class="consent-choice"><input type="checkbox" name="permission" value="true" required><span th:text="${consentText}"></span></label>
 <button class="btn" type="submit">I agree — request a call about PLCC</button></form><p class="muted">This demonstration records the request but does not initiate a call.</p></div></section>
 </body></html>

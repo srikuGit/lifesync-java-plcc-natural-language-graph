@@ -1,15 +1,15 @@
 <!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DEMO bank · Banker assistant</title><link rel="stylesheet" href="/css/app.css?v=3"></head>
-<body><header class="top"><div class="shell nav"><a class="brand" href="/">DEMO bank</a>
-<nav><a href="/">Customer assistant</a><a href="/campaigns">Campaign previews</a></nav></div></header>
+<title>DEMO bank · Banker assistant</title><link rel="stylesheet" href="/css/app.css?v=3" th:href="@{/css/app.css(v=3)}"></head>
+<body><header class="top"><div class="shell nav"><a class="brand" href="/" th:href="@{/}">DEMO bank</a>
+<nav><a href="/" th:href="@{/}">Customer assistant</a><a href="/campaigns" th:href="@{/campaigns}">Campaign previews</a></nav></div></header>
 <main class="shell"><section class="hero"><div><div class="eyebrow">YOUR NEXT STEP STARTS WITH A CONVERSATION</div>
 <h1>How can we help with your goals?</h1><p>Start with your customer ID, then ask about your goals, nearby shops or PLCC discounts.</p></div></section>
 <section class="panel pad"><h2 th:text="${profile == null ? 'Welcome to DEMO bank' : 'Choose a customer'}">Welcome</h2>
-<form id="customer-form" class="searchform" method="get" action="/experience"><input type="hidden" name="fresh" value="true"><label for="customerId">Customer ID
+<form id="customer-form" class="searchform" method="get" action="/experience" th:action="@{/experience}"><input type="hidden" name="fresh" value="true"><label for="customerId">Customer ID
 <input id="customerId" name="customerId" autocomplete="off" maxlength="64" required placeholder="C001" th:value="${customerIdInput}"></label>
 <button class="btn" type="submit">Start conversation</button></form><p id="load-status" role="status" aria-live="polite"></p>
-<div class="chips"><a href="/experience?fresh=true&amp;customerId=C001">C001</a><a href="/experience?fresh=true&amp;customerId=C002">C002</a><a href="/experience?fresh=true&amp;customerId=C003">C003</a></div>
+<div class="chips"><a href="/experience?fresh=true&amp;customerId=C001" th:href="@{/experience(fresh=true,customerId='C001')}">C001</a><a href="/experience?fresh=true&amp;customerId=C002" th:href="@{/experience(fresh=true,customerId='C002')}">C002</a><a href="/experience?fresh=true&amp;customerId=C003" th:href="@{/experience(fresh=true,customerId='C003')}">C003</a></div>
 <p class="muted">Fictional customer lookup for this demo; customer ID is not authentication.</p>
 <p role="alert" class="error" th:if="${error}" th:text="${error}"></p></section>
 <div th:if="${profile != null}">
@@ -28,7 +28,7 @@
 <div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="Show my goals">Show my goals</button>
 <button type="button" class="btn secondary chat-example" data-action="OFFERS" data-question="Where can I get shopping discounts?">Find discounts</button>
 <button type="button" class="btn secondary chat-example" data-action="MERCHANTS" data-question="Show shops near me">Shops near me</button></div>
-<form id="chat-form" class="searchform" th:attr="data-customer=${profile.customerId},data-conversation=${conversation.id()},data-token=${chatToken}">
+<form id="chat-form" class="searchform" th:data-chat-url="@{/experience/chat}" th:data-reset-url="@{/experience/reset}" th:attr="data-customer=${profile.customerId},data-conversation=${conversation.id()},data-token=${chatToken}">
 <label for="chat-question">Message<input id="chat-question" name="question" maxlength="500" required autocomplete="off"
 placeholder="Ask about your goals…" th:value="${questionInput}"></label><button class="btn" type="submit">Send</button></form>
 <p id="chat-status" role="status" aria-live="polite"></p><p class="muted">Follow up with “Only within five miles” or “At least fifteen percent discount.” Chats stay in this browser session and reset when you change customers.</p>
@@ -36,4 +36,4 @@ placeholder="Ask about your goals…" th:value="${questionInput}"></label><butto
 <div id="contact-panel"><div th:replace="~{fragments/conversation :: contact}"></div></div>
 </div>
 <p class="footnote">Fictional data and illustrative locations/offers only. Home lending and auto-loan goals can be listed; their provider and offer details are not displayed. Chat cannot open accounts, send emails or change consent. Email campaigns generate previews only.</p>
-</main><script src="/js/experience.js?v=5" defer></script></body></html>
+</main><script src="/js/experience.js?v=6" th:src="@{/js/experience.js(v=6)}" defer></script></body></html>
