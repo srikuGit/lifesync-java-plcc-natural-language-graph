@@ -1,12 +1,16 @@
 <!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DEMO bank · Email preview</title><link rel="stylesheet" href="/css/app.css"></head>
 <body><header class="top"><div class="shell nav"><a class="brand" href="/">DEMO bank</a><nav><a href="/">Assistant</a><a href="/campaigns">Campaign previews</a></nav></div></header>
-<main class="shell"><section class="hero"><div><div class="eyebrow">PREVIEW ONLY · NOT SENT</div><h1>PLCC email preview</h1></div></section><a th:href="@{/campaigns/{id}(id=${runId})}">Back to campaign run</a>
+<main class="shell"><section class="hero"><div><div class="eyebrow">CUSTOMER EMAIL</div><h1>PLCC email preview</h1></div></section><a th:if="${runId != null}" th:href="@{/campaigns/{id}(id=${runId})}">Back to campaign run</a>
+<a th:if="${runId == null}" th:href="@{/experience(customerId=${customerId})} + '#customer-profile'">Back to customer profile</a>
+<p class="notice error" role="alert" th:if="${emailError}" th:text="${emailError}"></p>
 <section class="panel pad" th:if="${previewError}"><h2>Preview unavailable</h2><p role="alert" th:text="${previewError}"></p></section>
-<div th:if="${page != null}"><section class="panel pad"><p><strong>Subject:</strong> <span th:text="${page.preview.subject}"></span></p><p class="muted">Generated: <span th:text="${page.preview.generatedAt}"></span> · <span th:text="${page.preview.source == 'GRAPH_GROUNDED_LLM' ? 'AI-assisted introduction' : 'Factual introduction'}"></span></p><p class="muted">The introduction was prepared during the campaign run. Provider facts and offer validity below are refreshed each time you open this preview.</p></section>
-<section class="panel pad"><h2 th:text="|Hello ${page.graph.displayName},|"></h2><p th:text="${page.preview.introduction}"></p>
-<p th:if="${#lists.isEmpty(page.graph.goals)}">The selected goals are no longer available.</p>
-<article th:each="goal : ${page.graph.goals}"><h3 th:text="${goal.description}"></h3><p th:if="${#lists.isEmpty(goal.providers)}">No eligible located merchants are currently available for this goal.</p>
-<div class="merchant" th:each="provider : ${goal.providers}"><h4 th:text="${provider.name}"></h4><p><span th:text="${provider.city}"></span>, <span th:text="${provider.state}"></span> · <span th:text="${provider.distanceLabel()}"></span></p>
-<p th:if="${#lists.isEmpty(provider.offers)}">No current offers available.</p><div class="reason" th:each="offer : ${provider.offers}"><strong th:text="${offer.title}"></strong><p th:text="|${offer.discountPercent}% illustrative discount|"></p><p th:text="${offer.terms}"></p><p class="muted" th:text="|Valid ${offer.validFrom} through ${offer.validUntil}|"></p></div></div></article>
-<p>Best regards,<br>DEMO bank</p></section></div>
-<p class="footnote">Fictional demonstration, not an official communication or offer. No email has been sent. Distances are straight-line approximations; offers require their stated conditions and exclusions. PLCC account status is checked again before this preview is shown.</p></main></body></html>
+<div th:if="${page != null}"><section class="panel pad"><p><strong>Subject:</strong> <span th:text="${page.preview.subject}"></span></p><p class="muted" th:if="${runId != null}">Generated: <span th:text="${page.preview.generatedAt}"></span> · <span th:text="${page.preview.source == 'GRAPH_GROUNDED_LLM' ? 'AI-assisted introduction' : 'Factual introduction'}"></span></p><p class="muted" th:if="${runId != null}">The introduction was prepared during the campaign run. Provider facts and offer validity below are refreshed each time you open this preview.</p></section>
+<section th:replace="~{email/campaign-content :: message}"></section>
+<section class="panel pad" th:if="${sendToken}">
+<p>To <strong th:text="${recipient}"></strong> (demo inbox)</p>
+<form method="post" th:action="${runId == null} ? @{/experience/{customer}/email/send(customer=${customerId})} : @{/campaigns/{run}/previews/{customer}/send(run=${runId},customer=${customerId})}">
+<input type="hidden" name="token" th:value="${sendToken}">
+<button class="btn" type="submit">Send email</button>
+</form>
+</section></div>
+<p class="footnote">Fictional demonstration, not an official communication or offer. Distances are straight-line approximations; offers require their stated conditions and exclusions. PLCC account status is checked again before this preview is shown.</p></main></body></html>

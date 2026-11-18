@@ -4,6 +4,13 @@ server:
 spring:
   thymeleaf:
     cache: false
+  mail:
+    host: ${DEMO_SMTP_HOST:localhost}
+    port: ${DEMO_SMTP_PORT:1025}
+    properties:
+      "[mail.smtp.connectiontimeout]": 5000
+      "[mail.smtp.timeout]": 5000
+      "[mail.smtp.writetimeout]": 5000
   neo4j:
     uri: ${NEO4J_URI:bolt://localhost:7687}
     authentication:
@@ -24,6 +31,9 @@ spring:
       init:
         pull-model-strategy: never
 lifesync:
+  campaign:
+    mail-from: ${DEMO_MAIL_FROM:bank@example.test}
+    mail-to: ${DEMO_MAIL_TO:banker@example.test}
   legacy-ingestion-enabled: ${LEGACY_INGESTION_ENABLED:false}
   ui-content-enabled: ${UI_CONTENT_ENABLED:true}
   graph-mcp-url: ${GRAPH_MCP_URL:http://127.0.0.1:8080/mcp}

@@ -1,6 +1,6 @@
 <!doctype html><html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DEMO bank · Banker assistant</title><link rel="stylesheet" href="/css/app.css?v=3" th:href="@{/css/app.css(v=3)}"></head>
+<title>DEMO bank · Banker assistant</title><link rel="stylesheet" href="/css/app.css?v=4" th:href="@{/css/app.css(v=4)}"></head>
 <body><header class="top"><div class="shell nav"><a class="brand" href="/" th:href="@{/}">DEMO bank</a>
 <nav><a href="/" th:href="@{/}">Customer assistant</a><a href="/campaigns" th:href="@{/campaigns}">Campaign previews</a></nav></div></header>
 <main class="shell"><section class="hero"><div><div class="eyebrow">YOUR NEXT STEP STARTS WITH A CONVERSATION</div>
@@ -14,18 +14,21 @@
 <p role="alert" class="error" th:if="${error}" th:text="${error}"></p></section>
 <div th:if="${profile != null}">
 <section id="customer-profile" class="panel pad"><div class="eyebrow">CUSTOMER DETAILS</div>
-<h2 th:text="${profile.displayName()}">Customer</h2><dl class="profile-details">
+<h2 th:text="${profile.displayName()}">Customer</h2>
+<p class="notice" role="status" th:if="${emailNotice}" th:text="${emailNotice}"></p><dl class="profile-details">
 <div><dt>First name</dt><dd th:text="${profile.firstName}">First name</dd></div>
 <div><dt>Last name</dt><dd th:text="${profile.lastName}">Last name</dd></div>
 <div><dt>Customer ID</dt><dd th:text="${profile.customerId}">ID</dd></div>
 <div><dt>Location</dt><dd th:text="|${profile.city}, ${profile.state}|">Location</dd></div>
-</dl></section>
+</dl>
+<p th:if="${profile.plccHolder()}"><a class="profile-email-link" th:href="@{/experience/{customer}/email(customer=${profile.customerId})}">View email with goals</a></p>
+</section>
 <section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your Banker assistant</h2>
-<p>Ask to see your goals first. Merchant and offer details are available on request for eligible PLCC shopping goals.</p></div>
+<p>Select View details to see the customer’s goals. Ask about shops or discounts for eligible PLCC shopping goals.</p></div>
 <button id="reset-chat" class="btn secondary" type="button">New chat</button></div>
 <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
 <div th:replace="~{fragments/conversation :: history(${messages})}"></div></div>
-<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="Show my goals">Show my goals</button>
+<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="View details">View details</button>
 <button type="button" class="btn secondary chat-example" data-action="OFFERS" data-question="Where can I get shopping discounts?">Find discounts</button>
 <button type="button" class="btn secondary chat-example" data-action="MERCHANTS" data-question="Show shops near me">Shops near me</button></div>
 <form id="chat-form" class="searchform" th:data-chat-url="@{/experience/chat}" th:data-reset-url="@{/experience/reset}" th:attr="data-customer=${profile.customerId},data-conversation=${conversation.id()},data-token=${chatToken}">

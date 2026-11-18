@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>PLCC shopping goals</title></head>
+<body>
+<section th:fragment="message" class="panel pad"><h2 th:text="|Hello ${page.graph.displayName},|"></h2><p th:text="${page.preview.introduction}"></p>
+<p th:if="${#lists.isEmpty(page.graph.goals)}">The selected goals are no longer available.</p>
+<article class="chat-goal" style="border: 1px solid #6d8da9; border-left: 4px solid #2b648b; border-radius: 10px; padding: 16px; margin: 16px 0; background: #fff;" th:each="goal : ${page.graph.goals}"><h3 th:text="${goal.description}"></h3><p th:if="${#lists.isEmpty(goal.providers)}">No eligible located merchants are currently available for this goal.</p>
+<div class="merchant" th:each="provider : ${goal.providers}"><h4 th:text="${provider.name}"></h4><p><span th:text="${provider.city}"></span>, <span th:text="${provider.state}"></span> · <span th:text="${provider.distanceLabel()}"></span></p>
+<p th:if="${#lists.isEmpty(provider.offers)}">No current offers available.</p><div class="reason" th:each="offer : ${provider.offers}"><strong th:text="${offer.title}"></strong><p th:if="${offer.discountPercent != null}" th:text="|${offer.discountPercent}% illustrative discount|"></p><p th:text="${offer.terms}"></p><p class="muted" th:text="|Valid ${offer.validFrom} through ${offer.validUntil}|"></p></div></div></article>
+<p>Best regards,<br>DEMO bank</p></section>
+</body>
+</html>

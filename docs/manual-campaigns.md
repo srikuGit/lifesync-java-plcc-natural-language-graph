@@ -3,8 +3,7 @@
 Open `/campaigns` and choose **Generate previews**. This starts one separate
 background run for up to the requested number of ACTIVE PLCC customers (default
 25, maximum 100, ordered by customer ID). It does not start on app boot or a
-schedule and does not send emails. There is no SMTP client, delivery endpoint,
-subscription action or LLM send tool.
+schedule. Delivery requires an explicit action from an individual preview.
 
 The campaign worker is separate from conversational HTTP requests. It processes
 one customer at a time, checks ACTIVE status before fetching facts and again
@@ -42,5 +41,18 @@ Manual POST uses a single-use session token. This is a local administrative demo
 not real administrator authentication. Before exposing it to shared users, add
 an authenticated role boundary and appropriate communication permissions. Existing
 representative-contact consent is not automatically email-marketing permission.
-Because these are previews only, no contact is initiated and no permission record
-is created or changed by generation.
+Generating previews does not create or change permission records.
+
+## Sending to the demo inbox
+
+Open a ready campaign preview, or select **View email with goals** on an active PLCC
+customer profile. The profile preview uses a factual introduction and current PLCC
+goals, merchants, and offers. Select **Send email** to deliver the message and return
+to the originating profile or campaign run with a confirmation. The server checks
+eligibility and refreshes offer facts before delivery.
+
+With Docker Compose, open the Mailpit inbox at http://localhost:8025. Customer
+fixtures have no email addresses, so the demo uses the displayed inbox address.
+When running outside Compose, configure a test SMTP server with `DEMO_SMTP_HOST`
+and `DEMO_SMTP_PORT` (defaults `localhost:1025`). The defaults for `DEMO_MAIL_FROM`
+and `DEMO_MAIL_TO` are `bank@example.test` and `banker@example.test`.

@@ -27,9 +27,12 @@ public class CampaignPreviewComposer {
             @Value("${lifesync.campaign.ai-timeout-seconds:${CAMPAIGN_AI_TIMEOUT_SECONDS:30}}") int timeoutSeconds) {
         this.models=models;this.mapper=mapper;this.enabled=enabled;this.timeoutSeconds=Math.max(5,Math.min(60,timeoutSeconds));
     }
-    public Copy compose(CustomerSubgraph graph) {
-        Copy fallback=new Copy("Explore offers for your PLCC shopping goals",
+    static Copy factualCopy() {
+        return new Copy("Explore offers for your PLCC shopping goals",
             "Explore nearby merchants related to your PLCC shopping goals. Review the current offers and their conditions below.","FACTUAL_TEMPLATE");
+    }
+    public Copy compose(CustomerSubgraph graph) {
+        Copy fallback=factualCopy();
         if(!enabled)return fallback;
         Future<String> task=null;
         try {

@@ -47,6 +47,11 @@ services:
         if [ "$${EMBED_ON_START}" = "true" ]; then ollama pull "$${OLLAMA_EMBED_MODEL}"; fi
     restart: "no"
 
+  mailpit:
+    image: axllent/mailpit:v1.22.3
+    ports:
+      - "127.0.0.1:8025:8025"
+
   app:
     build: .
     depends_on:
@@ -56,6 +61,7 @@ services:
       GEOCODING_URL: ${GEOCODING_URL:-https://geocoding.geo.census.gov/geocoder/locations/onelineaddress}
       SERVER_ADDRESS: 0.0.0.0
       LEGACY_INGESTION_ENABLED: ${LEGACY_INGESTION_ENABLED:-false}
+      DEMO_SMTP_HOST: mailpit
       CAMPAIGN_AI_ENABLED: ${CAMPAIGN_AI_ENABLED:-true}
       CAMPAIGN_AI_TIMEOUT_SECONDS: ${CAMPAIGN_AI_TIMEOUT_SECONDS:-30}
       AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-60}

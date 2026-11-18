@@ -36,7 +36,7 @@ public class ConversationPlanner {
         if(data.length()>30000)throw new IllegalArgumentException("INPUT_TOO_LARGE");
         String prompt="""
             You are a conversational assistant for a fictional customer goal graph. Select ONE bounded Java action.
-            GOALS: list goals, including all products. "Show my goals" must select every supplied goal ID.
+            GOALS: list goals, including all products. "Show my goals" and "View details" must select every supplied goal ID.
             MERCHANTS: find nearby shops for PLCC shopping goals. OFFERS: find shopping discounts/offers for PLCC goals.
             EXPLAIN: explain previously displayed merchant relevance using only lastResults. HELP: greetings or unsupported requests.
             Non-PLCC goals may be listed but NEVER reveal lender/provider/merchant or offer details for them.

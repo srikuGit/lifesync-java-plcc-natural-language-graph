@@ -18,7 +18,7 @@ still determine whether nearby shops and offers can be displayed.
 
 Enter a customer ID to see **first name, last name and a chat window**. No goals or offers are shown automatically. Ask **“Show my goals”** to list all product goals, then ask about shops/discounts for eligible PLCC merchant and offer details. Other product goals remain basic-only. Follow-up questions reuse bounded customer-session context.
 
-A separate **Campaign previews** page starts a manual background job for **ACTIVE PLCC holders only**. It creates email previews and records progress; it never sends email or changes consent.
+A separate **Campaign previews** page starts a manual background job for **ACTIVE PLCC holders only**. It creates email previews and records progress. Bankers can send an individual preview from a campaign run or an active PLCC customer profile to the local Mailpit inbox at http://localhost:8025.
 
 See [the conversational architecture and setup](docs/conversational-graphrag.md) and [manual campaign workflow](docs/manual-campaigns.md). These instructions supersede the historical UI descriptions below.
 
@@ -95,7 +95,7 @@ The following describes the retained legacy workflow; v0.9 defaults and startup 
 
 # LifeSync PLCC — Java-only retrieval + semantic classification + email LLM (v0.7.0)
 
-Local Java 21 / Spring Boot / Neo4j Community / Spring AI / Ollama / Thymeleaf / Docker Compose proof of concept. **No email is actually sent.** All names, account statuses, goals, stores, and offers are synthetic demo fixtures.
+Local Java 21 / Spring Boot / Neo4j Community / Spring AI / Ollama / Thymeleaf / Docker Compose proof of concept. Individual campaign emails are delivered to the demo inbox. All names, account statuses, goals, stores, and offers are synthetic demo fixtures.
 
 ## v0.7.0: exactly where AI is used
 

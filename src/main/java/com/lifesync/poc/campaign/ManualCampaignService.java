@@ -83,14 +83,25 @@ public class ManualCampaignService implements ApplicationRunner {
         Run run=repository.run(runId).orElseThrow(()->new NoSuchElementException("Campaign run not found."));
         Preview preview=repository.preview(runId,customerId).orElseThrow(()->new NoSuchElementException("Campaign preview not found."));
         if(!"READY".equals(preview.status()))throw new IllegalStateException("This customer preview is not ready.");
-        if(!repository.isActive(customerId))throw new IllegalStateException("This customer no longer has an ACTIVE PLCC account. The preview is unavailable.");
-        CustomerSubgraph current=plccGraph(mcp.customerGraph(customerId,"PLCC"),customerId);
-        if(current.goals().stream().anyMatch(g->"PLCC_ACCOUNT_RESTRICTED".equals(g.status())))
-            throw new IllegalStateException("PLCC merchant access is not currently verified. The preview is unavailable.");
+        CustomerSubgraph current=currentGraph(customerId);
         Set<String> selected=Set.copyOf(preview.goalIds());
         current=new CustomerSubgraph(current.customerId(),current.displayName(),current.goals().stream().filter(g->selected.contains(g.goalId())).toList());
         // No model call during rendering; offers are refreshed by MCP and never stored in campaign nodes.
         return new PreviewPage(run,preview,current);
+    }
+    public PreviewPage profilePreview(String customerId) {
+        CustomerSubgraph graph=currentGraph(customerId);
+        var copy=CampaignPreviewComposer.factualCopy();
+        var preview=new Preview(null,null,customerId,"READY",copy.subject(),copy.introduction(),
+            copy.source(),graph.goals().stream().map(CustomerSubgraph.Goal::goalId).toList(),null,"");
+        return new PreviewPage(null,preview,graph);
+    }
+    private CustomerSubgraph currentGraph(String customerId) {
+        if(!repository.isActive(customerId))throw new IllegalStateException("This customer no longer has an ACTIVE PLCC account. The preview is unavailable.");
+        CustomerSubgraph current=plccGraph(mcp.customerGraph(customerId,"PLCC"),customerId);
+        if(current.goals().stream().anyMatch(g->"PLCC_ACCOUNT_RESTRICTED".equals(g.status())))
+            throw new IllegalStateException("PLCC merchant access is not currently verified. The preview is unavailable.");
+        return current;
     }
     static CustomerSubgraph plccGraph(CustomerSubgraph graph,String customer) {
         if(graph==null||!customer.equals(graph.customerId()))throw new IllegalArgumentException("MCP customer scope mismatch");
