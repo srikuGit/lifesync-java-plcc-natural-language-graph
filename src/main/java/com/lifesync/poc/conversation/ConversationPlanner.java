@@ -1,7 +1,6 @@
 package com.lifesync.poc.conversation;
 
 import com.fasterxml.jackson.databind.*;
-import com.lifesync.poc.classification.CategoryCatalog;
 import com.lifesync.poc.product.*;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.prompt.Prompt;
@@ -10,44 +9,18 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.*;
-import java.util.regex.Pattern;
 
 /** The LLM selects one allow-listed read action; it never receives a customer selector or executes Cypher. */
 @Service
 public class ConversationPlanner {
     public record Plan(String action,List<String> goalIds,boolean reusePrevious,Double maxDistanceMiles,
                        Double minDiscountPercent,String sort,Boolean offersOnly,Integer limit,String explanation) {}
-    private static final Pattern BUY_QUESTION = Pattern.compile(
-        "(?i)^where\\s+can\\s+(?:i|we)\\s+buy\\s+([a-z]+(?:[ \t]+[a-z]+){0,3})[?.!]*$");
-    private static final Pattern NEARBY_SHOPS_WITH_RADIUS = Pattern.compile(
-        "(?i)^(?:show\\s+(?:me\\s+)?)?(?:shops|stores)\\s+near\\s+me[,]?\\s+"
-            + "(less\\s+than|under|within)\\s+([0-9]{1,5}(?:\\.[0-9]+)?)\\s+miles?[?.!]*$");
     private final ObjectProvider<ChatModel> models;
     private final ObjectMapper mapper;
     private final boolean enabled;
     public ConversationPlanner(ObjectProvider<ChatModel> models,ObjectMapper mapper,
             @Value("${lifesync.nl-query-llm-enabled:true}") boolean enabled){this.models=models;this.mapper=mapper;this.enabled=enabled;}
     public Plan plan(ConversationState state,CustomerSubgraph goals,String question) throws Exception {
-        var fallback = directShoppingPlan(goals, question);
-        try {
-            Plan planned = planWithModel(state, goals, question);
-            if (fallback.isPresent() && (!"MERCHANTS".equals(planned.action()) || planned.reusePrevious()
-                    || planned.goalIds().isEmpty() || !fallback.get().goalIds().containsAll(planned.goalIds())
-                    || (fallback.get().maxDistanceMiles() != null && (!planned.goalIds().containsAll(fallback.get().goalIds())
-                        || !Objects.equals(planned.maxDistanceMiles(), fallback.get().maxDistanceMiles())
-                        || planned.minDiscountPercent() != null || Boolean.TRUE.equals(planned.offersOnly()))))) {
-                return fallback.get();
-            }
-            return planned;
-        } catch (InterruptedException ex) {
-            throw ex;
-        } catch (Exception ex) {
-            if (fallback.isPresent()) return fallback.get();
-            throw ex;
-        }
-    }
-
-    private Plan planWithModel(ConversationState state, CustomerSubgraph goals, String question) throws Exception {
         ChatModel model = enabled ? models.getIfAvailable() : null;
         if (model == null) throw new IllegalStateException("MODEL_UNAVAILABLE");
         var goalFacts=goals.goals().stream().map(g->Map.of("goalId",g.goalId(),"description",g.description(),
@@ -95,35 +68,6 @@ public class ConversationPlanner {
             .with(com.fasterxml.jackson.core.JsonParser.Feature.STRICT_DUPLICATE_DETECTION).readTree(text);
         return validate(node,goals);
     }
-    private Optional<Plan> directShoppingPlan(CustomerSubgraph goals, String question) {
-        var nearby = NEARBY_SHOPS_WITH_RADIUS.matcher(question.strip());
-        if (nearby.matches()) {
-            double miles = Double.parseDouble(nearby.group(2));
-            if (miles <= 10000) {
-                boolean inclusive = "within".equalsIgnoreCase(nearby.group(1));
-                if (!inclusive && miles == 0) return Optional.empty();
-                double cap = inclusive ? miles : Math.nextDown(miles);
-                var ids = goals.goals().stream().filter(goal -> "PLCC".equals(goal.productId()))
-                    .map(CustomerSubgraph.Goal::goalId).toList();
-                return Optional.of(new Plan("MERCHANTS", ids, false, cap, null, "DISTANCE", false, null, ""));
-            }
-        }
-        var match = BUY_QUESTION.matcher(question.strip());
-        if (!match.matches()) return Optional.empty();
-        String topic = CategoryCatalog.normalize(match.group(1))
-            .replaceFirst("^(A|AN|SOME)_", "");
-        String category = "FURNITURE".equals(topic) ? "HOME_FURNISHINGS" : topic;
-        var ids = goals.goals().stream()
-            .filter(goal -> "PLCC".equals(goal.productId()))
-            .filter(goal -> goal.categories().contains(category)
-                || ("_" + CategoryCatalog.normalize(goal.description()) + "_")
-                    .contains("_" + topic + "_"))
-            .map(CustomerSubgraph.Goal::goalId)
-            .toList();
-        if (ids.isEmpty()) return Optional.empty();
-        return Optional.of(new Plan("MERCHANTS", ids, false, null, null, "DISTANCE", false, null, ""));
-    }
-
     public Plan validate(JsonNode n,CustomerSubgraph goals) {
         Set<String> fields=Set.of("action","goalIds","reusePrevious","maxDistanceMiles","minDiscountPercent","sort","offersOnly","limit","explanation");
         if(n==null||!n.isObject())throw new IllegalArgumentException("INVALID_PLAN");

@@ -27,7 +27,7 @@ class ConversationPlannerTest {
         var foreign=valid.deepCopy();((com.fasterxml.jackson.databind.node.ObjectNode)foreign).putArray("goalIds").add("FOREIGN");
         assertThrows(IllegalArgumentException.class,()->planner.validate(foreign,goals));
     }
-    @Test void shoppingQuestionUsesModelAndFallsBackIfItReturnsGoals() throws Exception {
+    @Test void shoppingQuestionUsesTheModelActionWithoutReplacingIt() throws Exception {
         var models=org.mockito.Mockito.<ObjectProvider<ChatModel>>mock();
         var model=mock(ChatModel.class);
         when(models.getIfAvailable()).thenReturn(model);
@@ -44,10 +44,10 @@ class ConversationPlannerTest {
         var modeled=planner.plan(state,goals,question);
         assertEquals("MERCHANTS",modeled.action());
         assertNull(modeled.sort());
-        var corrected=planner.plan(state,goals,question);
-        assertEquals("MERCHANTS",corrected.action());
-        assertEquals(List.of("G1"),corrected.goalIds());
-        assertEquals("DISTANCE",corrected.sort());
+        var goalPlan=planner.plan(state,goals,question);
+        assertEquals("GOALS",goalPlan.action());
+        assertEquals(List.of("G1"),goalPlan.goalIds());
+        assertNull(goalPlan.sort());
         verify(model,times(2)).call(any(Prompt.class));
     }
     @Test void unsupportedActionsCannotWriteOrRunCypher() throws Exception {

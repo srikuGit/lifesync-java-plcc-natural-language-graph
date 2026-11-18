@@ -102,10 +102,17 @@ public class ConversationService {
             String code="ASSISTANT_UNAVAILABLE";Throwable root=ex;
             for(int i=0;i<10&&root.getCause()!=null;i++)root=root.getCause();
             if(root instanceof TimeoutException)code="MODEL_TIMEOUT";
+            else if ("MODEL_UNAVAILABLE".equals(ex.getMessage()) || ex instanceof ExecutionException) code="MODEL_UNAVAILABLE";
             else if(ex instanceof RejectedExecutionException)code="MODEL_BUSY";
             else if(ex instanceof IllegalArgumentException||ex instanceof com.fasterxml.jackson.core.JsonProcessingException)code="INVALID_PLAN";
-            org.slf4j.LoggerFactory.getLogger(getClass()).warn("Conversation fallback: {}",code);
-            return save(state,question,new ConversationState.Reply("I couldn't complete that request. Please retry or use one of the example questions. Your customer selection has not changed. ["+code+"]","GRAPH_FALLBACK",null,false,false,toolCalls));
+            org.slf4j.LoggerFactory.getLogger(getClass()).warn("Conversation failed: {}",code);
+            String message = switch (code) {
+                case "MODEL_UNAVAILABLE" -> "Custom search requires Ollama. Check that Ollama is running with the configured model, then try again.";
+                case "MODEL_TIMEOUT", "MODEL_BUSY" -> "Ollama could not finish this search. Please try again.";
+                case "INVALID_PLAN" -> "The search could not be interpreted. Try rephrasing your question.";
+                default -> "I couldn't complete that request. Please try again.";
+            };
+            return save(state,question,new ConversationState.Reply(message+" ["+code+"]","SEARCH_ERROR",null,false,false,toolCalls));
         } finally {state.busy.set(false);}
     }
     private static String normalized(String text){return text.toLowerCase(Locale.ROOT).replaceAll("[^a-z0-9]+"," ").strip();}
