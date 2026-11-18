@@ -14,7 +14,13 @@ public class ConversationService {
     public ConversationService(GraphMcpClient tools,ConversationPlanner planner){this.tools=tools;this.planner=planner;}
     public ConversationState start(String customer){
         if(customer==null||!customer.matches("[A-Za-z0-9_-]{1,64}"))throw new IllegalArgumentException("Enter a valid customer ID.");
-        return new ConversationState(tools.customerProfile(customer));
+        var state = new ConversationState(tools.customerProfile(customer));
+        loadGraph(state);
+        return state;
+    }
+    private void loadGraph(ConversationState state) {
+        state.goals = tools.customerGraph(state.profile().customerId(), null);
+        state.retrievedAt = System.currentTimeMillis();
     }
     public void refreshProfile(ConversationState state){state.updateProfile(tools.customerProfile(state.profile().customerId()));}
     public ConversationState.Reply turn(ConversationState state,String question){return turn(state,question,null);}
@@ -25,10 +31,10 @@ public class ConversationService {
         int toolCalls=0;
         try {
             if(state.goals==null||System.currentTimeMillis()-state.retrievedAt>300_000){
-                state.goals=tools.customerGoals(state.profile().customerId());toolCalls++;
-                state.retrievedAt=System.currentTimeMillis();state.lastResult=null;state.previous=null;
+                loadGraph(state);toolCalls++;
+                state.lastResult=null;state.previous=null;
             }
-            if(state.lastResult!=null){refreshProfile(state);toolCalls++;}
+            if(action==null||state.lastResult!=null){refreshProfile(state);toolCalls++;}
             // Example buttons carry an explicit action, so shopping requests cannot be misclassified as lending.
             var plan=action==null?planner.plan(state,state.goals,question):new ConversationPlanner.Plan(action,
                 state.goals.goals().stream().filter(g->action.equals("GOALS")||"PLCC".equals(g.productId()))

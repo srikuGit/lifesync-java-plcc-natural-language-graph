@@ -1,5 +1,12 @@
 package com.lifesync.poc.conversation;
 import com.lifesync.poc.product.*;
+import org.springframework.ai.chat.messages.AssistantMessage;
+import org.springframework.ai.chat.model.Generation;
+import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.ai.chat.model.ChatModel;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lifesync.poc.mcp.GraphMcpClient;
 import org.junit.jupiter.api.*;
 import java.time.LocalDate;
@@ -15,14 +22,14 @@ class ConversationServiceTest {
     final CustomerSubgraph.Goal plcc=new CustomerSubgraph.Goal("G1","Furniture","PLCC","PLCC",List.of("HOME_FURNISHINGS"),"GOAL_ONLY",List.of());
     final CustomerSubgraph.Goal loan=new CustomerSubgraph.Goal("G2","Buy a home","HOME_PURCHASE","Home lending",List.of("HOME_PURCHASE"),"GOAL_ONLY",List.of());
     final CustomerSubgraph goals=new CustomerSubgraph("C1","Alex Walker",List.of(plcc,loan));
-    @BeforeEach void setup(){when(mcp.customerProfile("C1")).thenReturn(profile);when(mcp.customerGoals("C1")).thenReturn(goals);}
+    @BeforeEach void setup(){when(mcp.customerProfile("C1")).thenReturn(profile);when(mcp.customerGraph("C1",null)).thenReturn(goals);}
     ConversationPlanner.Plan plan(String action,List<String> ids){return new ConversationPlanner.Plan(action,ids,false,null,null,"DISTANCE",false,5,"");}
     CustomerSubgraph details(){
         var offer=new ProductOfferCatalog.Offer("O1","PLCC","M1",null,"Discount","Terms","ACTIVE",LocalDate.of(2026,1,1),LocalDate.of(2030,1,1),20.,null,null,null);
         var provider=new CustomerSubgraph.Provider("M1","S1","Cedar Furnishings","Seattle","WA",2.,List.of(offer));
         return new CustomerSubgraph("C1","Alex Walker",List.of(new CustomerSubgraph.Goal("G1","Furniture","PLCC","PLCC",plcc.categories(),"MATCHED",List.of(provider))));
     }
-    @Test void startingCustomerFetchesProfileOnly(){assertEquals(profile,service.start("C1").profile());verify(mcp,never()).customerGoals(anyString());verifyNoInteractions(planner);}
+    @Test void startingCustomerFetchesProfileAndGraph(){assertEquals(profile,service.start("C1").profile());verify(mcp).customerGraph("C1",null);verifyNoInteractions(planner);}
     @Test void showGoalsListsAllProductsWithoutMerchantsOrOffers() throws Exception {
         var state=service.start("C1");when(planner.plan(eq(state),eq(goals),anyString())).thenReturn(plan("GOALS",List.of("G1","G2")));
         var reply=service.turn(state,"Show my goals");assertEquals(2,reply.graph().goals().size());assertFalse(reply.showProviders());
@@ -30,7 +37,7 @@ class ConversationServiceTest {
         verify(mcp,never()).plccMerchants(anyString(),anyList(),any(),any(),anyInt());
     }
     @Test void customShoppingQuestionsRequireOllama() {
-        var disabledPlanner=new ConversationPlanner(null,new com.fasterxml.jackson.databind.ObjectMapper(),false);
+        var disabledPlanner=new ConversationPlanner(null,new ObjectMapper(),false);
         var assistant=new ConversationService(mcp,disabledPlanner);
         var state=assistant.start("C1");
 
@@ -52,6 +59,33 @@ class ConversationServiceTest {
         var reply=service.turn(state,question);
 
         assertEquals("MCP_PLCC_RESULTS",reply.source());
+        verify(mcp).plccMerchants("C1",List.of("G1"),5d,null,5);
+    }
+    @Test void goalsThenShopsUsesPreloadedMerchantContextAndModelDistance() {
+        var model=mock(ChatModel.class);
+        var models=org.mockito.Mockito.<ObjectProvider<ChatModel>>mock();
+        when(models.getIfAvailable()).thenReturn(model);
+        var assistant=new ConversationService(mcp,new ConversationPlanner(models,new ObjectMapper(),true));
+        when(mcp.customerGraph("C1",null)).thenReturn(details());
+        when(mcp.plccMerchants("C1",List.of("G1"),5d,null,5)).thenReturn(details());
+        var responses=new ArrayDeque<>(List.of("GOALS","MERCHANTS"));
+        when(model.call(any(Prompt.class))).thenAnswer(call -> {
+            assertTrue(call.getArgument(0,Prompt.class)
+                .getContents().contains("Cedar Furnishings"));
+            String action=responses.removeFirst();
+            String output="""
+                {"action":"%s","goalIds":["G1"],"reusePrevious":false,"maxDistanceMiles":%s,
+                 "minDiscountPercent":null,"sort":null,"offersOnly":null,"limit":null,"explanation":""}
+                """.formatted(action,"MERCHANTS".equals(action)?"5":"null");
+            return new ChatResponse(List.of(new Generation(
+                new AssistantMessage(output))));
+        });
+        var state=assistant.start("C1");
+        assertFalse(assistant.turn(state,"show all my goals").showProviders());
+        var reply=assistant.turn(state,"shops near me less than 5 miles");
+        assertTrue(reply.showProviders());
+        assertEquals("Cedar Furnishings",reply.graph().goals().getFirst().providers().getFirst().name());
+        verify(mcp).customerGraph("C1",null);
         verify(mcp).plccMerchants("C1",List.of("G1"),5d,null,5);
     }
     @Test void merchantRequestCannotRetrieveLoanProviders() throws Exception {
@@ -109,5 +143,6 @@ class ConversationServiceTest {
     }
     @Test void newCustomerStateNeverSharesHistoryOrGoalCache(){var a=service.start("C1");a.add("Private question",new ConversationState.Reply("Reply","GRAPH",null,false,false,0));
         when(mcp.customerProfile("C2")).thenReturn(new CustomerProfile("C2","Liam","Walker","Seattle","WA","NONE"));
-        var b=service.start("C2");assertTrue(b.messages().isEmpty());assertNull(b.goals);assertNotEquals(a.id(),b.id());}
+        when(mcp.customerGraph("C2",null)).thenReturn(new CustomerSubgraph("C2","Liam",List.of()));
+        var b=service.start("C2");assertTrue(b.messages().isEmpty());assertEquals("C2",b.goals.customerId());assertNotEquals(a.id(),b.id());}
 }

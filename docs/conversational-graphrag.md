@@ -1,14 +1,15 @@
 # Conversational GraphRAG assistant
 
-The customer ID entry now retrieves only `CustomerProfile`: explicit first name,
-last name, city/state and PLCC status. It performs no goal/merchant retrieval and
-no model call. The UI shows profile details and a conversational chat window.
+Starting a conversation retrieves the customer profile and a customer-scoped MCP
+graph with goals, eligible nearby PLCC shops, distances, and offers. It makes no
+model call until the banker submits a typed question. The UI shows profile details
+and a conversational chat window.
 Names are structured in the fixtures and graph; historical names are not guessed
 by splitting an arbitrary full name.
 
 ## On-demand goals and details
 
-* “Show my goals” uses MCP `list_customer_goals` and renders basic goal cards for
+* “Show my goals” renders basic goal cards from the customer snapshot for
   every product. No merchant or offer data is included in this response.
 * “Show shops near me” or “Where can I get discounts?” uses MCP
   `find_plcc_merchants`. Only the current customer's PLCC goals may be selected;
@@ -23,7 +24,7 @@ by splitting an arbitrary full name.
 * Non-holders can explicitly request representative contact through the existing
   single consent panel. Chat never creates consent or applications by itself.
 
-MCP also retains `get_customer_subgraph` for the independent campaign workflow.
+Chat initialization and the independent campaign workflow use `get_customer_subgraph`.
 It now always returns non-PLCC goals without provider details. The underlying
 lending/auto product graph remains unchanged and available for administrative
 Neo4j inspection.
@@ -35,7 +36,7 @@ MERCHANTS, OFFERS, EXPLAIN or HELP. The schema uses the known goal-ID allow-list
 Java validates every ID, argument, field, limit and numeric bound before dispatch.
 The model cannot choose a customer ID, run Cypher, send email, or mutate consent.
 
-The Java dispatcher may fetch a basic goal snapshot, revalidate cached PLCC
+The Java dispatcher may refresh the customer graph snapshot, revalidate cached PLCC
 eligibility, and invoke the merchant tool. Its control flow is bounded to at most
 three logical MCP tool calls per turn (currently at most two along normal paths),
 one model plan, at most 200 goals, and five nearby matching providers per goal.
@@ -45,8 +46,9 @@ HTTP tool calls have their own connection/read timeouts. Campaign jobs use a
 separate executor and do not occupy conversational request workers; Ollama CPU
 capacity is still shared.
 
-Only goal/product metadata, recent customer-session dialogue and filtered prior
-PLCC facts enter the model prompt. Profile names/ECNs, exact addresses/coordinates
+The prompt includes goal/product metadata, recent dialogue, the previous query,
+filtered prior results, and eligible merchant and offer context grouped by goal.
+Merchant context is capped at five shops per goal and fits within the prompt budget. Profile names/ECNs, exact addresses/coordinates
 and personalized-offer audience IDs are not mechanically added. Chat text is user
 input and may itself contain personal information, so do not treat model prompts
 as anonymized data. The model's structured action is interpreted by Java, and UI
@@ -59,15 +61,14 @@ The conversational workflow uses the chat model and curated graph relationships;
 History is session-only and bounded to six exchanges. Changing customer creates a
 new conversation and clears old consent/tool state. Sending messages requires the
 matching customer, conversation ID and session token. Concurrent turns are
-rejected; New chat clears history/cache atomically when idle. Goal snapshots last
+rejected; New chat clears history/cache atomically when idle. Graph snapshots last
 five minutes and expired snapshots reset prior filters/context. Cached merchant
-contexts are revalidated against current account status before explanation;
+contexts are revalidated against current account status before each typed question;
 revoked details are redacted from stored history and the returned UI history.
 
 This remains a fictional local demo: a supplied customer ID is not authentication.
 Shared/production use needs authenticated customer identity and admin authorization
-for campaign routes. Model/transport failures produce an explicit chat fallback
-rather than automatically displaying goals or inventing an answer.
+for campaign routes. Typed questions require Ollama. Model or transport failures produce an explicit chat error.
 
 ## Run and validate
 

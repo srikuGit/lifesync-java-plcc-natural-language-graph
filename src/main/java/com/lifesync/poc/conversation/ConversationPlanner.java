@@ -25,6 +25,15 @@ public class ConversationPlanner {
         if (model == null) throw new IllegalStateException("MODEL_UNAVAILABLE");
         var goalFacts=goals.goals().stream().map(g->Map.of("goalId",g.goalId(),"description",g.description(),
             "productId",g.productId(),"categories",g.categories())).toList();
+        var merchantContext = state.profile().plccHolder() ? goals.goals().stream()
+            .filter(g -> "PLCC".equals(g.productId()))
+            .map(g -> Map.of("goalId", g.goalId(), "status", g.status(), "providers", g.providers().stream()
+                .map(p -> Map.of("name", p.name(), "city", p.city(), "state", p.state(),
+                    "distanceMiles", p.distanceMiles(), "offers", p.offers().stream()
+                        .map(o -> Map.of("title", o.title(), "discountPercent", Objects.toString(o.discountPercent(), ""),
+                            "terms", Objects.toString(o.terms(), ""), "validFrom", Objects.toString(o.validFrom(), ""),
+                            "validUntil", Objects.toString(o.validUntil(), ""))).toList())).toList()))
+            .toList() : List.of();
         var history=state.messages().stream().map(m->Map.of("role",m.role(),"text",m.text())).toList();
         var previous=new LinkedHashMap<String,Object>();
         if(state.previous!=null){previous.put("action",state.previous.action());previous.put("goalIds",state.previous.goalIds());
@@ -33,10 +42,26 @@ public class ConversationPlanner {
         var lastFacts=state.lastResult==null?List.of():state.lastResult.goals().stream().map(g->Map.of("goalId",g.goalId(),
             "description",g.description(),"providers",g.providers().stream().map(p->Map.of("merchantId",p.merchantId(),
                 "name",p.name(),"city",p.city(),"description","A nearby merchant matching the goal category","offers",p.offers().stream().map(o->Map.of("title",o.title(),"terms",o.terms())).toList())).toList())).toList();
-        String data=mapper.writeValueAsString(Map.of("goals",goalFacts,"recentConversation",history,"previousQuery",previous,"lastResults",lastFacts));
-        if(data.length()>30000)throw new IllegalArgumentException("INPUT_TOO_LARGE");
+        var facts=mapper.createObjectNode();
+        facts.set("goals",mapper.valueToTree(goalFacts));
+        facts.set("recentConversation",mapper.valueToTree(history));
+        facts.set("previousQuery",mapper.valueToTree(previous));
+        facts.set("lastResults",mapper.valueToTree(lastFacts));
+        var context=facts.putArray("merchantContextByGoal");
+        if(facts.toString().length()>30000)throw new IllegalArgumentException("INPUT_TOO_LARGE");
+        for(var entry:merchantContext) {
+            context.add(mapper.valueToTree(entry));
+            if(facts.toString().length()>30000) {
+                context.remove(context.size()-1);
+                break;
+            }
+        }
+        String data=facts.toString();
         String prompt="""
             You are a conversational assistant for a fictional customer goal graph. Select ONE bounded Java action.
+            Select the action for the latest question. Use prior turns only to resolve references and filter-only follow-ups.
+            A new request for shops replaces a previous GOALS action. Use merchantContextByGoal to see which PLCC goals have shops and offers.
+            The merchant context is a bounded snapshot. Java checks current matches using the search filters you return.
             GOALS: list goals, including all products. "Show my goals" and "View Goals" must select every supplied goal ID.
             MERCHANTS: find nearby shops for PLCC shopping goals. OFFERS: find shopping discounts/offers for PLCC goals.
             "Where can I buy furniture?" asks for MERCHANTS, using PLCC goals about furniture or home furnishings.
