@@ -25,9 +25,25 @@ public class ConversationPlanner {
     public ConversationPlanner(ObjectProvider<ChatModel> models,ObjectMapper mapper,
             @Value("${lifesync.nl-query-llm-enabled:true}") boolean enabled){this.models=models;this.mapper=mapper;this.enabled=enabled;}
     public Plan plan(ConversationState state,CustomerSubgraph goals,String question) throws Exception {
-        var shoppingPlan = directShoppingPlan(goals, question);
-        if (shoppingPlan.isPresent()) return shoppingPlan.get();
-        if(!enabled || models.getIfAvailable()==null)throw new IllegalStateException("MODEL_UNAVAILABLE");
+        var fallback = directShoppingPlan(goals, question);
+        try {
+            Plan planned = planWithModel(state, goals, question);
+            if (fallback.isPresent() && (!"MERCHANTS".equals(planned.action()) || planned.reusePrevious()
+                    || planned.goalIds().isEmpty() || !fallback.get().goalIds().containsAll(planned.goalIds()))) {
+                return fallback.get();
+            }
+            return planned;
+        } catch (InterruptedException ex) {
+            throw ex;
+        } catch (Exception ex) {
+            if (fallback.isPresent()) return fallback.get();
+            throw ex;
+        }
+    }
+
+    private Plan planWithModel(ConversationState state, CustomerSubgraph goals, String question) throws Exception {
+        ChatModel model = enabled ? models.getIfAvailable() : null;
+        if (model == null) throw new IllegalStateException("MODEL_UNAVAILABLE");
         var goalFacts=goals.goals().stream().map(g->Map.of("goalId",g.goalId(),"description",g.description(),
             "productId",g.productId(),"categories",g.categories())).toList();
         var history=state.messages().stream().map(m->Map.of("role",m.role(),"text",m.text())).toList();
@@ -63,7 +79,7 @@ public class ConversationPlanner {
             Facts:
             """+data+"\nQuestion: "+mapper.writeValueAsString(question);
         var options=OllamaChatOptions.builder().format(schema(goals)).temperature(0.0).numPredict(384).build();
-        var response=AiTasks.run(()->models.getIfAvailable().call(new Prompt(prompt,options)));
+        var response=AiTasks.run(()->model.call(new Prompt(prompt,options)));
         if(response==null||response.getResult()==null)throw new IllegalArgumentException("INVALID_PLAN");
         String text=response.getResult().getOutput().getText();
         if(text==null||text.length()>12000)throw new IllegalArgumentException("INVALID_PLAN");
