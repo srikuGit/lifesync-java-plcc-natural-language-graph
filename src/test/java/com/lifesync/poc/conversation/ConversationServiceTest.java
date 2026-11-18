@@ -29,6 +29,24 @@ class ConversationServiceTest {
         assertTrue(reply.graph().goals().stream().allMatch(g->g.providers().isEmpty()));assertEquals(1,reply.toolCalls());
         verify(mcp,never()).plccMerchants(anyString(),anyList(),any(),any(),anyInt());
     }
+    @Test void whereToBuyFurnitureFindsShopsWithoutTheModel() {
+        var furnishings=new CustomerSubgraph.Goal("G1","Redo the living room","PLCC","PLCC",
+            List.of("HOME_FURNISHINGS"),"GOAL_ONLY",List.of());
+        var electronics=new CustomerSubgraph.Goal("G3","New television","PLCC","PLCC",
+            List.of("ELECTRONICS"),"GOAL_ONLY",List.of());
+        when(mcp.customerGoals("C1")).thenReturn(new CustomerSubgraph("C1","Alex Walker",
+            List.of(furnishings,loan,electronics)));
+        when(mcp.plccMerchants("C1",List.of("G1"),null,null,5)).thenReturn(details());
+        var offlinePlanner=new ConversationPlanner(null,new com.fasterxml.jackson.databind.ObjectMapper(),false);
+        var assistant=new ConversationService(mcp,offlinePlanner);
+
+        var reply=assistant.turn(assistant.start("C1"),"where can i buy furniture");
+
+        assertEquals("MCP_PLCC_RESULTS",reply.source());
+        assertTrue(reply.showProviders());
+        assertEquals("Cedar Furnishings",reply.graph().goals().getFirst().providers().getFirst().name());
+        verify(mcp).plccMerchants("C1",List.of("G1"),null,null,5);
+    }
     @Test void merchantRequestCannotRetrieveLoanProviders() throws Exception {
         var state=service.start("C1");when(planner.plan(eq(state),eq(goals),anyString())).thenReturn(plan("MERCHANTS",List.of("G2")));
         var reply=service.turn(state,"Find lenders for my home goal");assertEquals("PRODUCT_POLICY",reply.source());
