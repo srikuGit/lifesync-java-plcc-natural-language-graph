@@ -58,7 +58,7 @@ public class ConversationPlanner {
         if(data.length()>30000)throw new IllegalArgumentException("INPUT_TOO_LARGE");
         String prompt="""
             You are a conversational assistant for a fictional customer goal graph. Select ONE bounded Java action.
-            GOALS: list goals, including all products. "Show my goals" and "View details" must select every supplied goal ID.
+            GOALS: list goals, including all products. "Show my goals" and "View Goals" must select every supplied goal ID.
             MERCHANTS: find nearby shops for PLCC shopping goals. OFFERS: find shopping discounts/offers for PLCC goals.
             "Where can I buy furniture?" asks for MERCHANTS, using PLCC goals about furniture or home furnishings.
             Questions about where to buy something ask for stores or offers, not a list of goals.

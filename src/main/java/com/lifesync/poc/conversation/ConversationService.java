@@ -34,7 +34,7 @@ public class ConversationService {
                 state.goals.goals().stream().filter(g->action.equals("GOALS")||"PLCC".equals(g.productId()))
                     .map(CustomerSubgraph.Goal::goalId).toList(),false,null,null,"DISTANCE",action.equals("OFFERS"),null,"");
             if(plan.action().equals("HELP"))return save(state,question,new ConversationState.Reply(
-                "I can list your goals, find nearby PLCC shops and compare available shopping discounts. Try ‘View details’ or ‘Show shops near me’.","ASSISTANT_HELP",null,false,false,toolCalls));
+                "I can list your goals, find nearby PLCC shops and compare available shopping discounts. Try ‘View Goals’ or ‘Show shops near me’.","ASSISTANT_HELP",null,false,false,toolCalls));
             if(plan.action().equals("EXPLAIN")) {
                 if(state.lastResult==null)return save(state,question,new ConversationState.Reply("Ask for shops or discounts first, then I can explain the displayed matches.","GRAPH",null,false,false,toolCalls));
                 if(restricted(state.lastResult))return save(state,question,new ConversationState.Reply("PLCC merchant details are not displayed for this account.","ACCOUNT_RESTRICTED",state.lastResult,true,true,toolCalls));

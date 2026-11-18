@@ -24,11 +24,11 @@
 <p th:if="${profile.plccHolder()}"><a class="profile-email-link" th:href="@{/experience/{customer}/email(customer=${profile.customerId})}">View email with goals</a></p>
 </section>
 <section id="conversation" class="panel pad"><div class="chat-heading"><div><h2>Your Banker assistant</h2>
-<p>Select View details to see the customer’s goals. Ask about shops or discounts for eligible PLCC shopping goals.</p></div>
+<p>Select View Goals to see the customer’s goals. Ask about shops or discounts for eligible PLCC shopping goals.</p></div>
 <button id="reset-chat" class="btn secondary" type="button">New chat</button></div>
 <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
 <div th:replace="~{fragments/conversation :: history(${messages})}"></div></div>
-<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="View details">View details</button>
+<div class="chips chat-examples"><button type="button" class="btn secondary chat-example" data-action="GOALS" data-question="View Goals">View Goals</button>
 <button type="button" class="btn secondary chat-example" data-action="OFFERS" data-question="Where can I get shopping discounts?">Find discounts</button>
 <button type="button" class="btn secondary chat-example" data-action="MERCHANTS" data-question="Show shops near me">Shops near me</button></div>
 <form id="chat-form" class="searchform" th:data-chat-url="@{/experience/chat}" th:data-reset-url="@{/experience/reset}" th:attr="data-customer=${profile.customerId},data-conversation=${conversation.id()},data-token=${chatToken}">
