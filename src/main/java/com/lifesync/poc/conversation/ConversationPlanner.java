@@ -19,6 +19,9 @@ public class ConversationPlanner {
                        Double minDiscountPercent,String sort,Boolean offersOnly,Integer limit,String explanation) {}
     private static final Pattern BUY_QUESTION = Pattern.compile(
         "(?i)^where\\s+can\\s+(?:i|we)\\s+buy\\s+([a-z]+(?:[ \t]+[a-z]+){0,3})[?.!]*$");
+    private static final Pattern NEARBY_SHOPS_WITH_RADIUS = Pattern.compile(
+        "(?i)^(?:show\\s+(?:me\\s+)?)?(?:shops|stores)\\s+near\\s+me[,]?\\s+"
+            + "(less\\s+than|under|within)\\s+([0-9]{1,5}(?:\\.[0-9]+)?)\\s+miles?[?.!]*$");
     private final ObjectProvider<ChatModel> models;
     private final ObjectMapper mapper;
     private final boolean enabled;
@@ -29,7 +32,10 @@ public class ConversationPlanner {
         try {
             Plan planned = planWithModel(state, goals, question);
             if (fallback.isPresent() && (!"MERCHANTS".equals(planned.action()) || planned.reusePrevious()
-                    || planned.goalIds().isEmpty() || !fallback.get().goalIds().containsAll(planned.goalIds()))) {
+                    || planned.goalIds().isEmpty() || !fallback.get().goalIds().containsAll(planned.goalIds())
+                    || (fallback.get().maxDistanceMiles() != null && (!planned.goalIds().containsAll(fallback.get().goalIds())
+                        || !Objects.equals(planned.maxDistanceMiles(), fallback.get().maxDistanceMiles())
+                        || planned.minDiscountPercent() != null || Boolean.TRUE.equals(planned.offersOnly()))))) {
                 return fallback.get();
             }
             return planned;
@@ -61,6 +67,7 @@ public class ConversationPlanner {
             GOALS: list goals, including all products. "Show my goals" and "View Goals" must select every supplied goal ID.
             MERCHANTS: find nearby shops for PLCC shopping goals. OFFERS: find shopping discounts/offers for PLCC goals.
             "Where can I buy furniture?" asks for MERCHANTS, using PLCC goals about furniture or home furnishings.
+            "Shops near me less than 5 miles" is a new MERCHANTS search across all PLCC goals with maxDistanceMiles=5.
             Questions about where to buy something ask for stores or offers, not a list of goals.
             EXPLAIN: explain previously displayed merchant relevance using only lastResults. HELP: greetings or unsupported requests.
             Non-PLCC goals may be listed but NEVER reveal lender/provider/merchant or offer details for them.
@@ -89,6 +96,18 @@ public class ConversationPlanner {
         return validate(node,goals);
     }
     private Optional<Plan> directShoppingPlan(CustomerSubgraph goals, String question) {
+        var nearby = NEARBY_SHOPS_WITH_RADIUS.matcher(question.strip());
+        if (nearby.matches()) {
+            double miles = Double.parseDouble(nearby.group(2));
+            if (miles <= 10000) {
+                boolean inclusive = "within".equalsIgnoreCase(nearby.group(1));
+                if (!inclusive && miles == 0) return Optional.empty();
+                double cap = inclusive ? miles : Math.nextDown(miles);
+                var ids = goals.goals().stream().filter(goal -> "PLCC".equals(goal.productId()))
+                    .map(CustomerSubgraph.Goal::goalId).toList();
+                return Optional.of(new Plan("MERCHANTS", ids, false, cap, null, "DISTANCE", false, null, ""));
+            }
+        }
         var match = BUY_QUESTION.matcher(question.strip());
         if (!match.matches()) return Optional.empty();
         String topic = CategoryCatalog.normalize(match.group(1))

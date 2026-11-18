@@ -47,6 +47,18 @@ class ConversationServiceTest {
         assertEquals("Cedar Furnishings",reply.graph().goals().getFirst().providers().getFirst().name());
         verify(mcp).plccMerchants("C1",List.of("G1"),null,null,5);
     }
+    @Test void nearbyShopsWithExplicitRadiusSearchesAllPlccGoalsWithoutTheModel() {
+        var planner=new ConversationPlanner(null,new com.fasterxml.jackson.databind.ObjectMapper(),false);
+        var assistant=new ConversationService(mcp,planner);
+        var state=assistant.start("C1");
+        when(mcp.plccMerchants("C1",List.of("G1"),Math.nextDown(5d),null,5)).thenReturn(details());
+
+        var reply=assistant.turn(state,"shops near me less than 5 miles");
+
+        assertEquals("MCP_PLCC_RESULTS",reply.source());
+        assertEquals("Cedar Furnishings",reply.graph().goals().getFirst().providers().getFirst().name());
+        verify(mcp).plccMerchants("C1",List.of("G1"),Math.nextDown(5d),null,5);
+    }
     @Test void merchantRequestCannotRetrieveLoanProviders() throws Exception {
         var state=service.start("C1");when(planner.plan(eq(state),eq(goals),anyString())).thenReturn(plan("MERCHANTS",List.of("G2")));
         var reply=service.turn(state,"Find lenders for my home goal");assertEquals("PRODUCT_POLICY",reply.source());

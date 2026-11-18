@@ -94,7 +94,8 @@ public class ConversationService {
             boolean restricted=restricted(graph);int count=graph.goals().stream().mapToInt(g->g.providers().size()).sum();
             String message=restricted?"I found your PLCC shopping goals. Merchant details are not displayed for this account.":
                 graph.goals().stream().anyMatch(g->"NO_CUSTOMER_LOCATION".equals(g.status()))?"Your address has not been located yet. Nearby merchant results need a successful address lookup.":
-                count==0?"No located PLCC merchants matched those filters. Try a wider distance or a lower minimum discount.":
+                count==0?(distance!=null?"No eligible PLCC shops matched the requested distance and any other filters. Try a wider search.":
+                    "No located PLCC merchants matched those filters. Try a wider distance or a lower minimum discount."):
                 "Here are the matching PLCC shops"+(offersOnly?" with available offers":"")+". Distances are approximate straight-line miles; offer conditions still apply.";
             return save(state,question,new ConversationState.Reply(message,"MCP_PLCC_RESULTS",graph,true,restricted,toolCalls));
         } catch(Exception ex){
