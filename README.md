@@ -16,6 +16,15 @@ still determine whether nearby shops and offers can be displayed.
 
 # Conversational GraphRAG and manual campaign previews
 
+Startup uses Ollama embeddings to map demo goal descriptions to categories
+supported by their selected product. Neo4j stores the resulting category links.
+Docker Compose pulls the configured chat and embedding models before starting
+the app. When running standalone, start Ollama and run
+`ollama pull nomic-embed-text` before starting the application. This mapping
+works with `VECTOR_ENABLED=false`; that setting controls legacy vector retrieval.
+See [embedding-based goal classification](docs/conversational-graphrag.md#embedding-based-goal-classification).
+
+
 Enter a customer ID to see **first name, last name and a chat window**. No goals or offers are shown automatically. Ask **“Show my goals”** to list all product goals, then ask about shops/discounts for eligible PLCC merchant and offer details. Other product goals remain basic-only. Follow-up questions reuse bounded customer-session context.
 
 A separate **Campaign previews** page starts a manual background job for **ACTIVE PLCC holders only**. It creates email previews and records progress. Bankers can send an individual preview from a campaign run or an active PLCC customer profile to the local Mailpit inbox at http://localhost:8025.

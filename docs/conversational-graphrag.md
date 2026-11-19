@@ -7,6 +7,21 @@ and a conversational chat window.
 Names are structured in the fixtures and graph; historical names are not guessed
 by splitting an arbitrary full name.
 
+## Embedding-based goal classification
+
+At startup, `ProductDemoIngestion` passes each goal description and the
+configured product's category vocabulary to `SemanticCategoryClassifier`.
+Ollama embeds the text and category definitions. The classifier selects up
+to three labels by cosine similarity, using the configured minimum score and
+relative margin. Goal fixtures supply a product. Merchant category assignments
+continue to come from the merchant fixtures.
+
+Neo4j replaces the imported goal's previous `CLASSIFIED_AS` links and records
+the labels, confidence, and source. Weak matches remain visible as goals with
+no category links. Embeddings are cached on disk. An unavailable model on a
+cache miss stops ingestion before the goal mappings are written. Docker Compose
+downloads the models before starting the app.
+
 ## On-demand goals and details
 
 * “Show my goals” renders basic goal cards from the customer snapshot for

@@ -638,1401 +638,1201 @@
       "goalId": "PG-001-1",
       "customerId": "C001",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-001-2",
       "customerId": "C001",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-001-3",
       "customerId": "C001",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-001-4",
       "customerId": "C001",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-002-1",
       "customerId": "C002",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-002-2",
       "customerId": "C002",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-002-3",
       "customerId": "C002",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-002-4",
       "customerId": "C002",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-003-1",
       "customerId": "C003",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-003-2",
       "customerId": "C003",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-003-3",
       "customerId": "C003",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-003-4",
       "customerId": "C003",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-004-1",
       "customerId": "C004",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-004-2",
       "customerId": "C004",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-004-3",
       "customerId": "C004",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-004-4",
       "customerId": "C004",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-005-1",
       "customerId": "C005",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-005-2",
       "customerId": "C005",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-005-3",
       "customerId": "C005",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-005-4",
       "customerId": "C005",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-006-1",
       "customerId": "C006",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-006-2",
       "customerId": "C006",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-006-3",
       "customerId": "C006",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-006-4",
       "customerId": "C006",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-007-1",
       "customerId": "C007",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-007-2",
       "customerId": "C007",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-007-3",
       "customerId": "C007",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-007-4",
       "customerId": "C007",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-008-1",
       "customerId": "C008",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-008-2",
       "customerId": "C008",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-008-3",
       "customerId": "C008",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-008-4",
       "customerId": "C008",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-009-1",
       "customerId": "C009",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-009-2",
       "customerId": "C009",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-009-3",
       "customerId": "C009",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-009-4",
       "customerId": "C009",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-010-1",
       "customerId": "C010",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-010-2",
       "customerId": "C010",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-010-3",
       "customerId": "C010",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-010-4",
       "customerId": "C010",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-011-1",
       "customerId": "C011",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-011-2",
       "customerId": "C011",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-011-3",
       "customerId": "C011",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-011-4",
       "customerId": "C011",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-012-1",
       "customerId": "C012",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-012-2",
       "customerId": "C012",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-012-3",
       "customerId": "C012",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-012-4",
       "customerId": "C012",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-013-1",
       "customerId": "C013",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-013-2",
       "customerId": "C013",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-013-3",
       "customerId": "C013",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-013-4",
       "customerId": "C013",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-014-1",
       "customerId": "C014",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-014-2",
       "customerId": "C014",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-014-3",
       "customerId": "C014",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-014-4",
       "customerId": "C014",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-015-1",
       "customerId": "C015",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-015-2",
       "customerId": "C015",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-015-3",
       "customerId": "C015",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-015-4",
       "customerId": "C015",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-016-1",
       "customerId": "C016",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-016-2",
       "customerId": "C016",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-016-3",
       "customerId": "C016",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-016-4",
       "customerId": "C016",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-017-1",
       "customerId": "C017",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-017-2",
       "customerId": "C017",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-017-3",
       "customerId": "C017",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-017-4",
       "customerId": "C017",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-018-1",
       "customerId": "C018",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-018-2",
       "customerId": "C018",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-018-3",
       "customerId": "C018",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-018-4",
       "customerId": "C018",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-019-1",
       "customerId": "C019",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-019-2",
       "customerId": "C019",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-019-3",
       "customerId": "C019",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-019-4",
       "customerId": "C019",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-020-1",
       "customerId": "C020",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-020-2",
       "customerId": "C020",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-020-3",
       "customerId": "C020",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-020-4",
       "customerId": "C020",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-021-1",
       "customerId": "C021",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-021-2",
       "customerId": "C021",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-021-3",
       "customerId": "C021",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-021-4",
       "customerId": "C021",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-022-1",
       "customerId": "C022",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-022-2",
       "customerId": "C022",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-022-3",
       "customerId": "C022",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-022-4",
       "customerId": "C022",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-023-1",
       "customerId": "C023",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-023-2",
       "customerId": "C023",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-023-3",
       "customerId": "C023",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-023-4",
       "customerId": "C023",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-024-1",
       "customerId": "C024",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-024-2",
       "customerId": "C024",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-024-3",
       "customerId": "C024",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-024-4",
       "customerId": "C024",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-025-1",
       "customerId": "C025",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-025-2",
       "customerId": "C025",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-025-3",
       "customerId": "C025",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-025-4",
       "customerId": "C025",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-026-1",
       "customerId": "C026",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-026-2",
       "customerId": "C026",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-026-3",
       "customerId": "C026",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-026-4",
       "customerId": "C026",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-027-1",
       "customerId": "C027",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-027-2",
       "customerId": "C027",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-027-3",
       "customerId": "C027",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-027-4",
       "customerId": "C027",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-028-1",
       "customerId": "C028",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-028-2",
       "customerId": "C028",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-028-3",
       "customerId": "C028",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-028-4",
       "customerId": "C028",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-029-1",
       "customerId": "C029",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-029-2",
       "customerId": "C029",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-029-3",
       "customerId": "C029",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-029-4",
       "customerId": "C029",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-030-1",
       "customerId": "C030",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-030-2",
       "customerId": "C030",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-030-3",
       "customerId": "C030",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-030-4",
       "customerId": "C030",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-031-1",
       "customerId": "C031",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-031-2",
       "customerId": "C031",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-031-3",
       "customerId": "C031",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-031-4",
       "customerId": "C031",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-032-1",
       "customerId": "C032",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-032-2",
       "customerId": "C032",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-032-3",
       "customerId": "C032",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-032-4",
       "customerId": "C032",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-033-1",
       "customerId": "C033",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-033-2",
       "customerId": "C033",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-033-3",
       "customerId": "C033",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-033-4",
       "customerId": "C033",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-034-1",
       "customerId": "C034",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-034-2",
       "customerId": "C034",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-034-3",
       "customerId": "C034",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-034-4",
       "customerId": "C034",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-035-1",
       "customerId": "C035",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-035-2",
       "customerId": "C035",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-035-3",
       "customerId": "C035",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-035-4",
       "customerId": "C035",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-036-1",
       "customerId": "C036",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-036-2",
       "customerId": "C036",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-036-3",
       "customerId": "C036",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-036-4",
       "customerId": "C036",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-037-1",
       "customerId": "C037",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-037-2",
       "customerId": "C037",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-037-3",
       "customerId": "C037",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-037-4",
       "customerId": "C037",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-038-1",
       "customerId": "C038",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-038-2",
       "customerId": "C038",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-038-3",
       "customerId": "C038",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-038-4",
       "customerId": "C038",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-039-1",
       "customerId": "C039",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-039-2",
       "customerId": "C039",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-039-3",
       "customerId": "C039",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-039-4",
       "customerId": "C039",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-040-1",
       "customerId": "C040",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-040-2",
       "customerId": "C040",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-040-3",
       "customerId": "C040",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-040-4",
       "customerId": "C040",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-041-1",
       "customerId": "C041",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-041-2",
       "customerId": "C041",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-041-3",
       "customerId": "C041",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-041-4",
       "customerId": "C041",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-042-1",
       "customerId": "C042",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-042-2",
       "customerId": "C042",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-042-3",
       "customerId": "C042",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-042-4",
       "customerId": "C042",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-043-1",
       "customerId": "C043",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-043-2",
       "customerId": "C043",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-043-3",
       "customerId": "C043",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-043-4",
       "customerId": "C043",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-044-1",
       "customerId": "C044",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-044-2",
       "customerId": "C044",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-044-3",
       "customerId": "C044",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-044-4",
       "customerId": "C044",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-045-1",
       "customerId": "C045",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-045-2",
       "customerId": "C045",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-045-3",
       "customerId": "C045",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-045-4",
       "customerId": "C045",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-046-1",
       "customerId": "C046",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-046-2",
       "customerId": "C046",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-046-3",
       "customerId": "C046",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-046-4",
       "customerId": "C046",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-047-1",
       "customerId": "C047",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-047-2",
       "customerId": "C047",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-047-3",
       "customerId": "C047",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-047-4",
       "customerId": "C047",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-048-1",
       "customerId": "C048",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-048-2",
       "customerId": "C048",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-048-3",
       "customerId": "C048",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-048-4",
       "customerId": "C048",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-049-1",
       "customerId": "C049",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-049-2",
       "customerId": "C049",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-049-3",
       "customerId": "C049",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-049-4",
       "customerId": "C049",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     },
     {
       "goalId": "PG-050-1",
       "customerId": "C050",
       "description": "Furnish my home office",
-      "productId": "PLCC",
-      "category": "HOME_FURNISHINGS"
+      "productId": "PLCC"
     },
     {
       "goalId": "PG-050-2",
       "customerId": "C050",
       "description": "Save for a down payment to buy a home",
-      "productId": "HOME_PURCHASE",
-      "category": "HOME_PURCHASE"
+      "productId": "HOME_PURCHASE"
     },
     {
       "goalId": "PG-050-3",
       "customerId": "C050",
       "description": "Explore refinancing my current home",
-      "productId": "HOME_REFINANCE",
-      "category": "HOME_REFINANCE"
+      "productId": "HOME_REFINANCE"
     },
     {
       "goalId": "PG-050-4",
       "customerId": "C050",
       "description": "Finance a replacement family car",
-      "productId": "AUTO_LOAN",
-      "category": "AUTO_LOAN"
+      "productId": "AUTO_LOAN"
     }
   ],
   "merchants": [

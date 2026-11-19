@@ -36,6 +36,11 @@ public class SemanticCategoryClassifier {
         TAXONOMY.put("GROCERIES", "Grocery stores, supermarkets, fresh produce, packaged foods, food staples, pantry supplies and household groceries.");
     }
 
+    private static final Map<String,String> LENDING_TAXONOMY = Map.of(
+            "HOME_PURCHASE", "Buying a house or apartment, saving for a down payment, or taking out a mortgage to purchase a home.",
+            "HOME_REFINANCE", "Refinancing an existing home mortgage or replacing the current home loan with a new loan.",
+            "AUTO_LOAN", "Financing a vehicle purchase, borrowing to buy a car or truck, or getting an auto loan.");
+
     private final ObjectProvider<EmbeddingModel> models;
     private final ObjectMapper mapper;
     private final Path cacheDir;
@@ -70,7 +75,23 @@ public class SemanticCategoryClassifier {
     public Result classify(String input, boolean plccOnly, int maxLabels) {
         if (input == null || input.isBlank()) return new Result(List.of(), 0.0);
         if (maxLabels < 1) throw new IllegalArgumentException("maxLabels must be positive");
-        Map<String,float[]> catalog = taxonomyVectors();
+        return classifyAgainst(input, taxonomyVectors(), plccOnly, maxLabels);
+    }
+
+    /** Classify a goal using the categories supported by its selected product. */
+    public Result classifyForProduct(String description, Collection<String> allowedCategories) {
+        if (description == null || description.isBlank()) return new Result(List.of(), 0.0);
+        Map<String,float[]> vectors = new LinkedHashMap<>();
+        for (String category : allowedCategories) {
+            String definition = TAXONOMY.getOrDefault(category, LENDING_TAXONOMY.get(category));
+            if (definition == null) throw new IllegalArgumentException("Missing embedding definition for " + category);
+            vectors.put(category, categoryEmbedding(category, definition));
+        }
+        if (vectors.isEmpty()) return new Result(List.of(), 0.0);
+        return classifyAgainst("Customer goal: " + description, vectors, false, 3);
+    }
+
+    private Result classifyAgainst(String input, Map<String,float[]> catalog, boolean plccOnly, int maxLabels) {
         float[] query = embedding("search_query: " + EmbeddingText.trim(input, 800));
         List<Match> ranked = catalog.entrySet().stream()
                 .map(e -> new Match(e.getKey(), cosine(query, e.getValue())))
@@ -101,12 +122,15 @@ public class SemanticCategoryClassifier {
         synchronized (this) {
             if (categoryVectors != null) return categoryVectors;
             Map<String,float[]> vectors = new LinkedHashMap<>();
-            TAXONOMY.forEach((code, description) -> vectors.put(code,
-                    embedding("search_document: Business category " + code.replace('_',' ')
-                            + ". Products and services: " + description)));
+            TAXONOMY.forEach((code, description) -> vectors.put(code, categoryEmbedding(code, description)));
             categoryVectors = Collections.unmodifiableMap(vectors);
             return categoryVectors;
         }
+    }
+
+    private float[] categoryEmbedding(String code, String description) {
+        return embedding("search_document: Business category " + code.replace('_',' ')
+                + ". Products and services: " + description);
     }
 
     private float[] embedding(String text) {

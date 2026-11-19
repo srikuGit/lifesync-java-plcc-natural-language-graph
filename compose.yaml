@@ -30,7 +30,6 @@ services:
       - ollama_models_us:/root/.ollama
 
   pull-models:
-    profiles: ["models"]
     image: ollama/ollama:latest
     depends_on:
       - ollama
@@ -38,13 +37,12 @@ services:
       OLLAMA_HOST: http://ollama:11434
       OLLAMA_CHAT_MODEL: ${OLLAMA_CHAT_MODEL:-qwen2.5:1.5b}
       OLLAMA_EMBED_MODEL: ${OLLAMA_EMBED_MODEL:-nomic-embed-text}
-      EMBED_ON_START: ${EMBED_ON_START:-true}
     entrypoint: ["/bin/sh", "-ec"]
     command:
       - |
         until ollama list >/dev/null 2>&1; do sleep 3; done
         ollama pull "$${OLLAMA_CHAT_MODEL}"
-        if [ "$${EMBED_ON_START}" = "true" ]; then ollama pull "$${OLLAMA_EMBED_MODEL}"; fi
+        ollama pull "$${OLLAMA_EMBED_MODEL}"
     restart: "no"
 
   mailpit:
@@ -57,6 +55,8 @@ services:
     depends_on:
       neo4j:
         condition: service_healthy
+      pull-models:
+        condition: service_completed_successfully
     environment:
       GEOCODING_URL: ${GEOCODING_URL:-https://geocoding.geo.census.gov/geocoder/locations/onelineaddress}
       SERVER_ADDRESS: 0.0.0.0
@@ -81,7 +81,6 @@ services:
       VECTOR_ENABLED: ${VECTOR_ENABLED:-false}
       VECTOR_BACKFILL_BATCH_SIZE: ${VECTOR_BACKFILL_BATCH_SIZE:-2}
       VECTOR_BACKFILL_DELAY_MS: ${VECTOR_BACKFILL_DELAY_MS:-45000}
-      EMBED_ON_START: ${EMBED_ON_START:-true}
       OFFERS_ENABLED: ${OFFERS_ENABLED:-true}
       OFFERS_BASE_URL: ${OFFERS_BASE_URL:-http://localhost:8080/mock-offers}
       OFFERS_API_KEY: ${OFFERS_API_KEY:-}

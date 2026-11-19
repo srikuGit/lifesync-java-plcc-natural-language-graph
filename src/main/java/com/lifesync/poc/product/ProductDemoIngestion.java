@@ -2,6 +2,7 @@ package com.lifesync.poc.product;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lifesync.poc.graph.GraphRepository;
+import com.lifesync.poc.classification.SemanticCategoryClassifier;
 import org.neo4j.driver.Driver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.*;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.nio.file.Path;
 import java.util.*;
 
-/** Curated synthetic product/category relationships; never inferred lending eligibility. */
+/** Loads synthetic product facts and classifies goal text with embeddings. */
 @Component
 @Order(1)
 public class ProductDemoIngestion implements ApplicationRunner {
@@ -18,15 +19,17 @@ public class ProductDemoIngestion implements ApplicationRunner {
     private final ObjectMapper mapper;
     private final GraphRepository graph;
     private final Path input;
-    public ProductDemoIngestion(Driver driver, ObjectMapper mapper, GraphRepository graph,
+    private final SemanticCategoryClassifier classifier;
+    public ProductDemoIngestion(Driver driver, ObjectMapper mapper, GraphRepository graph, SemanticCategoryClassifier classifier,
             @Value("${lifesync.input-dir:./data/input}") String inputDir) {
-        this.driver=driver; this.mapper=mapper; this.graph=graph; this.input=Path.of(inputDir,"products-demo.json");
+        this.driver=driver; this.mapper=mapper; this.graph=graph; this.classifier=classifier; this.input=Path.of(inputDir,"products-demo.json");
     }
     public record Fixture(List<Map<String,Object>> products, List<Map<String,Object>> customers,
                           List<Map<String,Object>> goals, List<Map<String,Object>> merchants) {}
     @Override public void run(ApplicationArguments args) throws Exception {
         Fixture fixture = mapper.readValue(input.toFile(),Fixture.class);
         validateOwnership(fixture);
+        var classifiedGoals = classifyGoals(fixture);
         graph.createSchema();
         try (var session = driver.session()) {
             session.run("CREATE CONSTRAINT product_id IF NOT EXISTS FOR (p:Product) REQUIRE p.productId IS UNIQUE").consume();
@@ -58,16 +61,23 @@ public class ProductDemoIngestion implements ApplicationRunner {
                 tx.run("""
                     UNWIND $rows AS row
                     MATCH (c:Customer {customerId:row.customerId})
-                    MATCH (p:Product {productId:row.productId})-[:SUPPORTS_CATEGORY]->(cat:Category {categoryId:row.category})
+                    MATCH (p:Product {productId:row.productId})
                     MERGE (g:Goal {goalId:row.goalId})
                     SET g.description=row.description,g.productId=row.productId,g.ecn=c.ecn,
-                        g.category=row.category,g.categories=[row.category],g.goalType=row.productId,
+                        g.category=row.primaryCategory,g.categories=row.categories,g.goalType=row.productId,
+                        g.classificationConfidence=row.confidence,
                         g.ownerCustomerId=c.customerId,
-                        g.status='PRODUCT_DEMO',g.classificationSource='CURATED_SYNTHETIC_FIXTURE'
+                        g.status='PRODUCT_DEMO',g.classificationSource=row.source
                     MERGE (c)-[:HAS_GOAL]->(g)
                     MERGE (g)-[:FOR_PRODUCT]->(p)
+                    WITH g,p,row
+                    OPTIONAL MATCH (g)-[old:CLASSIFIED_AS]->(:Category)
+                    DELETE old
+                    WITH DISTINCT g,p,row
+                    UNWIND row.categories AS code
+                    MATCH (p)-[:SUPPORTS_CATEGORY]->(cat:Category {categoryId:code})
                     MERGE (g)-[:CLASSIFIED_AS]->(cat)
-                    """,Map.of("rows",fixture.goals())).consume();
+                    """,Map.of("rows",classifiedGoals)).consume();
                 tx.run("""
                     UNWIND $rows AS row
                     MATCH (p:Product {productId:row.productId})-[:SUPPORTS_CATEGORY]->(cat:Category {categoryId:row.category})
@@ -85,6 +95,27 @@ public class ProductDemoIngestion implements ApplicationRunner {
             });
         }
     }
+    List<Map<String,Object>> classifyGoals(Fixture fixture) {
+        Map<Object,List<String>> categoriesByProduct = new HashMap<>();
+        for (var product : fixture.products()) {
+            var categories = ((List<?>) product.get("categories")).stream().map(String.class::cast).toList();
+            categoriesByProduct.put(product.get("productId"), categories);
+        }
+        var rows = new ArrayList<Map<String,Object>>();
+        for (var goal : fixture.goals()) {
+            var allowed = categoriesByProduct.get(goal.get("productId"));
+            if (allowed == null) throw new IllegalArgumentException("Unknown product for goal " + goal.get("goalId"));
+            var result = classifier.classifyForProduct((String) goal.get("description"), allowed);
+            var categories = result.categories();
+            rows.add(Map.of("goalId", goal.get("goalId"), "customerId", goal.get("customerId"),
+                    "productId", goal.get("productId"), "description", goal.get("description"),
+                    "categories", categories, "primaryCategory", categories.isEmpty() ? "UNSUPPORTED" : categories.getFirst(),
+                    "confidence", result.confidence(), "source",
+                    categories.isEmpty() ? "SEMANTIC_NO_PRODUCT_MATCH" : "SEMANTIC_EMBEDDING"));
+        }
+        return rows;
+    }
+
     static void validateOwnership(Fixture fixture) {
         Set<Object> ids=new HashSet<>();
         Set<Object> customers=new HashSet<>();
